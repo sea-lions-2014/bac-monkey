@@ -37,19 +37,9 @@ class AlcoholCalc
       interval_count: interval_count
     })
 
+    build_up.pop
     build_up + break_down
   end
-
-  def self.current_bac(args)
-    alcohol = args[:alcohol]
-    weight = args[:weight]
-    ratio = self.ratio(args[:gender])
-    hours = args[:hours]
-
-    bac = (((alcohol * 5.14) / (weight * ratio)) - (0.015 * hours)).round(4)
-    bac < 0 ? 0 : bac
-  end
-
 
   private
 
@@ -58,21 +48,16 @@ class AlcoholCalc
     current_bac = args[:current_bac] || 0
     alcohol = args[:alcohol]
     weight = args[:weight]
-    gender = args[:gender]
+    ratio = self.ratio(args[:gender])
     hours = args[:hours]
     interval_count = (hours / 0.25).to_i
     consumption_rate = alcohol / interval_count
     bac_series = []
 
     interval_count.times do |interval|
-      hours = interval * 0.25
-      next_bac = self.current_bac({
-        alcohol: consumption_rate,
-        weight: weight,
-        gender: gender,
-        hours: hours
-      })
-      bac_series << [hours, next_bac]
+      current_bac = (current_bac + self.bac(consumption_rate, weight, ratio)) - self.metabolized
+      current_bac = 0 if current_bac < 0
+      bac_series << [interval * 0.25, current_bac.round(4)]
     end
 
     bac_series
@@ -94,6 +79,15 @@ class AlcoholCalc
     end
 
     bac_series
+  end
+
+  def self.bac(alcohol, weight, ratio)
+    ((alcohol * 5.14) / (weight * ratio))
+  end
+
+  # Returns BAC metabolized in 15 minutes
+  def self.metabolized
+    (0.015 * 0.25)
   end
 
   def self.next_bac(starting_bac, hours)
