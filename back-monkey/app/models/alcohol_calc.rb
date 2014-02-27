@@ -51,7 +51,7 @@ class AlcoholCalc
     ratio = self.ratio(args[:gender])
     hours = args[:hours]
     interval_count = (hours / 0.25).to_i
-    consumption_rate = alcohol / interval_count
+    consumption_rate = alcohol / interval_count.to_f
     bac_series = []
 
     interval_count.times do |interval|
