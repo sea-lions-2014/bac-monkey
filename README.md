@@ -2,13 +2,11 @@
 
 A person tracker for substance use.
 
-<img src="http://cdn2.holytaco.com/wp-content/uploads/images/2010/50326727.jpg"/>
-
 ###Team members
-John Olmsted, "Air Boss Johnson"
-Darcey Lachtman, "Cougar"
-Patrick Vilhena, "Merlin"
-David Goodman, "Iceman"
+* John Olmsted, "Air Boss Johnson"
+* Darcey Lachtman, "Cougar"
+* Patrick Vilhena, "Merlin"
+* David Goodman, "Iceman"
 
 ###Trello board
 
@@ -25,10 +23,12 @@ USE THE <a href="https://trello.com/b/HziUZOH2/back-monkey">TRELLO BOARD</a>
 ###Good commit messages
 
 1. Use commit -v
-2. Include a subject line and a body. Here's an example of a good commit message:
+2. Include a subject line and a description. Here's an example of a good commit message:
 
 ````
 Adds User model
 
 Adds basic user model with weight and gender columns, Includes Unit specs.
 ````
+
+<img src="http://cdn2.holytaco.com/wp-content/uploads/images/2010/50326727.jpg"/>
