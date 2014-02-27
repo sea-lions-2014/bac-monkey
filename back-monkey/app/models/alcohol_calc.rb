@@ -27,10 +27,10 @@ class AlcoholCalc
     hours = args[:hours]
     interval_count = args[:interval_count] || 49
 
-    build_up = self.bac_increase(args)
+    build_up = self.bac_build_up(args)
     last_bac = build_up.last.last
     last_drinking_hour = build_up.last.first
-    break_down = self.bac_decrease(args.merge({
+    break_down = self.bac_break_down(args.merge({
       starting_bac: last_bac,
       starting_hour: last_drinking_hour,
     }))
@@ -42,7 +42,7 @@ class AlcoholCalc
   private
 
   # Returns BAC series during the time you are continually drinking
-  def self.bac_increase(args)
+  def self.bac_build_up(args)
     current_bac = args[:current_bac] || 0
     alcohol = args[:alcohol]
     weight = args[:weight]
@@ -62,7 +62,7 @@ class AlcoholCalc
   end
 
   # Returns a BAC series during the time you are not drinking
-  def self.bac_decrease(args)
+  def self.bac_break_down(args)
     starting_bac = args[:starting_bac] || 0
     starting_hour = args[:starting_hour]
     weight = args[:weight]
