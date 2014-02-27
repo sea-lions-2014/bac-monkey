@@ -3,6 +3,10 @@
  * HTML CSS
  */
 
+#chart{
+  height: 400px;
+  width: 600px;
+}
 
 .chartWrap {
   margin: 0;
