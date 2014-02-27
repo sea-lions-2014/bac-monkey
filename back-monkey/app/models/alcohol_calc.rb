@@ -5,17 +5,17 @@
 # ratio = alcohol distribution ratio, 0.73 for men, 0.66 for women
 # hours = period in hours since alcohol was consumed
 
-# bac =  ((alcohol * 5.14) / (weight * ratio)) - (0.015 * hours)
+# BAC % =  ((alcohol * 5.14) / (weight * ratio)) - (0.015 * hours)
 
 class AlcoholCalc
-
-  # Returns a series of BAC percentages at 15 minute intervals as a
+  # Returns a complete series of BAC percentages at 15 minute intervals as a
   # nested array. The argument hash should have the following:
   # {
   #   starting_bac: defaults to 0,
   #   alcohol: ounces of pure alcohol,
   #   weight: in pounds,
   #   gender: "m" or "f",
+  #   hours: time spent continually drinking, in intervals of 0.25
   #   interval_count: defaults to 49 (12 hours)
   # }
   def self.bac_series(args)
@@ -23,24 +23,77 @@ class AlcoholCalc
     alcohol = args[:alcohol]
     weight = args[:weight]
     ratio = self.ratio(args[:gender])
+    hours = args[:hours]
     interval_count = args[:interval_count] || 49
-    bac_series = []
 
-    starting_bac = self.starting_bac(current_bac, alcohol, weight, ratio)
+    build_up = self.bac_increase(args)
+    last_bac = build_up.last.last
+    last_drinking_hour = build_up.last.first
+    break_down = self.bac_decrease({
+      starting_bac: last_bac,
+      starting_hour: last_drinking_hour,
+      weight: weight,
+      gender: args[:gender],
+      interval_count: interval_count
+    })
+
+    build_up + break_down
+  end
+
+  def self.current_bac(args)
+    alcohol = args[:alcohol]
+    weight = args[:weight]
+    ratio = self.ratio(args[:gender])
+    hours = args[:hours]
+
+    bac = (((alcohol * 5.14) / (weight * ratio)) - (0.015 * hours)).round(4)
+    bac < 0 ? 0 : bac
+  end
+
+
+  private
+
+  # Returns BAC series during the time you are continually drinking
+  def self.bac_increase(args)
+    current_bac = args[:current_bac] || 0
+    alcohol = args[:alcohol]
+    weight = args[:weight]
+    gender = args[:gender]
+    hours = args[:hours]
+    interval_count = (hours / 0.25).to_i
+    consumption_rate = alcohol / interval_count
+    bac_series = []
 
     interval_count.times do |interval|
       hours = interval * 0.25
-      next_bac = self.next_bac(starting_bac, hours)
+      next_bac = self.current_bac({
+        alcohol: consumption_rate,
+        weight: weight,
+        gender: gender,
+        hours: hours
+      })
       bac_series << [hours, next_bac]
     end
 
     bac_series
   end
 
-  private
+  # Returns a BAC series during the time you are not drinking
+  def self.bac_decrease(args)
+    starting_bac = args[:starting_bac] || 0
+    starting_hour = args[:starting_hour]
+    weight = args[:weight]
+    ratio = self.ratio(args[:gender])
+    interval_count = args[:interval_count] || 49
+    bac_series = []
 
-  def self.starting_bac(current_bac, alcohol, weight, ratio)
-    current_bac + ((alcohol * 5.14) / (weight * ratio)).round(4)
+    interval_count.times do |interval|
+      hours = interval * 0.25
+      next_bac = self.next_bac(starting_bac, hours)
+      bac_series << [starting_hour + hours, next_bac]
+    end
+
+    bac_series
   end
 
   def self.next_bac(starting_bac, hours)
