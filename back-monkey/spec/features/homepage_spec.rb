@@ -20,25 +20,21 @@ describe "homepage", js:true do
       expect(page).to have_content 'form'
     end
 
-    it "can't be submitted with incomplete information" do
-      expect(find('.submit input')[:disabled]).to be
-    end
-
     it "can't be submitted with invalid data" do
-      fill_in 'weight', with: 175
-      choose 'gender_m'
-      fill_in 'alcohol', with: 'lots'
-      fill_in 'hours', with: 4
-      expect(find('.submit input')[:disabled]).to be
+      fill_in 'alcohol_calc_weight', with: 175
+      choose 'alcohol_calc_gender_m'
+      fill_in 'alcohol_calc_alcohol', with: 'lots'
+      fill_in 'alcohol_calc_hours', with: 4
+      expect(page).to_not have_content('#chart')
     end
 
     it "can be submitted to create a chart with valid data" do
-      fill_in 'weight', with: 175
-      choose 'gender_m'
-      fill_in 'alcohol', with: 4
-      fill_in 'hours', with: 4
+      fill_in 'alcohol_calc_weight', with: 175
+      choose 'alcohol_calc_gender_m'
+      fill_in 'alcohol_calc_alcohol', with: 4
+      fill_in 'alcohol_calc_hours', with: 4
       click_on 'find BAC'
-      expect('chart').to be
+      expect(page).to_not have_content('#chart')
     end
 
   end
