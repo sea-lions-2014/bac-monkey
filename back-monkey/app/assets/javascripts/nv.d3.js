@@ -456,7 +456,7 @@ window.nv.tooltip.* also has various helper methods.
                 .attr("colspan",3)
                 .append("strong")
                     .classed("x-value",true)
-                    .html(headerFormatter(d.value+" minutes"));
+                    .html(headerFormatter("after "+d.value+" minutes"));
 
             var tbodyEnter = table.selectAll("tbody")
                 .data([d])
