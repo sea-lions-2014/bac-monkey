@@ -94,6 +94,7 @@ nav a{
 
 #alc_form{
   margin: 0 auto;
+  margin-top: 2em;
   width: 500px;
   font-family: 'Lato', sans-serif;
  }
@@ -104,19 +105,45 @@ nav a{
 
 }
 #alc_form label{
-  color:white;
+  color:white;'
+
 
   /*margin: .5em;*/
   /*margin-top: 1em;*/
 
 }
 
-input{
-  margin-left: 2em;
+.line input{
+  margin-left: 1em;
+}
+
+.gender{
+  display: inline-block;
+  padding-left: 1em;
+
+}
+
+.gender input{
+  margin-left: 0em;
+  margin-right: 1.5em;
 }
 
 .line{
   padding-top: 1em;
+
+}
+
+#alc_form .button{
+  color: white;
+  background-color:#ca171b;
+  border-radius: 5px;
+  border:#ca171b ;
+  padding: .5em ;
+  margin-right: 8em;
+}
+
+#alc_form .button:hover{
+  background-color:#d34245;
 }
 
 /*-----MEDIA QUERIES-----*/
