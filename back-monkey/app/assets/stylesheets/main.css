@@ -28,23 +28,41 @@ nav h3{
 
 }
 
-button{
+nav a{
   display: inline-block;
-  font-family: 'Averia Sans Libre', sans-serif
-  background-color: ;
+  border-radius: 0.25em;
+  padding: .5em;
+  top: .85em;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+}
 
+#signin:hover{
+  background-color:#8c8888;
+}
+
+#signup:hover{
+  background-color:#d34245;
 }
 
 #signin{
   position: absolute;
   right: .75em;
-  top:1.25em;
-
+  background-color: #7b7777;
 }
 
 #signup{
   position: absolute;
   right: 5.5em;
-  top:1.25em;
+  background-color:#ca171b;
+}
 
+/*-----MEDIA QUERIES-----*/
+
+@media (max-width: 510px) {
+  nav h3 {
+    display: none;
+  }
 }
