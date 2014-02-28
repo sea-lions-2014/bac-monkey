@@ -68,7 +68,7 @@ class AlcoholCalc
     # Returns a BAC series during the time you are not drinking
     def bac_break_down(args)
       starting_bac = args[:starting_bac] || 0
-      starting_hour = args[:starting_hour]
+      starting_hour = args[:starting_hour] || 0
       weight = args[:weight]
       ratio = ratio(args[:gender])
       interval_count = args[:interval_count] || 49

@@ -18,6 +18,34 @@
 class CaffeineCalc
 
   class << self
+    def mg_series
 
+    end
+
+    # Returns a mg series during the time you are not drinking
+    def mg_break_down(args)
+      starting_mg = args[:starting_mg] || 0
+      starting_hour = args[:starting_hour] || 0
+      interval_count = args[:interval_count] || 49
+      mg_series = []
+
+      interval_count.times do |interval|
+        hours = interval * 0.25
+        next_mg = next_mg(starting_mg, hours)
+        mg_series << [starting_hour + hours, next_mg]
+      end
+
+      mg_series
+    end
+
+    # Returns a mg series during the time you are continually drinking
+    def mg_build_up
+
+    end
+
+    def next_mg(starting_mg, hours)
+      next_mg = (starting_mg - (starting_mg * (0.09 * hours))).round(1)
+      next_mg < 0 ? 0 : next_mg
+    end
   end
 end
