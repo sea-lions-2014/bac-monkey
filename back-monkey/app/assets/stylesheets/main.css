@@ -96,6 +96,7 @@ nav a{
 
 #alc_form{
   margin: 0 auto;
+  margin-top: 2em;
   width: 500px;
   font-family: 'Lato', sans-serif;
  }
@@ -106,7 +107,8 @@ nav a{
 
 }
 #alc_form label{
-  color:white;
+  color:white;'
+
 
   /*margin: .5em;*/
   /*margin-top: 1em;*/
@@ -133,11 +135,17 @@ nav a{
 
 }
 
-#alc_form .submit{
-  color: red;
-  border-radius: 5;
-  padding: 1em 2em;
+#alc_form .button{
+  color: white;
+  background-color:#ca171b;
+  border-radius: 5px;
+  border:#ca171b ;
+  padding: .5em ;
+  margin-right: 8em;
+}
 
+#alc_form .button:hover{
+  background-color:#d34245;
 }
 /*-----MEDIA QUERIES-----*/
 
