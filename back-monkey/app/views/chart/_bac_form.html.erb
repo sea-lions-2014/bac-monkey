@@ -3,10 +3,13 @@
     <div class="line">
     <%= label_tag "Weight" %>
     <%= text_field_tag :weight %>
-    <%= label_tag :gender, "Male" %>
-    <%= radio_button_tag :gender, "m" %>
-    <%= label_tag :gender, "Female" %>
-    <%= radio_button_tag :gender, "f" %></div>
+      <div class="gender">
+      <%= label_tag :gender, "Male" %>
+      <%= radio_button_tag :gender, "m" %>
+      <%= label_tag :gender, "Female" %>
+      <%= radio_button_tag :gender, "f" %>
+      </div>
+    </div>
     <div class="line">
     <%= label_tag :alcohol, "How many drinks have you had?" %>
     <%= text_field_tag :alcohol %></div>
@@ -15,7 +18,8 @@
     <%= text_field_tag :hours %>
     </div>
     <div class="submit">
-    <%= submit_tag "find BAC", :disabled => true%>
+    <%= submit_tag "find BAC", :class=> "button", :disabled => true%>
+    <%= submit_tag "Find BAC", :class=> "button" %>
     </div>
   <% end  %>
 
