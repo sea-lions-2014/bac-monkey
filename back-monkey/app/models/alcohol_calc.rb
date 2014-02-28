@@ -51,11 +51,12 @@ class AlcoholCalc
     interval_count = (hours / 0.25).to_i
     consumption_rate = alcohol / interval_count.to_f
     bac_series = []
+    bac_series << [0, 0]
 
     interval_count.times do |interval|
       current_bac = (current_bac + self.bac(consumption_rate, weight, ratio)) - self.metabolized
       current_bac = 0 if current_bac < 0
-      bac_series << [interval * 0.25, current_bac.round(4)]
+      bac_series << [interval * 0.25 + 0.25, current_bac.round(4)]
     end
 
     bac_series
