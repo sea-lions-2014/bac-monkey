@@ -3,6 +3,10 @@
   margin: 0 auto;
 }*/
 
+body {
+  background-color: #1e1e1e;
+}
+
 img{
   width:75px;
   /*margin: 20px;*/
@@ -57,6 +61,14 @@ nav a{
   position: absolute;
   right: 5.5em;
   background-color:#ca171b;
+}
+
+#footer{
+  height: 15em;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  bottom: 0em;
 }
 
 /*-----MEDIA QUERIES-----*/
