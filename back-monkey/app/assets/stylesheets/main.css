@@ -152,15 +152,32 @@ nav a{
   margin: 0 auto;
   margin-top: 10em;
   color: white;
-  width:100em;
+  width:100%;
+  opacity: 50%;
 }
 
 .tick text{
-
   fill:white;
-  font-size: 20px;
+  font-size: 12px;
 }
 
+.nv-axisMaxMin{
+  fill:white;
+  stroke:none;
+  font-size: 12px;
+}
+
+.nv-legend{
+  fill:white;
+}
+
+.nv-guideline{
+  stroke:2px;
+}
+
+.nv-axislabel{
+  fill:white;
+}
 
 /*-----MEDIA QUERIES-----*/
 
