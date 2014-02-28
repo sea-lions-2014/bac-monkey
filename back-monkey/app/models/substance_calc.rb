@@ -1,9 +1,20 @@
 class SubstanceCalc
   class << self
 
+    #-----CLASS INSTANCE VARIABLES-----
+
+    # THESE SHOULD BE ASSIGNED IN SUBCLASSES
+
     # Rate at which a substance is eliminated from the body per hour.
     # Should be a percentage (e.g. 0.12 for 12%).
     @elimination_rate
+
+    # Number of decimal points the mg calculations round to.
+    # Substances that are measured in smaller doses should use higher
+    # precision.
+    @precision
+
+    #----------------------------------
 
     # Given the amount of substance consumed over a period of time, mg_series
     # returns a data-point series of mg concentrations at 15 minute intervals
@@ -63,7 +74,7 @@ class SubstanceCalc
       interval_count.times do |interval|
         current_mg = (current_mg + consumption_rate) - metabolized(current_mg)
         current_mg = 0 if current_mg < 0
-        mg_series << [interval * 0.25 + 0.25, current_mg.round(1)]
+        mg_series << [interval * 0.25 + 0.25, current_mg.round(@precision)]
       end
 
       mg_series
@@ -76,7 +87,7 @@ class SubstanceCalc
 
     # Given a starting mg, returns mg after n hours have passed
     def next_mg(starting_mg, hours)
-      next_mg = (starting_mg - (starting_mg * (@elimination_rate * hours))).round(1)
+      next_mg = (starting_mg - (starting_mg * (@elimination_rate * hours))).round(@precision)
       next_mg < 0 ? 0 : next_mg
     end
 
