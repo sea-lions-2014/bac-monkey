@@ -33,8 +33,6 @@ nav h3{
   font-family: 'Averia Sans Libre', sans-serif;
   font-size: 2.5em;
   top: -.9em;
-
-
 }
 
 nav a{
@@ -147,6 +145,7 @@ nav a{
 #alc_form .button:hover{
   background-color:#d34245;
 }
+
 /*-----MEDIA QUERIES-----*/
 
 @media (max-width: 510px) {
