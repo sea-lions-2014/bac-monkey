@@ -35,7 +35,7 @@ class AlcoholCalc
       last_drinking_hour = build_up.last.first
       break_down = bac_break_down(args.merge({
         starting_bac: last_bac,
-        starting_hour: last_drinking_hour,
+        starting_hour: last_drinking_hour
       }))
 
       build_up.pop
