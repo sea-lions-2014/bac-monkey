@@ -1,3 +1,3 @@
 BackMonkey::Application.routes.draw do
-  root :to => 'chart#index'
+  root :to => 'pages#index'
 end
