@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require d3.v3
+//= require nv.d3
+//= require linechart
 //= require_tree .
