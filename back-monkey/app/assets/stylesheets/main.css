@@ -5,6 +5,7 @@
 
 body {
   background-color: #1e1e1e;
+  margin: 0;
 }
 
 img{
@@ -94,7 +95,7 @@ nav a{
   border-top: 2px solid #121212;
 }
 
-#alc_form{
+#substance_form{
   margin: 0 auto;
   margin-top: 2em;
   width: 500px;
@@ -106,8 +107,8 @@ nav a{
   padding-top: 1em;
 
 }
-#alc_form label{
-  color:white;'
+#substance_form label{
+  color:white;
 
 
   /*margin: .5em;*/
@@ -135,7 +136,7 @@ nav a{
 
 }
 
-#alc_form .button{
+#substance_form .button{
   color: white;
   background-color:#ca171b;
   border-radius: 5px;
@@ -144,14 +145,14 @@ nav a{
   margin-right: 8em;
 }
 
-#alc_form .button:hover{
+#substance_form .button:hover{
   background-color:#d34245;
 }
 
 #chart{
   margin: 0 auto;
   margin-top: 10em;
-  color: white;
+  color: #BDBDBD;
   width:100%;
   opacity: 50%;
 }
@@ -159,6 +160,8 @@ nav a{
 .tick text{
   fill:white;
   font-size: 12px;
+  font-family: 'Lato', sans-serif;
+
 }
 
 .nv-axisMaxMin{
@@ -177,6 +180,25 @@ nav a{
 
 .nv-axislabel{
   fill:white;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.nv-line{
+  color:white;
+  stroke: #ca171b;
+
+}
+
+.nvd3 .nv-groups path.nv-line{
+   stroke-width: 7.5px;
+   stroke-linecap:"round";
+}
+
+.nv-legend-symbol{
+  stroke: #ca171b;
+  fill: #ca171b;
+
 }
 
 /*-----MEDIA QUERIES-----*/
