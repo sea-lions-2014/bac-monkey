@@ -1,27 +1,25 @@
 <div id="alc_form">
-  <%= form_tag '/alcoholcalc/create.json', id: 'alcoholform', :remote=> true do %>
+  <%= form_for :alcohol_calc, url: {action: :create, controller: :alcohol_calc}, remote: true do |f|%>
     <div class="line">
-    <%= label_tag "Weight" %>
-    <%= text_field_tag :weight %>
+      <%= f.label "Weight" %>
+      <%= f.number_field :weight, required: true, min: 1 %>
       <div class="gender">
-      <%= label_tag :gender, "Male" %>
-      <%= radio_button_tag :gender, "m" %>
-      <%= label_tag :gender, "Female" %>
-      <%= radio_button_tag :gender, "f" %>
+        <%= f.label "Male" %>
+        <%= f.radio_button :gender, "m", required: true %>
+        <%= f.label "Female" %>
+        <%= f.radio_button :gender, "f", required: true %>
       </div>
     </div>
     <div class="line">
-    <%= label_tag :alcohol, "How many drinks have you had?" %>
-    <%= text_field_tag :alcohol %></div>
+      <%= f.label "How many drinks did you have?" %>
+      <%= f.number_field :alcohol, required: true, min: 1 %>
+    </div>
     <div class="line">
-    <%= label_tag :hours, "Over how many hours?" %>
-    <%= text_field_tag :hours %>
+      <%= f.label "Over how many hours?" %>
+      <%= f.number_field :hours, required: true, min: 1 %>
     </div>
     <div class="submit">
-    <%= submit_tag "find BAC", :class=> "button", :disabled => true%>
-    <%= submit_tag "Find BAC", :class=> "button" %>
+      <%= f.submit "find BAC", :class=> "button" %>
     </div>
-  <% end  %>
-
+  <% end %>
 </div>
-
