@@ -1,4 +1,50 @@
-.container{
+/*.container{
   width: 720px;
   margin: 0 auto;
+}*/
+
+img{
+  width:75px;
+  /*margin: 20px;*/
+  /*height: 75px;*/
+
+}
+
+nav{
+  background: black;
+  position: relative;
+  height: 64px;
+}
+
+nav h3{
+  color:white;
+  position: absolute;
+  display: inline-block;
+  margin-left: .5em;
+  font-family: 'Averia Sans Libre', sans-serif;
+  font-size: 2.5em;
+  top: -.9em;
+
+
+}
+
+button{
+  display: inline-block;
+  font-family: 'Averia Sans Libre', sans-serif
+  background-color: ;
+
+}
+
+#signin{
+  position: absolute;
+  right: .75em;
+  top:1.25em;
+
+}
+
+#signup{
+  position: absolute;
+  right: 5.5em;
+  top:1.25em;
+
 }
