@@ -83,6 +83,7 @@ function drawChart(dataObj) {
           .datum(dataObj)
           .transition().duration(500).call(chart);
 
+
       nv.utils.windowResize(
               function() {
                   chart.update();

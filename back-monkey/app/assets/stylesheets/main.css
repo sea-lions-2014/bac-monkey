@@ -147,6 +147,21 @@ nav a{
 #alc_form .button:hover{
   background-color:#d34245;
 }
+
+#chart{
+  margin: 0 auto;
+  margin-top: 10em;
+  color: white;
+  width:100em;
+}
+
+.tick text{
+
+  fill:white;
+  font-size: 20px;
+}
+
+
 /*-----MEDIA QUERIES-----*/
 
 @media (max-width: 510px) {
