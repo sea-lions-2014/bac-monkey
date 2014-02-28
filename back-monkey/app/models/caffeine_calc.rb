@@ -17,4 +17,5 @@
 
 class CaffeineCalc < SubstanceCalc
     @elimination_rate = 0.09
+    @precision = 1
 end
