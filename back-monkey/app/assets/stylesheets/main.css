@@ -113,12 +113,31 @@ nav a{
 
 }
 
-input{
-  margin-left: 2em;
+.line input{
+  margin-left: 1em;
+}
+
+.gender{
+  display: inline-block;
+  padding-left: 1em;
+
+}
+
+.gender input{
+  margin-left: 0em;
+  margin-right: 1.5em;
 }
 
 .line{
   padding-top: 1em;
+
+}
+
+#alc_form .submit{
+  color: red;
+  border-radius: 5;
+  padding: 1em 2em;
+
 }
 /*-----MEDIA QUERIES-----*/
 
