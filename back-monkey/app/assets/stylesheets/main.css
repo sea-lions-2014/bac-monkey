@@ -18,6 +18,7 @@ nav{
   background: black;
   position: relative;
   height: 64px;
+  border-bottom: 2px solid #121212;
 }
 
 nav h3{
@@ -63,12 +64,30 @@ nav a{
   background-color:#ca171b;
 }
 
+#welcome_msg {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  color: #7b7777;
+  width: 300px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.pop {
+  color: white;
+  display: block;
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
+
 #footer{
   height: 15em;
   width: 100%;
   background-color: black;
   position: absolute;
   bottom: 0em;
+  border-top: 2px solid #121212;
 }
 
 /*-----MEDIA QUERIES-----*/
