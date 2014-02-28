@@ -257,8 +257,8 @@ svg .title {
 .nvd3 .x  .nv-axis .nv-axisMaxMin text,
 .nvd3 .x2 .nv-axis .nv-axisMaxMin text,
 .nvd3 .x3 .nv-axis .nv-axisMaxMin text {
-  text-anchor: middle,
-  stroke: #FFFFFF;
+  text-anchor: middle
+
 }
 
 
@@ -268,8 +268,8 @@ svg .title {
 */
 
 .nv-brush .resize path {
-  fill:#FFFFFF;;
-  stroke: #FFFFFF;
+  fill: #eee;
+  stroke: #666;
 }
 
 
@@ -348,8 +348,8 @@ svg .title {
 }
 
 .nvd3.nv-pie .nv-slice text {
-  stroke: #FFFFFF;
-  stroke-width: 2;
+  stroke: #000;
+  stroke-width: 0;
 }
 
 .nvd3.nv-pie path {
@@ -781,4 +781,3 @@ Interactive Layer
 .nvd3 line.nv-guideline {
   stroke: #FFFFFF;
 }
-
