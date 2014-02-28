@@ -1,3 +1,10 @@
+#-----NOTE!-----
+
+# AlcoholCalc cannot inherit from SubstanceCalc because alcohol
+# intoxication is measured as BAC % rather than milligrams. Widmark's
+# BAC % formula is also very different from the formula used in
+# SubstanceCalc.
+
 #-----WIDMARK'S BAC % FORMULA-----
 # Let
 # alcohol = liquid ounces of alcohol
