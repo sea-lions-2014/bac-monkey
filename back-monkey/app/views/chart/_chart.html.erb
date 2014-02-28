@@ -1,4 +1,17 @@
 <div class="container">
+  <%= form_tag '/alcoholcalc/create.json', id: 'alcoholform', :remote=> true do %>
+    <%= label_tag "Weight" %>
+    <%= text_field_tag :weight %>
+    <%= label_tag :gender, "Male" %>
+    <%= radio_button_tag :gender, "m" %>
+    <%= label_tag :gender, "Female" %>
+    <%= radio_button_tag :gender, "f" %>
+    <%= label_tag :alcohol, "How many drinks have you had?" %>
+    <%= text_field_tag :alcohol %>
+    <%= label_tag :hours, "Over how many hours?" %>
+    <%= text_field_tag :hours %>
+    <%= submit_tag %>
+  <% end  %>
   <svg id="chart">
   </svg>
 </div>
