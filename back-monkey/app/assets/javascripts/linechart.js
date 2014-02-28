@@ -54,6 +54,9 @@
 
 //Draw line chart
 function drawChart(dataObj) {
+  $('#welcome_msg').remove();
+  d3.select('body').insert('svg', '#footer').attr('id', 'chart');
+
   nv.addGraph(dataObj)
       var chart = nv.models.lineChart()
                   .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
