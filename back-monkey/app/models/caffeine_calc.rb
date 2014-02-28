@@ -18,9 +18,25 @@
 class CaffeineCalc
 
   class << self
-    def mg_series
+    def mg_series(args)
+      current_mg = args[:current_mg] || 0
+      milligrams = args[:milligrams]
+      hours = args[:hours]
+      interval_count = args[:interval_count] || 49
 
+      build_up = mg_build_up(args)
+      last_mg = build_up.last.last
+      last_drinking_hour = build_up.last.first
+      break_down = mg_break_down(args.merge({
+        starting_mg: last_mg,
+        starting_hour: last_drinking_hour
+      }))
+
+      build_up.pop
+      build_up + break_down
     end
+
+    private
 
     # Returns a mg series during the time you are not drinking
     def mg_break_down(args)
