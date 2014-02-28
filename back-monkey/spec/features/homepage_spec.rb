@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "homepage" do
+describe "homepage", js:true do
   before :each do
     visit root_path
   end
@@ -21,34 +21,25 @@ describe "homepage" do
     end
 
     it "can't be submitted with incomplete information" do
-      expect(find('submit')[:disabled]).to eq 'disabled'
+      expect(find('.submit input')[:disabled]).to be
     end
 
-    # it "can't be submitted with invalid data" do
-    #   fill_in 'weight', with: 175
-    #   choose 'gender_m'
-    #   fill_in 'alcohol', with: 'lots'
-    #   fill_in 'hours', with: 4
-    #   expect(page).to have_css 'commit'
-    # end
+    it "can't be submitted with invalid data" do
+      fill_in 'weight', with: 175
+      choose 'gender_m'
+      fill_in 'alcohol', with: 'lots'
+      fill_in 'hours', with: 4
+      expect(find('.submit input')[:disabled]).to be
+    end
 
-    # it "can be submitted with valid data" do
-    #   fill_in 'weight', with: 175
-    #   choose 'gender_m'
-    #   fill_in 'alcohol', with: 4
-    #   fill_in 'hours', with: 4
-    #   click_on 'find BAC'
-    #   expect(page).to have_css '#chart'
-    # end
-
-    # it "generates a chart when proper data is submitted" do
-    #   fill_in 'weight', with: 175
-    #   choose 'gender_m'
-    #   fill_in 'alcohol', with: 4
-    #   fill_in 'hours', with: 4
-    #   click_on 'find BAC'
-    #   expect('chart').to be
-    # end
+    it "can be submitted to create a chart with valid data" do
+      fill_in 'weight', with: 175
+      choose 'gender_m'
+      fill_in 'alcohol', with: 4
+      fill_in 'hours', with: 4
+      click_on 'find BAC'
+      expect('chart').to be
+    end
 
   end
 end
