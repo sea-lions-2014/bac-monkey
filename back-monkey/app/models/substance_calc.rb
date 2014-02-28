@@ -9,7 +9,7 @@ class SubstanceCalc
     # Should be a percentage (e.g. 0.12 for 12%).
     @elimination_rate
 
-    # Number of decimal points the mg calculations round to.
+    # Number of decimal points to preserve in the mg calculations.
     # Substances that are measured in smaller doses should use higher
     # precision.
     @precision
