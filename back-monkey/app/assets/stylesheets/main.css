@@ -9,6 +9,8 @@ body {
 
 img{
   width:75px;
+  position: absolute;
+  top:0em;
   /*margin: 20px;*/
   /*height: 75px;*/
 
@@ -16,16 +18,18 @@ img{
 
 nav{
   background: black;
-  position: relative;
+  position: fixed;
   height: 64px;
   border-bottom: 2px solid #121212;
+  top: 0em;
+  width: 100%;
 }
 
 nav h3{
   color:white;
   position: absolute;
   display: inline-block;
-  margin-left: .5em;
+  margin-left: 2.5em;
   font-family: 'Averia Sans Libre', sans-serif;
   font-size: 2.5em;
   top: -.9em;
@@ -85,11 +89,37 @@ nav a{
   height: 15em;
   width: 100%;
   background-color: black;
-  position: absolute;
+  position: fixed;
   bottom: 0em;
   border-top: 2px solid #121212;
 }
 
+#alc_form{
+  margin: 0 auto;
+  width: 500px;
+  font-family: 'Lato', sans-serif;
+ }
+
+.submit{
+  text-align: center;
+  padding-top: 1em;
+
+}
+#alc_form label{
+  color:white;
+
+  /*margin: .5em;*/
+  /*margin-top: 1em;*/
+
+}
+
+input{
+  margin-left: 2em;
+}
+
+.line{
+  padding-top: 1em;
+}
 /*-----MEDIA QUERIES-----*/
 
 @media (max-width: 510px) {
