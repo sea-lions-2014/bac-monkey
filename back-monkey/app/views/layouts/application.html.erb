@@ -2,11 +2,19 @@
 <html>
 <head>
   <title>BackMonkey</title>
+  <link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav id="topbar">
+  <%= image_tag("smoking_monkey.jpg", :alt => "monkey_logo") %>
+  <h3>Back Monkey</h3>
+  <a href="#" id="signin">Sign in</a>
+  <a href="#" id="signup">Sign up</a>
+</nav>
 
 <%= yield %>
 
