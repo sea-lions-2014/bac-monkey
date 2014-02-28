@@ -11,7 +11,8 @@ function formatData(event, data, status, xhr){
   var dataObj = [
     {
       key: "BAC",
-      values: values
+      values: values,
+      color: "#d34245"
     }
   ]
 
