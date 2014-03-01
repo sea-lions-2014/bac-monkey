@@ -1,15 +1,16 @@
 require 'spec_helper'
 
 describe AlcoholCalcController do
-  let!(:args){{weight: 200, gender: "m", hours: 2, alcohol: 4}}
+  let!(:alcohol_calc){{weight: 200, gender: "m", hours: 2, drinks: 4}}
+
   context '#create' do
 
     before :each do
-      post :create, params: args
+      post :create, alcohol_calc: alcohol_calc
     end
 
-    it "creates a BAC series from data" do
-      expect(assigns(:bac)).to be
+    it "creates a new AlcoholCalc instance" do
+      expect(assigns(:bac)).to be_a AlcoholCalc
     end
 
     it "returns a JSON object" do
