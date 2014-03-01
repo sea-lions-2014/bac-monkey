@@ -264,7 +264,7 @@ nav a{
 }
 
  #lower-nav #nicotine{
-background-color: #74E600;
+background-color: #00B358;
 }
 
 #lower-nav #alc:active{
@@ -276,7 +276,7 @@ background-color: #74E600;
 }
 
  #lower-nav #nicotine:active{
-background-color: #4B9500;
+background-color: #007439;
 }
 
 /*-----MEDIA QUERIES-----*/
