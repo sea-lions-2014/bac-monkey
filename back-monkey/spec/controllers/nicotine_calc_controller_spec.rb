@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe CaffeineCalcController do
-  let!(:args){{cups: 2, hours: 2, type: 'coffee'}}
+describe nicotineCalcController do
+  let!(:args){{cigarettes: 4, hours: 2}}
   context '#create' do
 
     before :each do
       post :create, params: args
     end
 
-    it "creates a caffeine series from data" do
-      expect(assigns(:caffeine_series)).to be
+    it "creates a nicotine series from data" do
+      expect(assigns(:nicotine_series)).to be
     end
 
     it "returns a JSON object" do
