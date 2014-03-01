@@ -14,6 +14,9 @@
 # http://www.ncbi.nlm.nih.gov/pubmed/7077531
 
 class NicotineCalc < SubstanceCalc
-  @elimination_rate = 0.25
-  @precision = 3
+  def initialize(args)
+    super
+    @elimination_rate = 0.25
+    @precision = 3
+  end
 end
