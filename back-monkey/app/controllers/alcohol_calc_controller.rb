@@ -3,8 +3,8 @@ class AlcoholCalcController < ApplicationController
   before_filter :format_args_data
 
   def create
-    alcohol_calc = AlcoholCalc.new
-    @bac = alcohol_calc.bac_series(args)
+    alcohol_calc = AlcoholCalc.new(args)
+    @bac = alcohol_calc.bac_series
     render json: @bac
   end
 
