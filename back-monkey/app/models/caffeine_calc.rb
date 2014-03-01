@@ -16,6 +16,9 @@
 # http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2995791/
 
 class CaffeineCalc < SubstanceCalc
+  def initialize(args)
+    super
     @elimination_rate = 0.09
     @precision = 1
+  end
 end

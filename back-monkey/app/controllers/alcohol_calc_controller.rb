@@ -1,5 +1,6 @@
 class AlcoholCalcController < ApplicationController
   respond_to :json, only: [:create]
+
   def create
     args = params[:alcohol_calc]
     p params

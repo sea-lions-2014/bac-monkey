@@ -6,6 +6,6 @@ class MgOfCaffeine
       mg_caff_per_ounce = 12 if type == "coffee"
       (cups * 8 * mg_caff_per_ounce).round(1)
     end
-
   end
 end
+
