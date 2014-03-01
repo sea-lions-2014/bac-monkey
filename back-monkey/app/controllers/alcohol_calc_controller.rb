@@ -3,11 +3,14 @@ class AlcoholCalcController < ApplicationController
 
   def create
     args = params[:alcohol_calc]
+    p params
+
     args[:weight] = args[:weight].to_i
     args[:alcohol] = args[:drinks].to_i * 0.6
     args[:hours] = args[:hours].to_i
 
-    @bac = AlcoholCalc.new(args).bac_series
+    alcohol_calc = AlcoholCalc.new
+    @bac = alcohol_calc.bac_series(args)
     render json: @bac
   end
 end
