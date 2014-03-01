@@ -1,21 +1,17 @@
 <div id="caffeine_form" class="substance_form hidden">
   <%= form_for :caffeine_calc, url: {action: :create, controller: :caffeine_calc}, remote: true do |f|%>
+  
     <div class="line">
-      <%= f.label "I had " %>
-      <%= f.number_field :cups, required: true, min: 1 %>
-    </div>
-    <div class="line">
-      <%= f.label "of" %>
-      <%= f.select :type, required: true %>
-      <%= options_for_select(['coffee', 'tea']) %>
-    </div>
-    <div class="line">
-      <%= f.label "over the course of" %>
-      <%= f.number_field :hours, required: true, min: 1 %>
-      <%= f.label "hours." %>
+      I had
+      <%= f.number_field :cups, required: true, min: 1 %> cups of
+      <%= f.select :type, options_for_select([['coffee', 'coffee'],['tea', 'tea']]), {required: true}, {:class => "drop_down"}%>
+  in  
+<%= f.number_field :hours, required: true, min: 1 %> hours.
     </div>
     <div class="submit">
       <%= f.submit "Check caffeine levels", :class=> "button" %>
     </div>
   <% end %>
 </div>
+
+
