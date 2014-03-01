@@ -1,7 +1,16 @@
 class AlcoholCalcController < ApplicationController
   respond_to :json, only: [:create]
+  before_filter :format_args_data
 
   def create
+    alcohol_calc = AlcoholCalc.new
+    @bac = alcohol_calc.bac_series(args)
+    render json: @bac
+  end
+
+  protected
+
+  def format_args_data
     args = params[:alcohol_calc]
     p params
 
