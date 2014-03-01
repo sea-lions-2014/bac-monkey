@@ -36,5 +36,8 @@ function drawChart(dataObj) {
               }
           );
 
-      return chart;
+  // Remove the now empty svg element left by the previous chart
+  $('svg:empty').remove();
+
+  return chart;
 }
