@@ -1,147 +1,140 @@
-/*.container{
-  width: 720px;
+body {
+  background-color: #1e1e1e;
+  margin: 0;
+}
+
+img{
+  width:75px;
+  position: absolute;
+  top:0em;
+  /*margin: 20px;*/
+  /*height: 75px;*/
+
+}
+
+nav{
+  background: black;
+  position: fixed;
+  height: 64px;
+  border-bottom: 2px solid #121212;
+  top: 0em;
+  width: 100%;
+}
+
+nav h3{
+  color:white;
+  position: absolute;
+  display: inline-block;
+  margin-left: 2.5em;
+  font-family: 'Averia Sans Libre', sans-serif;
+  font-size: 2.5em;
+  top: -.9em;
+}
+
+nav a{
+  display: inline-block;
+  border-radius: 0.25em;
+  padding: .5em;
+  top: .85em;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+}
+
+#signin:hover{
+  background-color:#8c8888;
+}
+
+#signup:hover{
+  background-color:#d34245;
+}
+
+#signin{
+  position: absolute;
+  right: .75em;
+  background-color: #7b7777;
+}
+
+#signup{
+  position: absolute;
+  right: 5.5em;
+  background-color:#ca171b;
+}
+
+#welcome_msg {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  color: #7b7777;
+  width: 300px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.pop {
+  color: white;
+  display: block;
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
+
+#footer{
+  height: 15em;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  bottom: 0em;
+  border-top: 2px solid #121212;
+}
+
+.substance_form{
   margin: 0 auto;
-  }*/
+  margin-top: 1em;
+  width: 500px;
+  font-family: 'Lato', sans-serif;
 
-  body {
-    background-color: #1e1e1e;
-    margin: 0;
-  }
+}
 
-  img{
-    width:75px;
-    position: absolute;
-    top:0em;
-    /*margin: 20px;*/
-    /*height: 75px;*/
+.submit{
+  text-align: center;
+  padding-top: 1em;
 
-  }
-
-  nav{
-    background: black;
-    position: fixed;
-    height: 64px;
-    border-bottom: 2px solid #121212;
-    top: 0em;
-    width: 100%;
-  }
-
-  nav h3{
-    color:white;
-    position: absolute;
-    display: inline-block;
-    margin-left: 2.5em;
-    font-family: 'Averia Sans Libre', sans-serif;
-    font-size: 2.5em;
-    top: -.9em;
+}
+.substance_form label{
+  color:white;
 
 
-  }
+  /*margin: .5em;*/
+  /*margin-top: 1em;*/
 
-  nav a{
-    display: inline-block;
-    border-radius: 0.25em;
-    padding: .5em;
-    top: .85em;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1px;
-    color: white;
-    text-decoration: none;
-  }
+}
 
-  #signin:hover{
-    background-color:#8c8888;
-  }
-
-  #signup:hover{
-    background-color:#d34245;
-  }
-
-  #signin{
-    position: absolute;
-    right: .75em;
-    background-color: #7b7777;
-  }
-
-  #signup{
-    position: absolute;
-    right: 5.5em;
-    background-color:#ca171b;
-  }
-
-  #welcome_msg {
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1px;
-    line-height: 1.5em;
-    color: #7b7777;
-    width: 300px;
-    margin: 150px auto;
-    text-align: center;
-  }
-
-  .pop {
-    color: white;
-    display: block;
-    font-size: 1.25em;
-    margin-bottom: 1.5em;
-  }
-
-  #footer{
-    height: 15em;
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    bottom: 0em;
-    border-top: 2px solid #121212;
-  }
-
-  .substance_form{
-    margin: 0 auto;
-    margin-top: 1em;
-    width: 500px;
-    font-family: 'Lato', sans-serif;
-
-  }
-
-  .submit{
-    text-align: center;
-    padding-top: 1em;
-
-  }
-  .substance_form label{
-    color:white;
-
-
-    /*margin: .5em;*/
-    /*margin-top: 1em;*/
-
-  }
-
-  .substance_form .line input{
-    margin: .75em;
-    width:50px;
-    background-color: #1e1e1e;
-    border-color: #1e1e1e;
-    font-family: 'Lato', sans-serif;
-    color: white;
-    font-size: 15px;
-    padding: 5px;
-  }
-  .drop_down{
-   background-color: #1e1e1e;
-   color: white;
-   border-color: #1e1e1e;
-   font-size: 15px;
- }
+.substance_form .line input{
+  margin: .75em;
+  width:50px;
+  background-color: #1e1e1e;
+  border-color: #1e1e1e;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+.drop_down{
+ background-color: #1e1e1e;
+ color: white;
+ border-color: #1e1e1e;
+ font-size: 15px;
+}
 
 
 
-  .drop_down select > option{
+.drop_down select > option{
   background-color: #1e1e1e;
   color: white;
   border-color: #1e1e1e;
   font-size: 15px;
-  }
+}
 
 .gender{
   display: inline-block;

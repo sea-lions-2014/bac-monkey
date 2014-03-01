@@ -1,17 +1,16 @@
+
 <div id="alc_form" class="substance_form">
-  <%= form_tag '/alcoholcalc/create.json', :remote=> true do %>
+  <%= form_for :alcohol_calc, url: {action: :create, controller: :alcohol_calc}, remote: true do |f|%>
+  <div class="line">
+    I am a <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]), {required: true}, { :class => "drop_down" }  %> weighing
+    <%= f.number_field :weight, required: true %> pounds. </div>
     <div class="line">
-
-      I am a <%= select_tag :gender, options_for_select([["Male", 'm'],["Female",'f']]), :class=> "drop_down" %> weighing
-    <%= text_field_tag :weight, 200 %> pounds. </div>
-    <div class="line">
-     I had <%= text_field_tag :alcohol, 10 %>drinks over
-    <%= text_field_tag :hours, 2 %> hours.
+      I had <%= f.number_field :drinks, required: true %>drinks over
+     <%= f.number_field :hours, required: true %> hours.
+   </div>
+   <div class="submit">
+    <%= f.submit "Find BAC", :class=> "button" %>
   </div>
-    <div class="submit">
-    <%= submit_tag "Find BAC", :class=> "button" %>
-    </div>
-  <% end  %>
-
+  <% end %>
 </div>
 
