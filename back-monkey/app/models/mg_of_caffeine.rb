@@ -12,6 +12,6 @@ class MgOfCaffeine
     def caffeine_content(cups, mg_caff_per_ounce)
       (cups * 8 * mg_caff_per_ounce).round(1)
     end
-
   end
 end
+
