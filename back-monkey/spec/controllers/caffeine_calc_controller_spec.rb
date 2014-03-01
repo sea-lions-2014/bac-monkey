@@ -5,7 +5,7 @@ describe CaffeineCalcController do
   context '#create' do
 
     before :each do
-      post :create, params: args
+      post :create, caffeine_calc: args
     end
 
     it "creates a caffeine series from data" do

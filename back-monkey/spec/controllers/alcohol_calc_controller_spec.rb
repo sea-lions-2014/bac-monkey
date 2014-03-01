@@ -10,7 +10,7 @@ describe AlcoholCalcController do
     end
 
     it "creates a new AlcoholCalc instance" do
-      expect(assigns(:bac)).to be_a AlcoholCalc
+      expect(assigns(:alcohol_calc)).to be_a AlcoholCalc
     end
 
     it "returns a JSON object" do
