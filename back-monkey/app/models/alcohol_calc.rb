@@ -43,9 +43,7 @@ class AlcoholCalc
     bac_series = [[0, @current_bac]]
 
     build_up_interval_count.times do |interval|
-      # next_bac = next_bac_up(next_bac)
-      next_bac = (next_bac + bac(consumption_rate, @weight, @ratio)) - metabolized
-      next_bac = 0 if next_bac < 0
+      next_bac = next_bac_up(next_bac)
       bac_series << [interval * 0.25 + 0.25, next_bac.round(4)]
     end
 
@@ -81,11 +79,10 @@ class AlcoholCalc
     return 0.66 if gender == "f"
   end
 
-  # def next_bac_up(next_bac)
-  #   (next_bac + bac(consumption_rate, @weight, @ratio)) - metabolized
-  #   next_bac = 0 if next_bac < 0
-  #   next_bac
-  # end
+  def next_bac_up(next_bac)
+    next_bac = (next_bac + bac(consumption_rate, @weight, @ratio)) - metabolized
+    next_bac < 0 ? 0 : next_bac
+  end
 
   def next_bac_down(starting_bac, hours)
     next_bac = (starting_bac - (0.015 * hours)).round(4)
