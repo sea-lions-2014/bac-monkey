@@ -86,19 +86,22 @@ nav a{
   position: fixed;
   bottom: 0em;
   border-top: 2px solid #121212;
+  display: inline-block;
 }
 
 .substance_form{
   margin: 0 auto;
-  margin-top: 1em;
+  /*margin-top: 1em;*/
   width: 500px;
   font-family: 'Lato', sans-serif;
+/*    display: inline-block;
+*/
 
 }
 
 .submit{
   text-align: center;
-  padding-top: 1em;
+  padding-top: .5em;
 
 }
 .substance_form label{
@@ -127,14 +130,6 @@ nav a{
  font-size: 15px;
 }
 
-
-
-.drop_down select > option{
-  background-color: #1e1e1e;
-  color: white;
-  border-color: #1e1e1e;
-  font-size: 15px;
-}
 
 .gender{
   display: inline-block;
@@ -226,10 +221,25 @@ nav a{
 
 }
 
+#form_container{
+  margin: 0 auto;
+  position: relative;
+}
 /*this is just so we could see the list as we worked on it*/
-#lower-nav li{
+#lower-nav a{
+ display: inline-block;
+  border-radius: 0.25em;
+  padding: .5em;
+  top: .85em;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
   color: white;
-  list-style: none;
+  text-decoration: none;
+  background-color: #7b7777;
+  margin-top: .5em;
+  margin: .25em;
+
+
 }
 
 .hidden {
