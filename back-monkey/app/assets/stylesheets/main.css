@@ -226,6 +226,16 @@ nav a{
 
 }
 
+/*this is just so we could see the list as we worked on it*/
+#lower-nav li{
+  color: white;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
 /*-----MEDIA QUERIES-----*/
 
 @media (max-width: 510px) {

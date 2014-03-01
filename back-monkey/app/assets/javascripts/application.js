@@ -15,5 +15,6 @@
 //= require d3.v3
 //= require nv.d3
 //= require getdata
+//= require lowernav
 //= require linechart
 //= require_tree .
