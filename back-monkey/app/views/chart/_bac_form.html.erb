@@ -1,4 +1,3 @@
-
 <div id="alc_form" class="substance_form">
   <%= form_for :alcohol_calc, url: {action: :create, controller: :alcohol_calc}, remote: true do |f|%>
   <div class="line">
@@ -9,7 +8,7 @@
      <%= f.number_field :hours, required: true %> hours.
    </div>
    <div class="submit">
-    <%= f.submit "Find BAC", :class=> "button" %>
+    <%= f.submit "Calculate BAC", :class=> "button" %>
   </div>
   <% end %>
 </div>

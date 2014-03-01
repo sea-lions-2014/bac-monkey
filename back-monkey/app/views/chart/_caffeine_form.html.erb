@@ -1,25 +1,21 @@
-<div id="alc_form">
-  <%= form_for :alcohol_calc, url: {action: :create, controller: :alcohol_calc}, remote: true do |f|%>
+<div id="caffeine_form" class="substance_form hidden">
+  <%= form_for :caffeine_calc, url: {action: :create, controller: :caffeine_calc}, remote: true do |f|%>
     <div class="line">
-      <%= f.label "Weight" %>
-      <%= f.number_field :weight, required: true, min: 1 %>
-      <div class="gender">
-        <%= f.label "Male" %>
-        <%= f.radio_button :gender, "m", required: true %>
-        <%= f.label "Female" %>
-        <%= f.radio_button :gender, "f", required: true %>
-      </div>
+      <%= f.label "I had " %>
+      <%= f.number_field :cups, required: true, min: 1 %>
     </div>
     <div class="line">
-      <%= f.label "How many drinks did you have?" %>
-      <%= f.number_field :alcohol, required: true, min: 1 %>
+      <%= f.label "of" %>
+      <%= f.select :type, required: true %>
+      <%= options_for_select(['coffee', 'tea']) %>
     </div>
     <div class="line">
-      <%= f.label "Over how many hours?" %>
+      <%= f.label "over the course of" %>
       <%= f.number_field :hours, required: true, min: 1 %>
+      <%= f.label "hours." %>
     </div>
     <div class="submit">
-      <%= f.submit "find BAC", :class=> "button" %>
+      <%= f.submit "Check caffeine levels", :class=> "button" %>
     </div>
   <% end %>
 </div>
