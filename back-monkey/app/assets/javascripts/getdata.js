@@ -1,5 +1,5 @@
 $(function(){
-  $('#alcoholform').on('ajax:success', {args: $(this).serialize()}, formatData)
+  $('#alc_form').on('ajax:success', {args: $(this).serialize()}, formatData)
 });
 
 

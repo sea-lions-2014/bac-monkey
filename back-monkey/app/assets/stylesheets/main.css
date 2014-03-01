@@ -95,7 +95,7 @@ nav a{
   border-top: 2px solid #121212;
 }
 
-#substance_form{
+.substance_form{
   margin: 0 auto;
   margin-top: 2em;
   width: 500px;
@@ -107,7 +107,7 @@ nav a{
   padding-top: 1em;
 
 }
-#substance_form label{
+.substance_form label{
   color:white;
 
 
@@ -117,7 +117,8 @@ nav a{
 }
 
 .line input{
-  margin-left: 1em;
+  margin: .75em;
+  width:50px;
 }
 
 .gender{
@@ -126,26 +127,34 @@ nav a{
 
 }
 
-.gender input{
+/*.gender input{
   margin-left: 0em;
   margin-right: 1.5em;
-}
+}*/
 
 .line{
   padding-top: 1em;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  word-spacing: 5px;
+  vertical-align: middle;
+
 
 }
 
-#substance_form .button{
+
+
+.substance_form .button{
   color: white;
   background-color:#ca171b;
   border-radius: 5px;
   border:#ca171b ;
   padding: .5em ;
-  margin-right: 8em;
+  margin: 0 auto;
 }
 
-#substance_form .button:hover{
+.substance_form .button:hover{
   background-color:#d34245;
 }
 

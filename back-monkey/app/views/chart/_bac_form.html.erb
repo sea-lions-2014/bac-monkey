@@ -1,22 +1,13 @@
-<div id="substance_form">
-  <%= form_tag '/alcoholcalc/create.json', id: 'alcoholform', :remote=> true do %>
+<div id="alc_form" class="substance_form">
+  <%= form_tag '/alcoholcalc/create.json', :remote=> true do %>
     <div class="line">
-    <%= label_tag "Weight" %>
-    <%= text_field_tag :weight, 200 %>
-      <div class="gender">
-      <%= label_tag :gender, "Male" %>
-      <%= radio_button_tag :gender, "m", :checked %>
-      <%= label_tag :gender, "Female" %>
-      <%= radio_button_tag :gender, "f" %>
-      </div>
-    </div>
+
+      I am a <%= select_tag :gender, options_for_select([["Male", 'm'],["Female",'f']]) %> weighing
+    <%= text_field_tag :weight, 200 %> pounds. </div>
     <div class="line">
-    <%= label_tag :alcohol, "How many drinks have you had?" %>
-    <%= text_field_tag :alcohol, 10 %></div>
-    <div class="line">
-    <%= label_tag :hours, "Over how many hours?" %>
-    <%= text_field_tag :hours, 2 %>
-    </div>
+     I had <%= text_field_tag :alcohol, 10 %>drinks over
+    <%= text_field_tag :hours, 2 %> hours.
+  </div>
     <div class="submit">
     <%= submit_tag "Find BAC", :class=> "button" %>
     </div>
