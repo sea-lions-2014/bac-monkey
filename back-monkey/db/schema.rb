@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(:version => 20140301010938) do
   create_table "users", :force => true do |t|
     t.string   "user_name"
     t.string   "email"
-    t.string   "password_hash"
+    t.string   "password_digest"
     t.string   "gender"
     t.integer  "weight"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
