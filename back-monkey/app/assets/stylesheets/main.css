@@ -87,15 +87,17 @@ nav a{
   bottom: 0em;
   border-top: 2px solid #121212;
   display: inline-block;
+
 }
 
 .substance_form{
   margin: 0 auto;
-  /*margin-top: 1em;*/
+  margin-top: 1em;
   width: 500px;
   font-family: 'Lato', sans-serif;
-/*    display: inline-block;
-*/
+  position: relative;
+    /*display: inline-block;*/
+
 
 }
 
@@ -222,12 +224,12 @@ nav a{
 }
 
 #form_container{
-  margin: 0 auto;
-  position: relative;
+ 
 }
 /*this is just so we could see the list as we worked on it*/
 #lower-nav a{
- display: inline-block;
+ display: block;
+ width: 5em;
   border-radius: 0.25em;
   padding: .5em;
   top: .85em;
@@ -236,11 +238,22 @@ nav a{
   color: white;
   text-decoration: none;
   background-color: #7b7777;
-  margin-top: .5em;
+  margin-top: 1em;
   margin: .25em;
 
 
 }
+#lower-nav{
+  width: 10%;
+  position: fixed;
+  /*margin:2em 0 0 0 ;*/
+
+}
+
+#lower-nav a:active{
+  background-color: #ca171b;
+}
+
 
 .hidden {
   display: none;
