@@ -4,6 +4,7 @@ $(function(){
 
 
 function formatData(event, data, status, xhr){
+  debugger
   var values = []
   for (var i=0; i< data.length; i++){
     values.push({x: data[i][0]*60, y: data[i][1]});
