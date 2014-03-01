@@ -2,7 +2,7 @@
   <%= form_tag '/alcoholcalc/create.json', :remote=> true do %>
     <div class="line">
 
-      I am a <%= select_tag :gender, options_for_select([["Male", 'm'],["Female",'f']]) %> weighing
+      I am a <%= select_tag :gender, options_for_select([["Male", 'm'],["Female",'f']]), :class=> "drop_down" %> weighing
     <%= text_field_tag :weight, 200 %> pounds. </div>
     <div class="line">
      I had <%= text_field_tag :alcohol, 10 %>drinks over
