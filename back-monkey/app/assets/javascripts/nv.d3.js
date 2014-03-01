@@ -414,10 +414,10 @@ window.nv.tooltip.* also has various helper methods.
         }
 
         */
-        ,   gravity = 'w'   //Can be 'n','s','e','w'. Determines how tooltip is positioned.
+        ,   gravity = 'n'   //Can be 'n','s','e','w'. Determines how tooltip is positioned.
         ,   distance = 50   //Distance to offset tooltip from the mouse location.
         ,   snapDistance = 25   //Tolerance allowed before tooltip is moved from its current position (creates 'snapping' effect)
-        ,   fixedTop = null //If not null, this fixes the top position of the tooltip.
+        ,   fixedTop = 175 //If not null, this fixes the top position of the tooltip.
         ,   classes = null  //Attaches additional CSS classes to the tooltip DIV that is created.
         ,   chartContainer = null   //Parent DIV, of the SVG Container that holds the chart.
         ,   tooltipElem = null  //actual DOM element representing the tooltip.
@@ -456,7 +456,7 @@ window.nv.tooltip.* also has various helper methods.
                 .attr("colspan",3)
                 .append("strong")
                     .classed("x-value",true)
-                    .html(headerFormatter("after "+d.value+" minutes"));
+                    .html(headerFormatter("after "+d.value/60+" hours"));
 
             var tbodyEnter = table.selectAll("tbody")
                 .data([d])

@@ -6,12 +6,15 @@
 #chart{
   height: 30em;
   width: 40em;
+  color: #FFFFFF;
 }
 
-.chartWrap {
+.chartWrap{
   margin: 0;
   padding: 0;
   overflow: hidden;
+  color: #FFFFFF;
+
 }
 
 /********************
@@ -85,6 +88,7 @@
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
+
 
 .nvtooltip p {
   margin: 0;
@@ -163,10 +167,13 @@ svg {
 
 svg text {
   font: normal 12px Arial;
+  color: #FFFFFF;
 }
+
 
 svg .title {
  font: bold 14px Arial;
+ color: #FFFFFF;
 }
 
 .nvd3 .nv-background {
@@ -217,7 +224,7 @@ svg .title {
 
 .nvd3 .nv-axis path {
   fill: none;
-  stroke: #000;
+  stroke: #FFFFFF;
   stroke-opacity: .75;
   shape-rendering: crispEdges;
 }
@@ -243,12 +250,15 @@ svg .title {
 
 .nvd3 .nv-axis .nv-axisMaxMin text {
   font-weight: bold;
+
+
 }
 
 .nvd3 .x  .nv-axis .nv-axisMaxMin text,
 .nvd3 .x2 .nv-axis .nv-axisMaxMin text,
 .nvd3 .x3 .nv-axis .nv-axisMaxMin text {
   text-anchor: middle
+
 }
 
 
@@ -769,5 +779,5 @@ Interactive Layer
   pointer-events:none;
 }
 .nvd3 line.nv-guideline {
-  stroke: #ccc;
+  stroke: #FFFFFF;
 }
