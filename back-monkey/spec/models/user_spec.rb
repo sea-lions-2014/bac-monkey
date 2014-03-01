@@ -18,9 +18,9 @@ describe User  do
       expect(not_user.save).to eq false
     end
 
-    it "encrypts a password" do
-      expect(person.password_hash).to_not eq "password"
-      expect(not_user.password_hash).to eq "password"
+    it "can match a password correctly" do
+      expect(person.password_digest).to_not eq "pasword"
+      expect(person.password_digest).to eq "password"
     end
   end
 end
