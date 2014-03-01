@@ -1,9 +1,9 @@
 class CaffeineCalcController < ApplicationController
   def create
     args = params[:caffeine_calc]
-    args[:milligrams] = args[:milligrams].to_i
     args[:hours] = args[:hours].to_i
 
+    args[:milligrams] = MgOfCaffeine.caffeine_content(args[:type], args[:cups])
     @caffeine_series = CaffeineCalc.mg_series(args)
 
     render json: @caffeine_series

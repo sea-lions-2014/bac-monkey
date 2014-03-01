@@ -15,26 +15,26 @@ function drawChart(dataObj) {
   ;
 
 
-      chart.xAxis
-          .axisLabel("Time")
-          ;
+  chart.xAxis
+      .axisLabel("Time")
+      ;
 
-      chart.yAxis
-          .axisLabel("BAC")
-          .tickFormat(d3.format(".4s"))
-          ;
+  chart.yAxis
+      .axisLabel(dataObj[0].key)
+      .tickFormat(d3.format(".4s"))
+      ;
 
-      // chart.forceY([0,0.08])
+  // chart.forceY([0,0.08])
 
-      d3.select("svg")
-          .datum(dataObj)
-          .transition().duration(500).call(chart);
+  d3.select("svg")
+      .datum(dataObj)
+      .transition().duration(500).call(chart);
 
-      nv.utils.windowResize(
-              function() {
-                  chart.update();
-              }
-          );
+  nv.utils.windowResize(
+          function() {
+              chart.update();
+          }
+      );
 
       return chart;
 }

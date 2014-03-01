@@ -10,11 +10,11 @@ function formatBACData(event, data, status, xhr){
 }
 
 function formatCaffeineData(event, data, status, xhr){
-  formatData(data, 'Caffeine')
+  formatData(data, 'mg of Caffeine')
 }
 
 function formatNicotineData(event, data, status, xhr){
-  formatData(data, 'Nicotine')
+  formatData(data, 'mg of Nicotine')
 }
 
 function formatData(data, key){
