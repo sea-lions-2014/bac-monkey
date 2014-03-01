@@ -5,5 +5,16 @@
 </div>
 
 <div id="footer">
-  <%= render "chart/bac_form" %>
+  <div id="lower-nav">
+    <ul>
+      <li id="alc">Alcohol</li>
+      <li id="caffeine">Caffeine</li>
+      <li id="nicotine">Nicotine</li>
+    </ul>
+  </div>
+
+  <div id="form_container">
+    <%= render "chart/bac_form" %>
+    <%= render "chart/caffeine_form" %>
+  </div>
 </div>
