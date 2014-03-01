@@ -231,15 +231,16 @@ nav a{
  display: block;
  width: 5em;
   border-radius: 0.25em;
-  padding: .5em;
+  padding: 1.75em 1em 1.75em 1em;
   top: .85em;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
   color: white;
   text-decoration: none;
   background-color: #7b7777;
-  margin-top: 1em;
+  /*margin-top: 1em;*/
   margin: .25em;
+
 
 
 }
