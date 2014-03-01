@@ -6,8 +6,8 @@ class CaffeineCalcController < ApplicationController
     args = params[:caffeine_calc]
     args[:hours] = args[:hours].to_i
 
-    caffeine_calc = CaffeineCalc.new
-    @caffeine_series = caffeine_calc.mg_series(args)
+    caffeine_calc = CaffeineCalc.new(args)
+    @caffeine_series = caffeine_calc.mg_series
 
     render json: @caffeine_series
   end
