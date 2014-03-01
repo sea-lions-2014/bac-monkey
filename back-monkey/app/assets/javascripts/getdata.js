@@ -17,6 +17,7 @@ function formatNicotineData(event, data, status, xhr){
   formatData(data, 'mg of Nicotine')
 }
 
+
 function formatData(data, key){
   var values = []
   for (var i=0; i< data.length; i++){
