@@ -1,0 +1,18 @@
+<div id="nicotine_form" class="substance_form hidden">
+  <%= form_for :nicotine_calc, url: {action: :create, controller: :nicotine_calc}, remote: true do |f|%>
+    <div class="line">
+      I had
+      <%= f.number_field :cigarettes, required: true, min: 1 %> 
+      <%= f.select :type, options_for_select([['cigarettes', 'cigarettes'],['other', 'other']]), {required: true}, {:class => "drop_down"}%>
+    </div>
+    <div class="line">
+Over the course of     
+<%= f.number_field :hours, required: true, min: 1 %> hours.
+    </div>
+    <div class="submit">
+      <%= f.submit "Check nicotine levels", :class=> "button" %>
+    </div>
+  <% end %>
+</div>
+
+
