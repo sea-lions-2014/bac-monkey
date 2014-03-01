@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AlcoholCalc do
   args = {alcohol: 1.8, weight: 160, gender: "m", hours: 1}
-  let(:alccalc) { AlcoholCalc.new(args)}
+  let(:alccalc) { AlcoholCalc.new(args) }
 
   context "#bac_series" do
     it "returns a nested array" do
