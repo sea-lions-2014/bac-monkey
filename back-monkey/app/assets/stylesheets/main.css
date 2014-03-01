@@ -251,13 +251,32 @@ nav a{
 
 }
 
-#lower-nav a:active{
-  background-color: #ca171b;
-}
-
-
 .hidden {
   display: none;
+}
+
+#lower-nav #alc{
+  background-color: #FF3D00;
+}
+
+#lower-nav #caffeine{
+  background-color: #0969A2;
+}
+
+ #lower-nav #nicotine{
+background-color: #00B358;
+}
+
+#lower-nav #alc:active{
+  background-color: #A62800;
+}
+
+#lower-nav #caffeine:active{
+  background-color: #03436A;
+}
+
+ #lower-nav #nicotine:active{
+background-color: #007439;
 }
 
 /*-----MEDIA QUERIES-----*/
