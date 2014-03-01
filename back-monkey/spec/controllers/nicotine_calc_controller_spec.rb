@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe nicotineCalcController do
+describe NicotineCalcController do
   let!(:args){{cigarettes: 4, hours: 2}}
   context '#create' do
 
