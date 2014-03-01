@@ -5,7 +5,7 @@ describe NicotineCalcController do
   context '#create' do
 
     before :each do
-      post :create, params: args
+      post :create, nicotine_calc: args
     end
 
     it "creates a nicotine series from data" do
