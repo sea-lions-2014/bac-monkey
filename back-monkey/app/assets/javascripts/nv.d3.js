@@ -440,6 +440,10 @@ window.nv.tooltip.* also has various helper methods.
             return d;
         };
 
+        var substanceColor = function(substance){
+          return $('#'+substance.toLowerCase()).css('background-color');
+        }
+
         //By default, the tooltip model renders a beautiful table inside a DIV.
         //You can override this function if a custom tooltip is desired.
         var contentGenerator = function(d) {
@@ -472,15 +476,9 @@ window.nv.tooltip.* also has various helper methods.
                 .classed("legend-color-guide",true)
                 .append("div")
                     .style("background-color", function(p) { 
-                      var substance = p.key.toLowerCase().split(' ');
+                      var substance = p.key.split(' ');
                       substance = substance[substance.length - 1];
-                      if ($('#'+substance).length == 0){
-                        return $('#alc').css('background-color');
-                      }
-                      else
-                      {
-                        return $('#'+substance).css('background-color');
-                      }
+                      return substanceColor(substance);
                     });
 
             trowEnter.append("td")
@@ -488,7 +486,7 @@ window.nv.tooltip.* also has various helper methods.
                 .html(function(p,i) { return valueFormatter(p.value,i) });
             trowEnter.append("td")
                 .classed("key",true)
-                .html(function(p) {return p.key + " remaining"});
+                .html(function(p) { return p.key });
 
 
             trowEnter.selectAll("td").each(function(p) {

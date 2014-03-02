@@ -3,7 +3,7 @@ $(function(){
 });
 
 function lowerNavEvents(){
-  $('#alc').click(toggleFormDisplay)
+  $('#bac').click(toggleFormDisplay)
   $('#caffeine').click(toggleFormDisplay)
   $('#nicotine').click(toggleFormDisplay)
 }
