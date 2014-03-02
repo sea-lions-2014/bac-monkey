@@ -42,34 +42,42 @@ nav a{
   text-decoration: none;
 }
 
+#profile-button{
+  position: absolute;
+  right: 6.75em;
+  background-color: #0969A2;
+}
+#profile-button:hover{
+  background-color: #3a87b4;
+}
+
 #signout{
   position: absolute;
   right: .75em;
   background-color: #7b7777;
 }
 #signout:hover{
-  background-color:#d34245;
-}
-
-
-#signin:hover{
   background-color:#8c8888;
 }
 
-#signup:hover{
-  background-color:#d34245;
-}
 
 #signin{
   position: absolute;
   right: .75em;
   background-color: #7b7777;
 }
+#signin:hover{
+  background-color:#8c8888;
+}
+
 
 #signup{
   position: absolute;
   right: 5.5em;
   background-color:#ca171b;
+}
+#signup:hover{
+  background-color:#d34245;
 }
 
 #welcome_msg {
@@ -308,9 +316,11 @@ background-color: #007439;
   border-bottom: 1px solid gray;
 }
 
+
+
 /*-----MEDIA QUERIES-----*/
 
-@media (max-width: 510px) {
+@media (max-width: 530px) {
   nav h3 {
     display: none;
   }
