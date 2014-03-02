@@ -6,7 +6,6 @@ $(function(){
 
 
 function getBACChart(event, data, status, xhr){
-  debugger
   var BACDataObj = formatData(data, 'BAC');
   Chart.draw(BACDataObj, $('#alc').css('background-color'));
 }

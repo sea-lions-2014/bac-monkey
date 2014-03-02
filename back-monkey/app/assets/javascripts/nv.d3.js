@@ -468,13 +468,23 @@ window.nv.tooltip.* also has various helper methods.
                 .classed("highlight", function(p) { return p.highlight})
                 ;
 
-            // trowEnter.append("td")
-            //     .classed("legend-color-guide",true)
-            //     .append("div")
-            //         // .style("background-color", function(p) { return p.color});
+            trowEnter.append("td")
+                .classed("legend-color-guide",true)
+                .append("div")
+                    .style("background-color", function(p) { 
+                      var substance = p.key.toLowerCase().split(' ');
+                      substance = substance[substance.length - 1];
+                      if ($('#'+substance).length == 0){
+                        return $('#alc').css('background-color');
+                      }
+                      else
+                      {
+                        return $('#'+substance).css('background-color');
+                      }
+                    });
+
             trowEnter.append("td")
                 .classed("value",true)
-                .html(headerFormatter("after "+d.value/60+" hours"))
                 .html(function(p,i) { return valueFormatter(p.value,i) });
             trowEnter.append("td")
                 .classed("key",true)
