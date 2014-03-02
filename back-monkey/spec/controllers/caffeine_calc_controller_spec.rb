@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe CaffeineCalcController do
-  let!(:args){{milligrams: 150, hours: 2}}
+  let!(:args){{cups: 8, hours: 2, type: 'coffee'}}
   context '#create' do
 
     before :each do
-      post :create, params: args
+      post :create, caffeine_calc: args
     end
 
     it "creates a caffeine series from data" do
