@@ -17,6 +17,7 @@ FactoryGirl.define do
   end
 
   factory :empty_params, class: User do
+  end
 
   factory :consumption_record do
     substance { "caffeine" }

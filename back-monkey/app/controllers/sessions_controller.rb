@@ -4,8 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_email_or_user_name(params[:user][:user_name])
-    login(user) if user.authenticate([params[:user][:password]])
+    user = User.find_by_user_name(params[:user][:user_name])
+    if user.authenticate(params[:user][:password])
+      login(user) 
+      redirect_to user_path(user)
+    end
   end
 
   def destroy
