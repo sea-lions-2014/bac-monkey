@@ -12,6 +12,7 @@ describe UsersController do
   context '#create' do
     let!(:user) { build :user }
     let!(:non_user) { build :non_user }
+
     it "creates a user given valid info" do
       post :create, user: attributes_for(:user)
       expect(assigns(:user).save).to be true
