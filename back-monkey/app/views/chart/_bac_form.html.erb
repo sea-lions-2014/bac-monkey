@@ -2,10 +2,10 @@
   <%= form_for :alcohol_calc, url: {action: :create, controller: :alcohol_calc}, remote: true do |f|%>
   <div class="line">
     I am a <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]), {required: true}, { :class => "drop_down" }  %> weighing
-    <%= f.number_field :weight, required: true %> pounds. </div>
+    <%= f.number_field :weight, required: true, min: 0 %> pounds. </div>
     <div class="line">
       I had <%= f.number_field :drinks, required: true %>drinks over
-     <%= f.number_field :hours, required: true %> hours.
+     <%= f.number_field :hours, required: true, min: 0 %> hours.
    </div>
    <div class="submit">
     <%= f.submit "Calculate BAC", :class=> "button" %>
