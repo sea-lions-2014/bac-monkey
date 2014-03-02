@@ -14,7 +14,7 @@ class AlcoholCalcController < ApplicationController
     render json: @bac
   end
 
-  def save_consumption_record
+  def save_consumption_record(args)
       current_user.consumption_records.build(substance: "alcohol", 
                                              amount: args[:drinks],
                                              unit_of_measure: "drink")
