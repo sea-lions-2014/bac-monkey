@@ -21,6 +21,20 @@
 </nav>
 <%= render 'users/sign_in_form' %>
 <%= yield %>
+<div id="footer">
+  <div id="lower-nav">
+      <a href="#" id="bac">Alcohol</a>
+      <a href="#" id="caffeine">Caffeine</a>
+      <a href="#" id="nicotine">Nicotine</a>
+  </div>
+
+  <div id="form_container">
+    <%= render "chart/bac_form" %>
+    <%= render "chart/caffeine_form" %>
+    <%= render "chart/nicotine_form" %>
+
+  </div>
+</div>
 
 </body>
 </html>

@@ -1,7 +1,3 @@
-$(function(){
-  lowerNavEvents();
-});
-
 function lowerNavEvents(){
   $('#lower-nav a').click(toggleFormDisplay)
 }

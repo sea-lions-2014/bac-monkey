@@ -1,10 +1,10 @@
-$(function(){
+function AJAXEvents(){
   $('#bac_form').on('ajax:success', {args: $(this).serialize()}, formatBACData)
+
   $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, formatCaffeineData)
+
   $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, formatNicotineData)
-});
-
-
+}
 
 function formatBACData(event, data, status, xhr){
   var BACdataObj = formatData(data, 'BAC');
