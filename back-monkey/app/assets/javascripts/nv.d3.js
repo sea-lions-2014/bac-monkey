@@ -2792,8 +2792,6 @@ nv.models.scatter = function() {
           .classed('hover', function(d) { return d.hover });
       groups
           .transition()
-          .style('fill', function(d,i) { return color(d, i) })
-          .style('stroke', function(d,i) { return color(d, i) })
           .style('stroke-opacity', 1)
           .style('fill-opacity', .5);
 
@@ -2807,7 +2805,7 @@ nv.models.scatter = function() {
             // .style('stroke', function (d,i) { return d.color })
             .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x0(getX(d,i))) })
             .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y0(getY(d,i))) })
-            .attr('r', function(d,i) { return Math.sqrt(z(getSize(d,i))/Math.PI) });
+            .attr('r', function(d,i) { return (Math.sqrt(z(getSize(d,i))/Math.PI))*3 });
         points.exit().remove();
         groups.exit().selectAll('path.nv-point').transition()
             .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x(getX(d,i))) })
@@ -2823,7 +2821,7 @@ nv.models.scatter = function() {
         points.transition()
             .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x(getX(d,i))) })
             .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y(getY(d,i))) })
-            .attr('r', function(d,i) { return Math.sqrt(z(getSize(d,i))/Math.PI) });
+            .attr('r', function(d,i) { return (Math.sqrt(z(getSize(d,i))/Math.PI))*3 });
 
       } else {
 
