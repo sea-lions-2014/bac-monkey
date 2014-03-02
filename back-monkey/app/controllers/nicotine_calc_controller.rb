@@ -6,10 +6,16 @@ class NicotineCalcController < ApplicationController
     args[:hours] = args[:hours].to_i
     args[:milligrams] = args[:cigarettes].to_i
 
+    save_consumption_record(args) if current_user
     nicotine_calc = NicotineCalc.new(args)
     @nicotine_series = nicotine_calc.mg_series
 
     render json: @nicotine_series
   end
 
+  def save_consumption_record(args)
+      current_user.consumption_records.build(substance: "nicotine", 
+                                             amount: args[:milligrams],
+                                             unit_of_measure: "mg")
+  end
 end
