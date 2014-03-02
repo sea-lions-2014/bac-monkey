@@ -17,4 +17,5 @@
 //= require getdata
 //= require lowernav
 //= require linechart
+//= require signin
 //= require_tree .
