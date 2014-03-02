@@ -13,6 +13,7 @@ var Chart = (function(){
     var color = $('#'+substance).css('background-color');
     $('.nv-line').css('stroke', color);
     $('.nv-legend-symbol').css('stroke', color).css('fill', color);
+    $('.nv-group').css('stroke', color).css('fill', color)
   }
 
   var _buildChart = function(dataObj){
