@@ -208,20 +208,12 @@ nav a{
 
   .nv-line{
     color:white;
-    stroke: #ca171b;
-
   }
 
   .nvd3 .nv-groups path.nv-line{
    stroke-width: 7.5px;
    stroke-linecap:"round";
  }
-
- .nv-legend-symbol{
-  stroke: #ca171b;
-  fill: #ca171b;
-
-}
 
 .registration_form{
   margin-top: 300px;
