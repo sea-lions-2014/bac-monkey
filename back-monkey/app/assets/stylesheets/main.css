@@ -42,6 +42,16 @@ nav a{
   text-decoration: none;
 }
 
+#signout{
+  position: absolute;
+  right: .75em;
+  background-color: #7b7777;
+}
+#signout:hover{
+  background-color:#d34245;
+}
+
+
 #signin:hover{
   background-color:#8c8888;
 }
