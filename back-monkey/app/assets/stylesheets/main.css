@@ -3,13 +3,16 @@ body {
   margin: 0;
 }
 
-img{
+nav img{
   width:75px;
   position: absolute;
   top:0em;
+  cursor: pointer;
   /*margin: 20px;*/
   /*height: 75px;*/
-
+}
+nav img:hover{
+  opacity: 0.7;
 }
 
 nav{
