@@ -440,6 +440,10 @@ window.nv.tooltip.* also has various helper methods.
             return d;
         };
 
+        var substanceColor = function(substance){
+          return $('#'+substance.toLowerCase()).css('background-color');
+        }
+
         //By default, the tooltip model renders a beautiful table inside a DIV.
         //You can override this function if a custom tooltip is desired.
         var contentGenerator = function(d) {
@@ -471,13 +475,18 @@ window.nv.tooltip.* also has various helper methods.
             trowEnter.append("td")
                 .classed("legend-color-guide",true)
                 .append("div")
-                    .style("background-color", function(p) { return p.color});
-            trowEnter.append("td")
-                .classed("key",true)
-                .html(function(p) {return p.key});
+                    .style("background-color", function(p) { 
+                      var substance = p.key.split(' ');
+                      substance = substance[substance.length - 1];
+                      return substanceColor(substance);
+                    });
+
             trowEnter.append("td")
                 .classed("value",true)
                 .html(function(p,i) { return valueFormatter(p.value,i) });
+            trowEnter.append("td")
+                .classed("key",true)
+                .html(function(p) { return p.key });
 
 
             trowEnter.selectAll("td").each(function(p) {
@@ -1520,8 +1529,6 @@ nv.models.legend = function() {
       series.classed('disabled', function(d) { return d.disabled });
       series.exit().remove();
       series.select('circle')
-          .style('fill', function(d,i) { return d.color || color(d,i)})
-          .style('stroke', function(d,i) { return d.color || color(d, i) });
       series.select('text').text(getKey);
 
 
@@ -2796,8 +2803,8 @@ nv.models.scatter = function() {
         var points = groups.selectAll('circle.nv-point')
             .data(function(d) { return d.values }, pointKey);
         points.enter().append('circle')
-            .style('fill', function (d,i) { return d.color })
-            .style('stroke', function (d,i) { return d.color })
+            // .style('fill', function (d,i) { return d.color })
+            // .style('stroke', function (d,i) { return d.color })
             .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x0(getX(d,i))) })
             .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y0(getY(d,i))) })
             .attr('r', function(d,i) { return Math.sqrt(z(getSize(d,i))/Math.PI) });
@@ -2823,8 +2830,8 @@ nv.models.scatter = function() {
         var points = groups.selectAll('path.nv-point')
             .data(function(d) { return d.values });
         points.enter().append('path')
-            .style('fill', function (d,i) { return d.color })
-            .style('stroke', function (d,i) { return d.color })
+            // .style('fill', function (d,i) { return d.color })
+            // .style('stroke', function (d,i) { return d.color })
             .attr('transform', function(d,i) {
               return 'translate(' + x0(getX(d,i)) + ',' + y0(getY(d,i)) + ')'
             })

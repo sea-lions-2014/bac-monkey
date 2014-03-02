@@ -9,7 +9,6 @@ img{
   top:0em;
   /*margin: 20px;*/
   /*height: 75px;*/
-
 }
 
 nav{
@@ -144,84 +143,80 @@ nav a{
   margin-right: 1.5em;
   }*/
 
-  .line{
-    padding-top: .5em;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    word-spacing: 5px;
-    vertical-align: middle;
-
-
-  }
+.line{
+  padding-top: .5em;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  word-spacing: 5px;
+  vertical-align: middle;
+}
 
 
 
-  .substance_form .button{
-    color: white;
-    background-color:#ca171b;
-    border-radius: 5px;
-    border:#ca171b ;
-    padding: 1em ;
-    margin: 0 auto;
-    font-size: 12px;
-  }
+.substance_form .button{
+  color: white;
+  background-color:#ca171b;
+  border-radius: 5px;
+  border:#ca171b ;
+  padding: 1em ;
+  margin: 0 auto;
+  font-size: 12px;
+}
 
-  .substance_form .button:hover{
-    background-color:#d34245;
-  }
+.substance_form .button:hover{
+  background-color:#d34245;
+}
 
-  #chart{
-    margin: 0 auto;
-    margin-top: 10em;
-    color: #BDBDBD;
-    width:100%;
-    opacity: 50%;
-  }
+#chart{
+  margin: 0 auto;
+  margin-top: 10em;
+  color: #BDBDBD;
+  width:100%;
+  opacity: 50%;
+}
 
-  .tick text{
-    fill:white;
-    font-size: 12px;
-    font-family: 'Lato', sans-serif;
-
-  }
-
-  .nv-axisMaxMin{
-    fill:white;
-    stroke:none;
-    font-size: 12px;
-  }
-
-  .nv-legend{
-    fill:white;
-  }
-
-  .nv-guideline{
-    stroke:2px;
-  }
-
-  .nv-axislabel{
-    fill:white;
-    font-family: 'Lato', sans-serif;
-
-  }
-
-  .nv-line{
-    color:white;
-    stroke: #ca171b;
-
-  }
-
-  .nvd3 .nv-groups path.nv-line{
-   stroke-width: 7.5px;
-   stroke-linecap:"round";
- }
-
- .nv-legend-symbol{
-  stroke: #ca171b;
-  fill: #ca171b;
+.tick text{
+  fill:white;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
 
 }
+
+.nv-axisMaxMin{
+  fill:white;
+  stroke:none;
+  font-size: 12px;
+}
+
+.nv-legend{
+  fill:white;
+}
+
+.nv-guideline{
+  stroke:2px;
+}
+
+.nv-axislabel{
+  fill:white;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.nv-line{
+  color:white;
+  /*stroke: #ca171b;*/
+}
+
+.nvd3 .nv-groups path.nv-line{
+  stroke-width: 7.5px;
+  stroke-linecap:"round";
+}
+
+/*.nv-legend-symbol{
+  stroke: #ca171b;
+  fill: #ca171b;
+}*/
 
 .registration_form{
   margin-top: 300px;
@@ -270,7 +265,7 @@ nav a{
   display: none;
 }
 
-#lower-nav #alc{
+#lower-nav #bac{
   background-color: #FF3D00;
 }
 
@@ -282,7 +277,7 @@ nav a{
 background-color: #00B358;
 }
 
-#lower-nav #alc:active{
+#lower-nav #bac:active{
   background-color: #A62800;
 }
 

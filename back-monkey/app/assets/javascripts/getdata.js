@@ -1,21 +1,23 @@
 $(function(){
-  $('#alc_form').on('ajax:success', {args: $(this).serialize()}, formatBACData)
-  $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, formatCaffeineData)
-  $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, formatNicotineData)
+  $('#bac_form').on('ajax:success', {args: $(this).serialize()}, getBACChart)
+  $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, getCaffeineChart)
+  $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, getNicotineChart)
 });
 
 
-function formatBACData(event, data, status, xhr){
-  formatData(data, 'BAC')
+function getBACChart(event, data, status, xhr){
+  var BACDataObj = formatData(data, 'BAC');
+  Chart.draw(BACDataObj, $('#bac').css('background-color'));
 }
 
-function formatCaffeineData(event, data, status, xhr){
-  formatData(data, 'mg of Caffeine')
+function getCaffeineChart(event, data, status, xhr){
+  var caffeineDataObj = formatData(data, 'mg of Caffeine')
+  Chart.draw(caffeineDataObj, $('#caffeine').css('background-color'));
 }
 
-function formatNicotineData(event, data, status, xhr){
-  debugger
-  formatData(data, 'mg of Nicotine')
+function getNicotineChart(event, data, status, xhr){
+  var nicotineDataObj = formatData(data, 'mg of Nicotine')
+  Chart.draw(nicotineDataObj, $('#nicotine').css('background-color'));
 }
 
 
@@ -30,5 +32,5 @@ function formatData(data, key){
       values: values
     }
   ]
-  drawChart(dataObj);
+  return dataObj;
 }

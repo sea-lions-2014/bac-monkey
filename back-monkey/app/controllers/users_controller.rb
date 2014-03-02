@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    p @user
   end
 
 end
