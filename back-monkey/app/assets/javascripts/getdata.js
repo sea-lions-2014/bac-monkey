@@ -1,5 +1,5 @@
 $(function(){
-  $('#alc_form').on('ajax:success', {args: $(this).serialize()}, getBACChart)
+  $('#bac_form').on('ajax:success', {args: $(this).serialize()}, getBACChart)
   $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, getCaffeineChart)
   $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, getNicotineChart)
 });
@@ -7,7 +7,7 @@ $(function(){
 
 function getBACChart(event, data, status, xhr){
   var BACDataObj = formatData(data, 'BAC');
-  Chart.draw(BACDataObj, $('#alc').css('background-color'));
+  Chart.draw(BACDataObj, $('#bac').css('background-color'));
 }
 
 function getCaffeineChart(event, data, status, xhr){
