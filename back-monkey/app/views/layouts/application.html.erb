@@ -12,10 +12,10 @@
 <nav id="topbar">
   <%= image_tag("smoking_monkey.jpg", :alt => "monkey_logo") %>
   <h3>Back Monkey</h3>
-  <a href="#" id="signin">Sign in</a>
-  <a href="#" id="signup">Sign up</a>
+  <%= link_to "Sign In", new_session_path, id:"signin", remote: true %>
+  <%= link_to "Sign Up", new_user_path, id:"signup" %>
 </nav>
-
+<%= render 'users/sign_in_form' %>
 <%= yield %>
 
 </body>

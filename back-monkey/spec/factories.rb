@@ -1,8 +1,9 @@
 FactoryGirl.define do
-  factory :user do params =
+  
+  factory :user do
     user_name "David"
     email "email@yesanemail.com"
-    password_digest BCrypt::Password.create("password")
+    password "password"
     gender 'm'
     weight 123
   end
@@ -10,7 +11,7 @@ FactoryGirl.define do
   factory :non_user, class: User do
     user_name "David"
     email "notanemail"
-    password_digest "password"
+    password "password"
     gender 'm'
     weight 123
   end
