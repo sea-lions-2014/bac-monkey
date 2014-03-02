@@ -1,5 +1,5 @@
 $(function(){
-  $('#alc_form').on('ajax:success', {args: $(this).serialize()}, formatBACData)
+  $('#bac_form').on('ajax:success', {args: $(this).serialize()}, formatBACData)
   $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, formatCaffeineData)
   $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, formatNicotineData)
 });
@@ -14,7 +14,6 @@ function formatCaffeineData(event, data, status, xhr){
 }
 
 function formatNicotineData(event, data, status, xhr){
-  debugger
   formatData(data, 'mg of Nicotine')
 }
 

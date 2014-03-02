@@ -270,7 +270,7 @@ nav a{
   display: none;
 }
 
-#lower-nav #alc{
+#lower-nav #bac{
   background-color: #FF3D00;
 }
 
@@ -282,7 +282,7 @@ nav a{
 background-color: #00B358;
 }
 
-#lower-nav #alc:active{
+#lower-nav #bac:active{
   background-color: #A62800;
 }
 
