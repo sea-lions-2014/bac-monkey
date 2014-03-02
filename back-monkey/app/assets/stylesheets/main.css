@@ -292,8 +292,20 @@ background-color: #00B358;
   background-color: #03436A;
 }
 
- #lower-nav #nicotine:active{
+#lower-nav #nicotine:active{
 background-color: #007439;
+}
+
+#user-profile {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  color: white;
+  width: 50%;
+  margin: 150px auto;
+}
+
+#user-profile h3 {
+  border-bottom: 1px solid gray;
 }
 
 /*-----MEDIA QUERIES-----*/
