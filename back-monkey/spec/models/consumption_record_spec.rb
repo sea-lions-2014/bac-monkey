@@ -18,4 +18,13 @@ describe ConsumptionRecord do
       expect(drink_record.dose_description).to eq "1 drink"
     end
   end
+
+  context '#update_user_total' do
+    let!(:user) { FactoryGirl.create :user }
+    it "increments the associated user's substance total when saved" do
+      expect {
+        user.consumption_records.create(substance: "caffeine", amount: 200, unit_of_measure: "mg")
+      }.to change { user.reload.total_caffeine }.by(200)
+    end
+  end
 end

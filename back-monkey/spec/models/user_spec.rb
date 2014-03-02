@@ -1,10 +1,12 @@
 require 'spec_helper'
 
-describe User  do
+describe User do
   context "User model" do
     let(:person){create :user}
     let(:not_user){build :non_user}
     let(:empty_params){build :empty_params}
+
+    it { should have_many :consumption_records }
 
     it "creates a new user" do
       expect(person).to be_a User

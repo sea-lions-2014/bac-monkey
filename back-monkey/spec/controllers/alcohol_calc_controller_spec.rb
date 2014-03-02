@@ -4,7 +4,6 @@ describe AlcoholCalcController do
   let!(:alcohol_calc){{weight: 200, gender: "m", hours: 2, drinks: 4}}
 
   context '#create' do
-
     before :each do
       post :create, alcohol_calc: alcohol_calc
     end
@@ -16,6 +15,5 @@ describe AlcoholCalcController do
     it "returns a JSON object" do
       expect(response.header['Content-Type']).to include 'application/json'
     end
-
   end
 end
