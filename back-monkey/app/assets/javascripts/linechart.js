@@ -1,17 +1,15 @@
+var Chart = (function(){
 
-//Draw line chart
-function drawChart(dataObj) {
-  $('#welcome_msg').remove();
-  d3.select('body').insert('svg', '#footer').attr('id', 'chart');
-
-  nv.addGraph(dataObj)
-      var chart = nv.models.lineChart()
-                  .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
-                  .useInteractiveGuideline(true)  //We want nice looking tooltips and a guideline!
-                  .transitionDuration(350)  //how fast do you want the lines to transition?
-                  .showLegend(true)       //Show the legend, allowing users to turn on/off line series.
-                  .showYAxis(true)        //Show the y-axis
-                  .showXAxis(false)        //Show the x-axis
+  var _buildChart = function(dataObj){
+    nv.addGraph(dataObj)
+    
+    var chart = nv.models.lineChart()
+                .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
+                .useInteractiveGuideline(true)  //Tooltips and a guideline!
+                .transitionDuration(350)  //how fast do you want the lines to transition?
+                .showLegend(true)       //Show the legend, allowing users to turn on/off line series.
+                .showYAxis(true)        //Show the y-axis
+                .showXAxis(false)        //Show the x-axis
   ;
 
 
@@ -24,8 +22,6 @@ function drawChart(dataObj) {
       .tickFormat(d3.format(".4s"))
       ;
 
-  // chart.forceY([0,0.08])
-
   d3.select("svg")
       .datum(dataObj)
       .transition().duration(500).call(chart);
@@ -33,11 +29,31 @@ function drawChart(dataObj) {
       nv.utils.windowResize(
               function() {
                   chart.update();
-              }
-          );
+              });
 
-  // Remove the now empty svg element left by the previous chart
-  $('svg:empty').remove();
+    return chart;
+  }
 
-  return chart;
-}
+  var _cleanUpHomepage = function(){
+    $('#welcome_msg').remove();
+    $('svg').remove();
+    d3.select('body').insert('svg', '#footer').attr('id', 'chart');
+  }
+
+  var _styleChart = function(color){
+    $('.nv-legend-symbol').css('fill', color);
+    $('.nv-point').css('stroke', color);
+    $('.nv-line').css('stroke', color)
+    $('.legend-color-guide div').css('background-color', color)
+  }
+
+  return {
+    draw: function(dataObj, color){
+      _cleanUpHomepage();
+      _buildChart(dataObj);
+      _styleChart(color);
+    }
+  }
+
+})()
+
