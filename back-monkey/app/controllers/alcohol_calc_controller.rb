@@ -10,7 +10,7 @@ class AlcoholCalcController < ApplicationController
   end
 
   def save_consumption_record(args)
-      current_user.consumption_records.build(substance: "alcohol", 
+      current_user.consumption_records.create(substance: "alcohol", 
                                              amount: args[:drinks],
                                              unit_of_measure: "drink")
   end
