@@ -1,4 +1,24 @@
 FactoryGirl.define do
+  
+  factory :user do
+    user_name "David"
+    email "email@yesanemail.com"
+    password "password"
+    gender 'm'
+    weight 123
+  end
+
+  factory :non_user, class: User do
+    user_name "David"
+    email "notanemail"
+    password "password"
+    gender 'm'
+    weight 123
+  end
+
+  factory :empty_params, class: User do
+  end
+
   factory :consumption_record do
     substance { "caffeine" }
     amount { 200 }

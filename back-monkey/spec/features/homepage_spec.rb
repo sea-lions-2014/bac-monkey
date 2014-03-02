@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "homepage", js:true do
+describe "homepage" do
   before :each do
     visit root_path
   end
@@ -22,10 +22,9 @@ describe "homepage", js:true do
 
     it "can't be submitted with invalid data" do
       fill_in 'alcohol_calc_weight', with: 175
-      select 'm', from: 'alcohol_calc_gender'
       fill_in 'alcohol_calc_drinks', with: 'lots'
       fill_in 'alcohol_calc_hours', with: 4
-      expect(page).to_not have_css '#chart'
+      expect(page).to have_css '#welcome_msg'
     end
 
     it "can be submitted to create a chart with valid data" do
@@ -34,7 +33,7 @@ describe "homepage", js:true do
       fill_in 'alcohol_calc_drinks', with: 4
       fill_in 'alcohol_calc_hours', with: 4
       click_on 'Calculate BAC'
-      expect(page).to have_css '#chart'
+      expect(page).to_not have_css '#welcome_msg'
     end
   end
 

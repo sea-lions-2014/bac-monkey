@@ -223,6 +223,21 @@ nav a{
 
 }
 
+.registration_form{
+  margin-top: 300px;
+  display: block;
+}
+
+.signin_form{
+  position: absolute;
+  right: 0;
+  top: 4.5em;
+}
+
+.signin_form input{
+  display: block;
+}
+
 #form_container{
  
 }
