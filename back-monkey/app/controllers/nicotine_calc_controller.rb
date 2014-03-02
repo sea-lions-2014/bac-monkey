@@ -5,7 +5,6 @@ class NicotineCalcController < ApplicationController
     args = params[:nicotine_calc]
     args[:hours] = args[:hours].to_i
     args[:milligrams] = args[:cigarettes].to_i
-    p args
 
     nicotine_calc = NicotineCalc.new(args)
     @nicotine_series = nicotine_calc.mg_series

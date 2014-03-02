@@ -9,7 +9,7 @@ FactoryGirl.define do
   end
 
   factory :non_user, class: User do
-    user_name "David"
+    user_name "Bob"
     email "notanemail"
     password "password"
     gender 'm'
