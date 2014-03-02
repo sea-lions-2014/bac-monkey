@@ -5,7 +5,7 @@ describe AlcoholCalcController do
   context '#create' do
 
     before :each do
-      post :create, params: args
+      post :create, alcohol_calc: args
     end
 
     it "creates a BAC series from data" do
