@@ -1,43 +1,61 @@
-
 //Draw line chart
-function drawChart(dataObj) {
-  $('#welcome_msg').remove();
-  d3.select('body').insert('svg', '#footer').attr('id', 'chart');
 
-  nv.addGraph(dataObj)
-      var chart = nv.models.lineChart()
-                  .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
-                  .useInteractiveGuideline(true)  //We want nice looking tooltips and a guideline!
-                  .transitionDuration(350)  //how fast do you want the lines to transition?
-                  .showLegend(true)       //Show the legend, allowing users to turn on/off line series.
-                  .showYAxis(true)        //Show the y-axis
-                  .showXAxis(false)        //Show the x-axis
-  ;
+var Chart = (function(){
 
+  var _clearHomePage = function(){
+    $('#welcome_msg').remove();
+    $('svg:empty').remove();
+  }
 
-  chart.xAxis
-      .axisLabel("Time")
-      ;
+  var _styleChart = function(dataObj){
+    var substance = dataObj[0].key.split(' ');
+    substance = substance[substance.length-1].toLowerCase();
+    var color = $('#'+substance).css('background-color');
+    $('.nv-line').css('stroke', color);
+    $('.nv-legend-symbol').css('stroke', color).css('fill', color);
+  }
 
-  chart.yAxis
-      .axisLabel(dataObj[0].key)
-      .tickFormat(d3.format(".4s"))
-      ;
+  var _buildChart = function(dataObj){
+    d3.select('body').insert('svg', '#footer').attr('id', 'chart');
+    nv.addGraph(dataObj)
+    var chart = nv.models.lineChart()
+                .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
+                .useInteractiveGuideline(true)  //Tooltips and guideline
+                .transitionDuration(350)  //Line transition time
+                .showLegend(true)       //Show the legend
+                .showYAxis(true)        //Show the y-axis
+                .showXAxis(false)        //Show the x-axis
+    ;
 
-  // chart.forceY([0,0.08])
+    chart.xAxis
+        .axisLabel("Time")
+    ;
 
-  d3.select("svg")
-      .datum(dataObj)
-      .transition().duration(500).call(chart);
+    chart.yAxis
+        .axisLabel(dataObj[0].key)
+        .tickFormat(d3.format(".4s"))
+    ;
 
-      nv.utils.windowResize(
-              function() {
-                  chart.update();
-              }
-          );
+    d3.select("svg")
+        .datum(dataObj)
+        .transition().duration(500).call(chart)
+    ;
 
-  // Remove the now empty svg element left by the previous chart
-  $('svg:empty').remove();
+    nv.utils.windowResize(
+            function() {
+              chart.update();
+            }
+    );
 
-  return chart;
-}
+    return chart;
+  }
+
+  return {
+    render: function(dataObj){
+      _buildChart(dataObj);
+      _clearHomePage();
+      _styleChart(dataObj);
+    }
+  }
+
+})()

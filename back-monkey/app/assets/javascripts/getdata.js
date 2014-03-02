@@ -5,16 +5,20 @@ $(function(){
 });
 
 
+
 function formatBACData(event, data, status, xhr){
-  formatData(data, 'BAC')
+  var BACdataObj = formatData(data, 'BAC');
+  Chart.render(BACdataObj);
 }
 
 function formatCaffeineData(event, data, status, xhr){
-  formatData(data, 'mg of Caffeine')
+  var caffeineDataObj = formatData(data, 'mg of Caffeine');
+  Chart.render(caffeineDataObj);
 }
 
 function formatNicotineData(event, data, status, xhr){
-  formatData(data, 'mg of Nicotine')
+  var nicotineDataObj = formatData(data, 'mg of Nicotine');
+  Chart.render(nicotineDataObj);
 }
 
 
@@ -24,10 +28,10 @@ function formatData(data, key){
     values.push({x: data[i][0]*60, y: data[i][1]});
   }
   var dataObj = [
-    {
-      key: key,
-      values: values
-    }
+  {
+    key: key,
+    values: values
+  }
   ]
-  drawChart(dataObj);
+  return dataObj
 }
