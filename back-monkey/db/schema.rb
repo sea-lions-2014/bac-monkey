@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20140301223811) do
 
   create_table "users", :force => true do |t|
@@ -24,6 +25,14 @@ ActiveRecord::Schema.define(:version => 20140301223811) do
     t.integer  "total_alcohol",   :default => 0
     t.integer  "total_caffeine",  :default => 0
     t.integer  "total_nicotine",  :default => 0
+
+  create_table "consumption_records", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "substance"
+    t.integer  "amount"
+    t.string   "unit_of_measure"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
