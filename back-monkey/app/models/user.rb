@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :user_name, :email, :password, :gender, :weight
+  has_many :consumption_records
   validates :user_name, :email, :gender, :weight, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
   validates :gender, inclusion: { in: ["m", "f"]}

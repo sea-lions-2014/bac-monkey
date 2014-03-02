@@ -17,5 +17,12 @@ describe AlcoholCalcController do
       expect(response.header['Content-Type']).to include 'application/json'
     end
 
+    context "user is signed in" do
+      ApplicationController.any_instance.stub(:current_user) { FactoryGirl.create :user }
+
+      it "builds a consumption record" do
+        expect(:current_user).not_to be blank?
+      end
+    end
   end
 end
