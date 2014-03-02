@@ -86,6 +86,8 @@ nav a{
   position: fixed;
   bottom: 0em;
   border-top: 2px solid #121212;
+  display: inline-block;
+
 }
 
 .substance_form{
@@ -93,12 +95,15 @@ nav a{
   margin-top: 1em;
   width: 500px;
   font-family: 'Lato', sans-serif;
+  position: relative;
+    /*display: inline-block;*/
+
 
 }
 
 .submit{
   text-align: center;
-  padding-top: 1em;
+  padding-top: .5em;
 
 }
 .substance_form label{
@@ -127,14 +132,6 @@ nav a{
  font-size: 15px;
 }
 
-
-
-.drop_down select > option{
-  background-color: #1e1e1e;
-  color: white;
-  border-color: #1e1e1e;
-  font-size: 15px;
-}
 
 .gender{
   display: inline-block;
@@ -241,14 +238,60 @@ nav a{
   display: block;
 }
 
+#form_container{
+ 
+}
 /*this is just so we could see the list as we worked on it*/
-#lower-nav li{
+#lower-nav a{
+ display: block;
+ width: 5em;
+  border-radius: 0.25em;
+  padding: 1.75em 1em 1.75em 1em;
+  top: .85em;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
   color: white;
-  list-style: none;
+  text-decoration: none;
+  background-color: #7b7777;
+  /*margin-top: 1em;*/
+  margin: .25em;
+
+
+
+}
+#lower-nav{
+  width: 10%;
+  position: fixed;
+  /*margin:2em 0 0 0 ;*/
+
 }
 
 .hidden {
   display: none;
+}
+
+#lower-nav #alc{
+  background-color: #FF3D00;
+}
+
+#lower-nav #caffeine{
+  background-color: #0969A2;
+}
+
+ #lower-nav #nicotine{
+background-color: #00B358;
+}
+
+#lower-nav #alc:active{
+  background-color: #A62800;
+}
+
+#lower-nav #caffeine:active{
+  background-color: #03436A;
+}
+
+ #lower-nav #nicotine:active{
+background-color: #007439;
 }
 
 /*-----MEDIA QUERIES-----*/
