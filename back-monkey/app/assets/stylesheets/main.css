@@ -367,43 +367,146 @@ background-color: #00B358;
 }
 
 .signin_form {
-  background-color: #ca171b;
+  background-color: #000;
   font-family: 'Lato', sans-serif;
   padding: .5em;
   border-radius: .5em;
-
 }
 
 .signin_form input{
   margin: .5em;
+  background-color: #1e1e1e;
+  border-color: #121212;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 1em;
+  padding: 5px;
 }
 
 .signin_form .button{
     color: white;
-    background-color:#000;
+    background-color:#ca171b;
     border-radius: 5px;
     border:#ca171b ;
-    padding: 1em ;
+    padding: .5em;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 1em;
 }
 
-#user-profile {
+#user_profile {
   font-family: 'Lato', sans-serif;
   font-size: 1.25em;
   color: white;
-  width: 50%;
-  margin: 150px auto;
+  width: 1100px;
+  margin: 7em auto;
 }
 
-#user-profile h3 {
+#user_profile h3 {
   border-bottom: 1px solid gray;
+}
 
+.consumption_list {
+
+}
+
+.consumption_summary {
+  width: 100%;
+  background-color: #000;
+  margin-bottom: 2em;
+
+}
+
+.user_info {
+  display: inline-block;
+  width: 20%;
+  min-width: 150px;
+  text-align: center;
+  border-right: 2px solid #1e1e1e;
+}
+
+.user_info p {
+  font-size: .8em;
+}
+
+.daily_info {
+  background-color: #ca171b;
+  height: 50%;
+  padding: .75em;
+  border-bottom: 3px solid #1e1e1e;
+
+}
+
+.total_info {
+  height: 50%;
+  padding: .75em;
+}
+
+.big_num {
+  font-size: 3em;
+}
+
+.tips{
+  width: 70%;
+  right: 0;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  padding-left: 1.25em;
+  word-spacing: 3px;
+  line-height: 1.5em;
+}
+
+#alc_daily {
+ background-color: #FF3D00;
+}
+
+#caff_daily {
+  background-color: #0969A2;
+}
+
+#nic_daily {
+  background-color: #00B358;
+}
+
+.advice {
+  color: gray;
+  /*margin: 1.5em 0;*/
+}
+
+.average_num {
+  font-size: 2em;
+  margin-right: .25em;
+}
+
+.recommeded_num {
+  font-size: 2em;
+  margin-right: .25em;
 }
 
 /*-----MEDIA QUERIES-----*/
 
-@media (max-width: 510px) {
+
+@media (max-width: 1130px) {
+  #user_profile {
+    width: 90%;
+    min-width: 0;
+  }
+
+  .user_info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tips {
+    width: 90%;
+  }
+
+  .total_info {
+    border-bottom: 3px solid #1e1e1e;
+  }
+}
+
+@media (max-width: 570px) {
   nav h3 {
     display: none;
   }
