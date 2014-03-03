@@ -56,6 +56,15 @@ nav a{
   background-color:#d34245;
 }
 
+#profile-button{
+  position: absolute;
+  right: 6.75em;
+  background-color: #0969A2;
+}
+#profile-button:hover{
+  background-color: #3a87b4;
+}
+
 
 #signin:hover{
   background-color:#8c8888;
