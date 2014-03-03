@@ -286,13 +286,22 @@ nav a{
 #lower-nav #bac{
   background-color: #FF3D00;
 }
+#lower-nav #bac:hover{
+  background-color: #ff5019;
+}
 
 #lower-nav #caffeine{
   background-color: #0969A2;
 }
+#lower-nav #caffeine:hover{
+  background-color: #2178ab;
+}
 
  #lower-nav #nicotine{
 background-color: #00B358;
+}
+ #lower-nav #nicotine:hover{
+background-color: #19ba68;
 }
 
 #lower-nav #bac:active{
