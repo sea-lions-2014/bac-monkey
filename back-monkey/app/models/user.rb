@@ -6,21 +6,20 @@ class User < ActiveRecord::Base
   validates :gender, inclusion: { in: ["m", "f"]}
   has_secure_password
 
-  # def self.current_gender
-  #   if current_user
-  #     @gender = current_user.gender
-  #   else
-  #     @gender = "Male"
-  #   end
-  # end
+  def daily_average_alcohol
+    self.total_alcohol / days_account_open
+  end
 
-  # def self.current_weight
-  #   if current_user
-  #     @weight = current_user.weight
-  #   else
-  #     @weight = 0
-  #   end
-  # end
+  def daily_average_caffeine
+    self.total_caffeine / days_account_open
+  end
 
+  def daily_average_nicotine
+    self.total_nicotine / days_account_open
+  end
 
+  def days_account_open
+    days = ((Time.zone.now - self.created_at)/86400).ceil
+    days == 0 ? 1 : days
+  end
 end

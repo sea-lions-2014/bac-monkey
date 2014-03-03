@@ -2,9 +2,12 @@ require 'spec_helper'
 
 describe NicotineCalcController do
   let!(:args){{cigarettes: 4, hours: 2}}
+  let!(:user) { create :user }
+
   context '#create' do
 
     before :each do
+      ApplicationController.any_instance.stub(:current_user) { user }
       post :create, nicotine_calc: args
     end
 
@@ -16,5 +19,8 @@ describe NicotineCalcController do
       expect(response.header['Content-Type']).to include 'application/json'
     end
 
+    it "increments the current user's relevant substance total" do
+      expect(user.reload.total_nicotine).to eq 4
+    end
   end
 end
