@@ -97,8 +97,8 @@ nav a{
   bottom: 0em;
   border-top: 2px solid #121212;
   display: inline-block;
-
 }
+
 
 .substance_form{
   margin: 0 auto;
@@ -292,8 +292,18 @@ background-color: #00B358;
   background-color: #03436A;
 }
 
- #lower-nav #nicotine:active{
-background-color: #007439;
+#lower-nav #nicotine:active{
+  background-color: #007439;
+}
+
+.arrow{
+  color: white;
+  position: absolute;
+  right: 1em
+}
+
+.arrow:hover{
+  cursor: pointer;
 }
 
 /*-----MEDIA QUERIES-----*/

@@ -53,8 +53,8 @@ var Chart = (function(){
 
   return {
     render: function(dataObj){
-      _buildChart(dataObj);
       _clearHomePage();
+      _buildChart(dataObj);
       _styleChart(dataObj);
     }
   }
