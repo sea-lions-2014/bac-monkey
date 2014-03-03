@@ -399,7 +399,7 @@ background-color: #00B358;
   color: white;
   width: 60%;
   min-width: 630px;
-  margin: 150px auto;
+  margin: 7em auto;
 }
 
 #user_profile h3 {
@@ -452,8 +452,9 @@ background-color: #00B358;
   display: inline-block;
   height: auto;
   vertical-align: top;
-  padding-left: 1em;
+  padding-left: 1.25em;
   word-spacing: 3px;
+  line-height: 1.5em;
 }
 
 #alc_daily {
@@ -466,6 +467,21 @@ background-color: #00B358;
 
 #nic_daily {
   background-color: #00B358;
+}
+
+.advice {
+  color: gray;
+  margin: 1.5em 0;
+}
+
+.average_num {
+  font-size: 2em;
+  margin-right: .25em;
+}
+
+.recommeded_num {
+  font-size: 2em;
+  margin-right: .25em;
 }
 
 /*-----MEDIA QUERIES-----*/
