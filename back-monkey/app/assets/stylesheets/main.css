@@ -3,13 +3,16 @@ body {
   margin: 0;
 }
 
-img{
+nav img{
   width:75px;
   position: absolute;
   top:0em;
+  cursor: pointer;
   /*margin: 20px;*/
   /*height: 75px;*/
-
+}
+nav img:hover{
+  opacity: 0.7;
 }
 
 nav{
@@ -42,34 +45,42 @@ nav a{
   text-decoration: none;
 }
 
+#profile-button{
+  position: absolute;
+  right: 6.75em;
+  background-color: #0969A2;
+}
+#profile-button:hover{
+  background-color: #3a87b4;
+}
+
 #signout{
   position: absolute;
   right: .75em;
   background-color: #7b7777;
 }
 #signout:hover{
-  background-color:#d34245;
-}
-
-
-#signin:hover{
   background-color:#8c8888;
 }
 
-#signup:hover{
-  background-color:#d34245;
-}
 
 #signin{
   position: absolute;
   right: .75em;
   background-color: #7b7777;
 }
+#signin:hover{
+  background-color:#8c8888;
+}
+
 
 #signup{
   position: absolute;
   right: 5.5em;
   background-color:#ca171b;
+}
+#signup:hover{
+  background-color:#d34245;
 }
 
 #welcome_msg {
@@ -275,13 +286,22 @@ nav a{
 #lower-nav #bac{
   background-color: #FF3D00;
 }
+#lower-nav #bac:hover{
+  background-color: #ff5019;
+}
 
 #lower-nav #caffeine{
   background-color: #0969A2;
 }
+#lower-nav #caffeine:hover{
+  background-color: #2178ab;
+}
 
  #lower-nav #nicotine{
 background-color: #00B358;
+}
+ #lower-nav #nicotine:hover{
+background-color: #19ba68;
 }
 
 #lower-nav #bac:active{
@@ -292,13 +312,27 @@ background-color: #00B358;
   background-color: #03436A;
 }
 
- #lower-nav #nicotine:active{
+#lower-nav #nicotine:active{
 background-color: #007439;
 }
 
+#user-profile {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  color: white;
+  width: 50%;
+  margin: 150px auto;
+}
+
+#user-profile h3 {
+  border-bottom: 1px solid gray;
+}
+
+
+
 /*-----MEDIA QUERIES-----*/
 
-@media (max-width: 510px) {
+@media (max-width: 530px) {
   nav h3 {
     display: none;
   }
