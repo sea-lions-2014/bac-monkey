@@ -1,15 +1,20 @@
 body {
   background-color: #1e1e1e;
   margin: 0;
+  /*height:50%;*/
 }
 
-img{
+nav img{
   width:75px;
   position: absolute;
   top:0em;
+  cursor: pointer;
+  left:0;
   /*margin: 20px;*/
   /*height: 75px;*/
-
+}
+nav img:hover {
+  opacity: 0.7;
 }
 
 nav{
@@ -49,6 +54,15 @@ nav a{
 }
 #signout:hover{
   background-color:#d34245;
+}
+
+#profile-button{
+  position: absolute;
+  right: 6.75em;
+  background-color: #0969A2;
+}
+#profile-button:hover{
+  background-color: #3a87b4;
 }
 
 
@@ -183,11 +197,20 @@ nav a{
 
   #chart{
     margin: 0 auto;
-    margin-top: 10em;
+    margin-top: 5em;
+    /*margin-bottom: 100em;*/
+    /*position: fixed;*/
     color: #BDBDBD;
     width:100%;
-    opacity: 50%;
+    height: 60%;
+    /*margin-bottom: 700px;*/
+
   }
+
+#svg-container{
+  height:100%;
+  width: auto;
+}
 
   .tick text{
     fill:white;
@@ -241,9 +264,11 @@ nav a{
 }
 
 #form_container{
- 
+
 }
 /*this is just so we could see the list as we worked on it*/
+
+
 #lower-nav a{
  display: block;
  width: 5em;
@@ -257,6 +282,7 @@ nav a{
   background-color: #7b7777;
   /*margin-top: 1em;*/
   margin: .25em;
+  margin-bottom: .25em;
 
 
 
@@ -304,6 +330,75 @@ background-color: #00B358;
 
 .arrow:hover{
   cursor: pointer;
+}
+
+.registration_form{
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 15px;
+  width: 50%;
+  text-align: left;
+  margin: 20em auto auto auto;
+  background-color: #000;
+  border: 2px solid #121212;
+  /*border: 2px solid white;*/
+  /*display: block;*/
+}
+
+.registration_form .button{
+    color: white;
+    background-color:#ca171b;
+    border-radius: 5px;
+    border:#ca171b ;
+    padding: 1em ;
+    margin: 2em auto;
+    font-size: 12px;
+}
+
+.registration_form input{
+  margin: .75em;
+  width:100px;
+  background-color: #1e1e1e;
+  border-color: #121212;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.signin_form {
+  background-color: #ca171b;
+  font-family: 'Lato', sans-serif;
+  padding: .5em;
+  border-radius: .5em;
+
+}
+
+.signin_form input{
+  margin: .5em;
+}
+
+.signin_form .button{
+    color: white;
+    background-color:#000;
+    border-radius: 5px;
+    border:#ca171b ;
+    padding: 1em ;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+#user-profile {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  color: white;
+  width: 50%;
+  margin: 150px auto;
+}
+
+#user-profile h3 {
+  border-bottom: 1px solid gray;
+
 }
 
 /*-----MEDIA QUERIES-----*/

@@ -4,5 +4,23 @@
   <p>Fill out the form below to start tracking your blood alcohol content (BAC). It will graph your estimated BAC over time, so you can decide whether you've had one beer too many (or too few).</p>
 </div>
 
+<div id="svg-container"></div>
+
+<div id="footer">
+  <div class="hidden arrow" id="up">&and;</div>
+  <div class="arrow" id="down">&or;</div>
+  <div id="lower-nav">
+      <a href="#" id="bac">Alcohol</a>
+      <a href="#" id="caffeine">Caffeine</a>
+      <a href="#" id="nicotine">Nicotine</a>
+  </div>
+  <div id="form_container">
+    <%= render "chart/bac_form" %>
+    <%= render "chart/caffeine_form" %>
+    <%= render "chart/nicotine_form" %>
+  </div>
+</div>
+
+
 
      <!-- render "chart/nicotine_form" -->

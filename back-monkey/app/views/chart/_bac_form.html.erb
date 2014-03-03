@@ -8,7 +8,8 @@
      <%= f.number_field :hours, required: true, min: 0 %> hours.
    </div>
    <div class="submit">
-    <%= f.submit "Calculate BAC", :class=> "button" %>
+    <%= f.submit "Calculate BAC", :class=> "button", :id=>
+    "alc_button" %>
   </div>
   <% end %>
 </div>
