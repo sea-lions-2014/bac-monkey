@@ -1,9 +1,10 @@
 body {
   background-color: #1e1e1e;
   margin: 0;
+  /*height:50%;*/
 }
 
-nav img{
+img{
   width:75px;
   position: absolute;
   top:0em;
@@ -11,9 +12,7 @@ nav img{
   left:0;
   /*margin: 20px;*/
   /*height: 75px;*/
-}
-nav img:hover{
-  opacity: 0.7;
+
 }
 
 nav{
@@ -46,42 +45,34 @@ nav a{
   text-decoration: none;
 }
 
-#profile-button{
-  position: absolute;
-  right: 6.75em;
-  background-color: #0969A2;
-}
-#profile-button:hover{
-  background-color: #3a87b4;
-}
-
 #signout{
   position: absolute;
   right: .75em;
   background-color: #7b7777;
 }
 #signout:hover{
+  background-color:#d34245;
+}
+
+
+#signin:hover{
   background-color:#8c8888;
 }
 
+#signup:hover{
+  background-color:#d34245;
+}
 
 #signin{
   position: absolute;
   right: .75em;
   background-color: #7b7777;
 }
-#signin:hover{
-  background-color:#8c8888;
-}
-
 
 #signup{
   position: absolute;
   right: 5.5em;
   background-color:#ca171b;
-}
-#signup:hover{
-  background-color:#d34245;
 }
 
 #welcome_msg {
@@ -195,11 +186,20 @@ nav a{
 
   #chart{
     margin: 0 auto;
-    margin-top: 10em;
+    margin-top: 5em;
+    /*margin-bottom: 100em;*/
+    /*position: fixed;*/
     color: #BDBDBD;
     width:100%;
-    opacity: 50%;
+    height: 60%;
+    /*margin-bottom: 700px;*/
+
   }
+
+#svg-container{
+  height:100%;
+  width: auto;
+}
 
   .tick text{
     fill:white;
@@ -256,6 +256,8 @@ nav a{
 
 }
 /*this is just so we could see the list as we worked on it*/
+
+
 #lower-nav a{
  display: block;
  width: 5em;
@@ -288,22 +290,13 @@ nav a{
 #lower-nav #bac{
   background-color: #FF3D00;
 }
-#lower-nav #bac:hover{
-  background-color: #ff5019;
-}
 
 #lower-nav #caffeine{
   background-color: #0969A2;
 }
-#lower-nav #caffeine:hover{
-  background-color: #2178ab;
-}
 
  #lower-nav #nicotine{
 background-color: #00B358;
-}
- #lower-nav #nicotine:hover{
-background-color: #19ba68;
 }
 
 #lower-nav #bac:active{
@@ -314,24 +307,46 @@ background-color: #19ba68;
   background-color: #03436A;
 }
 
-#lower-nav #nicotine:active{
-background-color: #007439;
+ #lower-nav #nicotine:active{
+  background-color: #007439;
 }
 
-#user-profile {
+.registration_form{
   font-family: 'Lato', sans-serif;
-  font-size: 1.25em;
   color: white;
+  font-size: 15px;
   width: 50%;
-  margin: 150px auto;
+  text-align: left;
+  margin: 20em auto auto auto;
+  background-color: #000;
+  border: 2px solid #121212;
+  /*border: 2px solid white;*/
+  /*display: block;*/
 }
 
-#user-profile h3 {
-  border-bottom: 1px solid gray;
+.registration_form .button{
+    color: white;
+    background-color:#ca171b;
+    border-radius: 5px;
+    border:#ca171b ;
+    padding: 1em ;
+    margin: 2em auto;
+    font-size: 12px;
+
 }
 
+.registration_form input{
+  margin: .75em;
+  width:100px;
+  background-color: #1e1e1e;
+  border-color: #121212;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
 
-.signin_form{
+.signin_form {
   background-color: #ca171b;
   font-family: 'Lato', sans-serif;
   padding: .5em;
@@ -344,7 +359,7 @@ background-color: #007439;
 }
 
 .signin_form .button{
-     color: white;
+    color: white;
     background-color:#000;
     border-radius: 5px;
     border:#ca171b ;
@@ -355,7 +370,7 @@ background-color: #007439;
 
 /*-----MEDIA QUERIES-----*/
 
-@media (max-width: 530px) {
+@media (max-width: 510px) {
   nav h3 {
     display: none;
   }
