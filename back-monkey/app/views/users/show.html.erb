@@ -4,11 +4,11 @@
 
       <div class="user_info">
         <div class="daily_info" id="alc_daily">
-          <span class="big_num"><%= @user.daily_average_alcohol %></span>
+          <span class="big_num"><%= current_user.daily_average_alcohol %></span>
           <p>drinks per day</p>
         </div>
         <div class="total_info">
-          <span class="big_num"><%= @user.total_alcohol %></span>
+          <span class="big_num"><%= current_user.total_alcohol %></span>
           <p>drinks total</p>
         </div>
       </div>
@@ -25,11 +25,11 @@
     <div class="consumption_summary">
       <div class="user_info">
         <div class="daily_info" id="caff_daily">
-          <span class="big_num"><%= @user.daily_average_caffeine %></span>
+          <span class="big_num"><%= current_user.daily_average_caffeine %></span>
           <p>mgs caffeine per day</p>
         </div>
         <div class="total_info">
-          <span class="big_num"><%= @user.total_caffeine %></span>
+          <span class="big_num"><%= current_user.total_caffeine %></span>
           <p>mgs caffeine total</p>
         </div>
       </div>
@@ -46,11 +46,11 @@
     <div class="consumption_summary">
       <div class="user_info">
         <div class="daily_info"  id="nic_daily">
-          <span class="big_num"><%= @user.daily_average_nicotine %></span>
+          <span class="big_num"><%= current_user.daily_average_nicotine %></span>
           <p>mgs nicotine per day</p>
         </div>
         <div class="total_info">
-          <span class="big_num"><%= @user.total_nicotine %></span>
+          <span class="big_num"><%= current_user.total_nicotine %></span>
           <p>mgs nicotine total</p>
         </div>
       </div>

@@ -20,6 +20,7 @@ describe User do
       expect(not_user.save).to eq false
     end
 
+    # we don't need this, you're testing has_secure_password, which is already tested.
     it "can match a password correctly" do
       expect(person.password_digest).to_not eq "pasword"
       expect(person.password_digest).to eq "password"

@@ -7,12 +7,12 @@ describe CaffeineCalcController do
   context '#create' do
 
     before :each do
-      ApplicationController.any_instance.stub(:current_user) { user }
+      stub_current_user user
       post :create, caffeine_calc: args
     end
 
     it "creates a caffeine series from data" do
-      expect(assigns(:caffeine_series)).to be
+      expect(assigns(:caffeine_series)).to be # to be or not to be?
     end
 
     it "returns a JSON object" do

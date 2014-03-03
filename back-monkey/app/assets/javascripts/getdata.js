@@ -1,3 +1,4 @@
+// this polutes the global namespace...booo use modules
 function AJAXEvents(){
   $('#bac_form').on('ajax:success', {args: $(this).serialize()}, formatBACData)
 

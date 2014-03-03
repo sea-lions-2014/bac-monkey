@@ -1,3 +1,4 @@
+# create a CalcController base class that inherits from ApplicationController and all other *Calc controllers inherit from it.
 class AlcoholCalcController < ApplicationController
   respond_to :json, only: [:create]
 

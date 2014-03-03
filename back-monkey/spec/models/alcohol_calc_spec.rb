@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe AlcoholCalc do
-  args = {alcohol: 1.8, weight: 160, gender: "m", hours: 1}
+  let(:args) { {alcohol: 1.8, weight: 160, gender: "m", hours: 1} }
   let(:alccalc) { AlcoholCalc.new(args) }
 
   context "#bac_series" do
@@ -11,14 +11,14 @@ describe AlcoholCalc do
     end
 
     it "returns results with no negative numbers" do
-      results = alccalc.bac_series
-      results.each do |result|
+      alccalc.bac_series.each do |result|
         expect(result.first).to  be >= 0
         expect(result.last).to be >= 0
       end
     end
 
     it "correctly estimates the BAC of a 160 lb man who drank 3 shots over 1 hour" do
+      # we're using this in multiple tests, can we use let?
       results = alccalc.bac_series
       expect(results[4].last).to be > 0.05
       expect(results[4].last).to be < 0.07

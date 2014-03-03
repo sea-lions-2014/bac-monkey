@@ -1,3 +1,4 @@
+// this polutes the global namespace...booo
 function fixWebkitHeightBug(){
   var svgW = 658;
   var svgH = 500;

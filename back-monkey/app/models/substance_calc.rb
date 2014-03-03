@@ -22,14 +22,15 @@ class SubstanceCalc
     #   hours: time spent continually consuming the substance, in intervals of 0.25
     #   interval_count: optional, defaults to 49 (12 hours of data-points)
     # }
-
+    DEFAULT_INTERVAL = 49
     def initialize(args)
       @current_mg = args[:current_mg] || 0
       @milligrams = args[:milligrams]
       @hours = args[:hours]
-      @interval_count = args[:interval_count] || 49
+      @interval_count = args[:interval_count] || DEFAULT_INTERVAL
     end
 
+    # needs some love
     def mg_series
       build_up = mg_build_up
       break_down = mg_break_down
@@ -40,6 +41,7 @@ class SubstanceCalc
     private
 
     # Returns a mg series during the time you are continually consuming a substance
+    # needs some love
     def mg_build_up
       next_mg = @current_mg
       mg_series = [[0, @current_mg]]
@@ -54,6 +56,7 @@ class SubstanceCalc
     end
 
     # Returns a mg series during the time you are not consuming a substance
+    # needs some love
     def mg_break_down
       mg_series = []
 

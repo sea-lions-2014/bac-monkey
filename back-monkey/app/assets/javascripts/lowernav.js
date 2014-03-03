@@ -1,3 +1,4 @@
+// this polutes the global namespace...booo
 function lowerNavEvents(){
   $('#lower-nav a').click(toggleFormDisplay)
   $(".arrow").click(toggleLowerNavHeight)
@@ -13,7 +14,7 @@ function toggleFormDisplay(){
 
 function toggleLowerNavHeight(){
   var height = ($('#up').hasClass('hidden')) ? '1.5em' : '15em'
-  
+
   $('#footer').animate({
     height: height
   }, 800);

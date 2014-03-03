@@ -12,7 +12,7 @@ describe SessionsController do
 
     it "should not create a session if credentials are invalid" do
       post :create, user: {user_name: user.user_name, password: ''}
-      expect(session[:id]).to be nil
+      expect(session[:id]).to be_nil
     end
   end
 
@@ -22,9 +22,9 @@ describe SessionsController do
     it "should destroy a session" do
       session[:id] = user.id
       delete :destroy, id: user.id
-      expect(session[:id]).to be nil
+      expect(session[:id]).to be_nil
     end
 
-  end  
-  
+  end
+
 end

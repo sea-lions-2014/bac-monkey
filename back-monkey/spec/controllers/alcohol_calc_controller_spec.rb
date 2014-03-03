@@ -1,20 +1,21 @@
 require 'spec_helper'
 
 describe AlcoholCalcController do
-  let!(:alcohol_calc){{weight: 200, gender: "m", hours: 2, drinks: 4}}
+  let!(:alcohol_calc) { {weight: 200, gender: "m", hours: 2, drinks: 4} }
   let!(:user) { create :user }
 
   context '#create' do
     before :each do
-      ApplicationController.any_instance.stub(:current_user) { user }
+      stub_current_user(user)
       post :create, alcohol_calc: alcohol_calc
     end
 
     it "creates a new AlcoholCalc instance" do
-      expect(assigns(:alcohol_calc)).to be_a AlcoholCalc
+      expect(assigns(:alcohol_calc)).to be_a_new AlcoholCalc
     end
 
     it "returns a JSON object" do
+      # there might a method that test header.
       expect(response.header['Content-Type']).to include 'application/json'
     end
 

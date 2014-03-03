@@ -6,4 +6,8 @@ module LoginUser
     fill_in 'user[password]', with: user.password
     click_button 'Sign In'
   end
+
+  def stub_current_user(user)
+    ApplicationController.any_instance.stub(:current_user) { user }
+  end
 end

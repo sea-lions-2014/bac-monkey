@@ -5,6 +5,7 @@ describe "homepage", js:true do
     visit root_path
   end
 
+  # These are not very good: use have_content. The user doesn't care about your classes.
   context "welcome screen" do
     it "has a welcome message" do
       expect(page).to have_css '#welcome_msg'

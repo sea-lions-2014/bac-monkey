@@ -5,12 +5,14 @@ describe CaffeineCalc do
     args = {milligrams: 200, hours: 0.5}
     let(:caffcalc) { CaffeineCalc.new(args) }
 
+    # I don't like testing against classes. Let's work on that together.
     it "returns a nested array" do
-      expect(caffcalc.mg_series.class).to eq Array
-      expect(caffcalc.mg_series.pop.class).to eq Array
+      expect(caffcalc.mg_series).to be_a Array
+      expect(caffcalc.mg_series).to be_a Array
     end
 
     it "returns results with no negative numbers" do
+      # user let(:results) to DRY up your tests.
       results = caffcalc.mg_series
       results.each do |result|
         expect(result.first).to  be >= 0

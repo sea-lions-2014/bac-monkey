@@ -5,17 +5,16 @@ class ConsumptionRecord < ActiveRecord::Base
 
   def dose_description
     desc = "#{self.amount} #{self.unit_of_measure}"
-    desc += "s" unless self.amount == 1
+    desc += "s" unless self.single?
     desc
   end
 
+  def single?
+    self.amount == 1
+  end
+
   def update_user_total
-    if self.user
-      self.user.total_alcohol += self.amount if self.substance == "alcohol"
-      self.user.total_caffeine += self.amount if self.substance == "caffeine"
-      self.user.total_nicotine += self.amount if self.substance == "nicotine"
-      self.user.save
-    end
+    self.user.update_totals(self.amount, self.substance) if self.user
   end
 
 end

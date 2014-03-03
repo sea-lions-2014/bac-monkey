@@ -5,7 +5,7 @@ describe UsersController do
   context '#new' do
     it "initializes an empty User object" do
       get :new
-      expect(assigns(:user)).to be_a User
+      expect(assigns(:user)).to be_a_new User
     end
   end
 
@@ -26,7 +26,7 @@ describe UsersController do
 
   context '#show' do
     let!(:user){ create :user }
-    
+
     it "should find the current logged in user" do
       session[:id] = user.id
       get :show, id: user.id

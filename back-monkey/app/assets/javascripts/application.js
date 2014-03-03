@@ -15,9 +15,5 @@
 //=require fix_bug
 //= require d3.v3
 //= require nv.d3
-//= require getdata
-//= require lowernav
-//= require linechart
-//= require signin
-//= require initialize
+//= require ../../../vendor/assets/javascripts/<FILENAME>
 //= require_tree .

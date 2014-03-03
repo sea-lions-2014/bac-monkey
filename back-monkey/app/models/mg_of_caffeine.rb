@@ -1,3 +1,4 @@
+# this is a good case for a module and move it under lib/
 class MgOfCaffeine
   class << self
 
