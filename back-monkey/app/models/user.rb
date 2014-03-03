@@ -18,6 +18,14 @@ class User < ActiveRecord::Base
     self.total_nicotine / days_account_open
   end
 
+  def past_month_consumption
+    self.consumption_records.where('created_at > ?', (Time.zone.now - 18141000))
+  end
+
+  def past_week_consumption
+    self.consumption_records.where('created_at > ?', (Time.zone.now - 604800))
+  end
+
   def days_account_open
     days = ((Time.zone.now - self.created_at)/86400).ceil
     days == 0 ? 1 : days
