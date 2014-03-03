@@ -1,15 +1,15 @@
 <div id="caffeine_form" class="substance_form hidden">
   <%= form_for :caffeine_calc, url: {action: :create, controller: :caffeine_calc}, remote: true do |f|%>
-  
+
     <div class="line">
       I had
       <%= f.number_field :cups, required: true, min: 1 %> cups of
       <%= f.select :type, options_for_select([['coffee', 'coffee'],['tea', 'tea']]), {required: true}, {:class => "drop_down"}%>
-  in  
+  in
 <%= f.number_field :hours, required: true, min: 1 %> hours.
     </div>
     <div class="submit">
-      <%= f.submit "Check caffeine levels", :class=> "button" %>
+      <%= f.submit "Check caffeine levels", :class=> "button", :id=>"caf_button" %>
     </div>
   <% end %>
 </div>

@@ -1,3 +1,4 @@
+
 (function(){
 
 var nv = window.nv || {};
@@ -475,7 +476,7 @@ window.nv.tooltip.* also has various helper methods.
             trowEnter.append("td")
                 .classed("legend-color-guide",true)
                 .append("div")
-                    .style("background-color", function(p) { 
+                    .style("background-color", function(p) {
                       var substance = p.key.split(' ');
                       substance = substance[substance.length - 1];
                       return substanceColor(substance);

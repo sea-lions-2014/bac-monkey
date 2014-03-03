@@ -1,6 +1,7 @@
 body {
   background-color: #1e1e1e;
   margin: 0;
+  /*height:50%;*/
 }
 
 nav img{
@@ -194,11 +195,20 @@ nav a{
 
   #chart{
     margin: 0 auto;
-    margin-top: 10em;
+    margin-top: 5em;
+    /*margin-bottom: 100em;*/
+    /*position: fixed;*/
     color: #BDBDBD;
     width:100%;
-    opacity: 50%;
+    height: 60%;
+    /*margin-bottom: 700px;*/
+
   }
+
+#svg-container{
+  height:100%;
+  width: auto;
+}
 
   .tick text{
     fill:white;
@@ -252,9 +262,11 @@ nav a{
 }
 
 #form_container{
- 
+
 }
 /*this is just so we could see the list as we worked on it*/
+
+
 #lower-nav a{
  display: block;
  width: 5em;

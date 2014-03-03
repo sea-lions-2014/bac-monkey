@@ -25,14 +25,14 @@ ActiveRecord::Schema.define(:version => 20140301223811) do
   create_table "users", :force => true do |t|
     t.string   "user_name"
     t.string   "email"
-    t.string   "password_digest"
+    t.string   "password_hash"
     t.string   "gender"
     t.integer  "weight"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-    t.integer  "total_alcohol",   :default => 0
-    t.integer  "total_caffeine",  :default => 0
-    t.integer  "total_nicotine",  :default => 0
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "total_alcohol",  :default => 0
+    t.integer  "total_caffeine", :default => 0
+    t.integer  "total_nicotine", :default => 0
   end
 
 end

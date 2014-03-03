@@ -17,7 +17,7 @@ var Chart = (function(){
   }
 
   var _buildChart = function(dataObj){
-    d3.select('body').insert('svg', '#footer').attr('id', 'chart');
+    d3.select('#svg-container').insert('svg', '#footer').attr('id', 'chart');
     nv.addGraph(dataObj)
     var chart = nv.models.lineChart()
                 .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
@@ -60,3 +60,4 @@ var Chart = (function(){
   }
 
 })()
+
