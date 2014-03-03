@@ -398,7 +398,7 @@ background-color: #00B358;
   font-size: 1.25em;
   color: white;
   width: 60%;
-  min-width: 500px;
+  min-width: 630px;
   margin: 150px auto;
 }
 
@@ -452,6 +452,8 @@ background-color: #00B358;
   display: inline-block;
   height: auto;
   vertical-align: top;
+  padding-left: 1em;
+  word-spacing: 3px;
 }
 
 #alc_daily {
@@ -468,13 +470,29 @@ background-color: #00B358;
 
 /*-----MEDIA QUERIES-----*/
 
-@media (max-width: 550px) {
-  nav h3 {
-    display: none;
-  }
 
+@media (max-width: 695px) {
   #user_profile {
     width: 90%;
     min-width: 0;
+  }
+
+  .user_info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tips {
+    width: 90%;
+  }
+
+  .total_info {
+    border-bottom: 3px solid #1e1e1e;
+  }
+}
+
+@media (max-width: 570px) {
+  nav h3 {
+    display: none;
   }
 }
