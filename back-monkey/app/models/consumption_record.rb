@@ -17,4 +17,5 @@ class ConsumptionRecord < ActiveRecord::Base
       self.user.save
     end
   end
+
 end
