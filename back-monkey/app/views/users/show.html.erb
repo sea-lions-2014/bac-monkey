@@ -1,29 +1,49 @@
-<div id="user-profile">
-  <div class="consumption-list">
+<div id="user_profile">
+  <div class="consumption_list">
     <div class="consumption_summary">
-      <div class="daily_info">
+
+      <div class="user_info">
+        <div class="daily_info" id="alc_daily">
+          <span class="big_num"><%= @user.daily_average_alcohol %></span>
+          <p>drinks per day</p>
+        </div>
+        <div class="total_info">
+          <span class="big_num"><%= @user.total_alcohol %></span>
+          <p>drinks total</p>
+        </div>
       </div>
-      <div class="total_info">
-      </div>
-      <div id="alcohol_tips">
+      <div class="tips">
+        fdhgterydhgghjkiljhgvrd
       </div>
     </div>
 
     <div class="consumption_summary">
-      <div class="daily_info">
+      <div class="user_info">
+        <div class="daily_info" id="caff_daily">
+          <span class="big_num"><%= @user.daily_average_caffeine %></span>
+          <p>mgs caffeine per day</p>
+        </div>
+        <div class="total_info">
+          <span class="big_num"><%= @user.total_caffeine %></span>
+          <p>mgs caffeine total</p>
+        </div>
       </div>
-      <div class="total_info">
-      </div>
-      <div id="caffeine_tips">
+      <div class="tips">
       </div>
     </div>
 
     <div class="consumption_summary">
-      <div class="daily_info">
+      <div class="user_info">
+        <div class="daily_info"  id="nic_daily">
+          <span class="big_num"><%= @user.daily_average_nicotine %></span>
+          <p>mgs nicotine per day</p>
+        </div>
+        <div class="total_info">
+          <span class="big_num"><%= @user.total_nicotine %></span>
+          <p>mgs nicotine total</p>
+        </div>
       </div>
-      <div class="total_info">
-      </div>
-      <div id="nicotine_tips">
+      <div class="tips">
       </div>
     </div>
   </div>
