@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -17,6 +17,9 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    # our changes
+    # @gender = User.current_gender
+    # @weight = User.current_weight
   end
 
 end
