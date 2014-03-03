@@ -1,6 +1,7 @@
 class AlcoholCalcController < ApplicationController
   respond_to :json, only: [:create]
 
+
   def create
     args = format_params(params)
     save_consumption_record(args) if current_user

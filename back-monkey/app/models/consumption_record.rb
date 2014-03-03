@@ -14,7 +14,6 @@ class ConsumptionRecord < ActiveRecord::Base
       self.user.total_alcohol += self.amount if self.substance == "alcohol"
       self.user.total_caffeine += self.amount if self.substance == "caffeine"
       self.user.total_nicotine += self.amount if self.substance == "nicotine"
-      # debugger
       self.user.save
     end
   end
