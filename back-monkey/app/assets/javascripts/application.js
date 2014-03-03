@@ -19,4 +19,5 @@
 //= require lowernav
 //= require linechart
 //= require signin
+//= require initialize
 //= require_tree .
