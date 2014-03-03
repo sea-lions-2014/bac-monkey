@@ -17,9 +17,6 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    # our changes
-    # @gender = User.current_gender
-    # @weight = User.current_weight
   end
 
 end
