@@ -25,4 +25,26 @@ describe User do
       expect(person.password_digest).to eq "password"
     end
   end
+
+  context "daily average methods" do
+    let!(:user){ create :user }
+    before :each do
+      User.any_instance.stub(:total_alcohol) { 10 }
+      User.any_instance.stub(:total_caffeine) { 1000 }
+      User.any_instance.stub(:total_nicotine) { 100 }
+      User.any_instance.stub(:created_at) { Time.zone.now - 864000 }
+    end
+
+    it "returns a daily average of alcohol consumption" do
+      expect(user.daily_average_alcohol).to eq 1
+    end
+
+    it "returns a daily average of caffeine consumption" do
+      expect(user.daily_average_caffeine).to eq 100
+    end
+
+    it "returns a daily average of nicotine consumption" do
+      expect(user.daily_average_nicotine).to eq 10
+    end
+  end
 end

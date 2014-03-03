@@ -6,20 +6,20 @@ class User < ActiveRecord::Base
   validates :gender, inclusion: { in: ["m", "f"]}
   has_secure_password
 
-  #Need to work on bcrypt with factory girl testing
-  # def password
-  #   @password ||= Password.new(password_hash)
-  # end
+  def daily_average_alcohol
+    self.total_alcohol / days_account_open
+  end
 
-  # def password=(new_password)
-  #   @password = Password.create(new_password)
-  #   self.password_hash = @password
-  # end
+  def daily_average_caffeine
+    self.total_caffeine / days_account_open
+  end
 
-  # def create
-  #   @user = User.new(params[:user])
-  #   @user.password = params[:password]
-  #   @user.save!
-  # end
+  def daily_average_nicotine
+    self.total_nicotine / days_account_open
+  end
 
+  def days_account_open
+    days = ((Time.zone.now - self.created_at)/86400).ceil
+    days == 0 ? 1 : days
+  end
 end
