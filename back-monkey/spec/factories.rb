@@ -1,10 +1,10 @@
 FactoryGirl.define do
-  
+
   factory :user do
-    user_name "David"
+    user_name "Davida"
     email "email@yesanemail.com"
     password "password"
-    gender 'm'
+    gender 'f'
     weight 123
   end
 
@@ -28,6 +28,6 @@ FactoryGirl.define do
   factory :single_drink, class: ConsumptionRecord do
     substance { "alcohol" }
     amount { 1 }
-    unit_of_measure { "drink" } 
+    unit_of_measure { "drink" }
   end
 end
