@@ -451,7 +451,7 @@ background-color: #00B358;
   display: inline-block;
   height: 100%;
   vertical-align: top;
-  padding-left: 1.25em;
+  padding-left: 2em;
   word-spacing: 3px;
   line-height: 1.5em;
 }
@@ -499,6 +499,7 @@ background-color: #00B358;
 
   .tips {
     width: 90%;
+    padding-left: 1em;
   }
 
   .total_info {
