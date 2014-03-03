@@ -8,6 +8,7 @@ nav img{
   position: absolute;
   top:0em;
   cursor: pointer;
+  left:0;
   /*margin: 20px;*/
   /*height: 75px;*/
 }
@@ -252,7 +253,7 @@ nav a{
 }
 
 #form_container{
- 
+
 }
 /*this is just so we could see the list as we worked on it*/
 #lower-nav a{
@@ -268,6 +269,7 @@ nav a{
   background-color: #7b7777;
   /*margin-top: 1em;*/
   margin: .25em;
+  margin-bottom: .25em;
 
 
 
@@ -329,6 +331,27 @@ background-color: #007439;
 }
 
 
+.signin_form{
+  background-color: #ca171b;
+  font-family: 'Lato', sans-serif;
+  padding: .5em;
+  border-radius: .5em;
+
+}
+
+.signin_form input{
+  margin: .5em;
+}
+
+.signin_form .button{
+     color: white;
+    background-color:#000;
+    border-radius: 5px;
+    border:#ca171b ;
+    padding: 1em ;
+    margin: 0 auto;
+    font-size: 12px;
+}
 
 /*-----MEDIA QUERIES-----*/
 
