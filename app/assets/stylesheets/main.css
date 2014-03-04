@@ -284,7 +284,7 @@ nav a{
 }
 
 #form_container{
-
+margin-left: 5em;
 }
 /*this is just so we could see the list as we worked on it*/
 
@@ -553,16 +553,25 @@ background-color: #00B358;
 
 @media (max-width: 600px){
   #form_container{
-    margin-left: 7em;
+    margin-left: 6em;
+
   }
 
   .line{
     font-size: .75em;
-    width: 40%;
+    width: 35%;
+    padding-top: 0em;
+/*    margin: 0 auto;
+*/
+    /*height: 1em;*/
+
+
   }
 
 .substance_form .line input{
-    width: 2em;
+    width: 3em;
+
+
   }
 
  .substance_form .button{
@@ -571,14 +580,16 @@ background-color: #00B358;
   /*float: left;*/
   margin-bottom: 10em;
   position: absolute;
-  left: 5em;
-  top: 16em;
-   }
+  left: 4em;
+  top: 15em;
+/*  bottom:5em;
+*/   }
 
  #lower_nav a{
-  padding: 1.7em .15em 1.7em .5em;
+  padding: 2.55em 0em 2.55em 0em;
+  text-align: center;
 
-    font-size: 1em;
+    font-size: .75em;
 
  }
 
