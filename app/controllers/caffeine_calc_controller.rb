@@ -10,7 +10,7 @@ class CaffeineCalcController < ApplicationController
   end
 
   def save_consumption_record(args)
-      current_user.consumption_records.create(substance: "caffeine", 
+      current_user.consumption_records.create(substance: "caffeine",
                                              amount: args[:milligrams],
                                              unit_of_measure: "mg")
   end

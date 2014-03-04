@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//=require fix_bug
+//= require fix_bug
 //= require d3.v3
 //= require nv.d3
-//= require linechart
+//= require app_init
 //= require_tree .

@@ -5,8 +5,8 @@ $(function(){
 var MonkeyApp = (function(){
 
   var _ajaxEvents = function(){
-    $('#bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
+    $('#bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
   }
 
@@ -36,12 +36,13 @@ var MonkeyApp = (function(){
     },
 
     getCaffeineChart: function(event, data, status, xhr){
-      var dataObj = SubstanceDataParser.BACData(data);
+      debugger
+      var dataObj = SubstanceDataParser.caffeineData(data);
       Chart.render(dataObj);
     },
 
     getNicotineChart: function(event, data, status, xhr){
-      var dataObj = SubstanceDataParser.BACData(data);
+      var dataObj = SubstanceDataParser.nicotineData(data);
       Chart.render(dataObj);
     }
 
