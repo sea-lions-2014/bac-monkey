@@ -10,15 +10,24 @@ var MonkeyApp = (function(){
     $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
   }
 
+  var _toggleSignInForm = function(){
+    $('.signin_form').toggleClass('hidden');
+  }
+
   var _bindEvents = function(){
     $('#lower-nav a').click(LowerNav.toggleForms)
     $(".arrow").click(LowerNav.toggleNavHeight)
-  }
+    $('#signin').click(MonkeyApp.toggleSignInForm)
+}
 
   return{
     init: function(){
       _ajaxEvents();
       _bindEvents();
+    },
+
+    toggleSignInForm: function(){
+      _toggleSignInForm();
     },
 
     getBACChart: function(event, data, status, xhr){
