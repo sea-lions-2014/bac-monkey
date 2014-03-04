@@ -19,11 +19,11 @@ class User < ActiveRecord::Base
   end
 
   def past_month_consumption
-    self.consumption_records.where('created_at > ?', (Time.zone.now - 18141000))
+    self.consumption_records.where('created_at > ?', (Time.zone.now - 18141000)).reverse
   end
 
   def past_week_consumption
-    self.consumption_records.where('created_at > ?', (Time.zone.now - 604800))
+    self.consumption_records.where('created_at > ?', (Time.zone.now - 604800)).reverse
   end
 
   def days_account_open
