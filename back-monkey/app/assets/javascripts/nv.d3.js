@@ -2797,73 +2797,73 @@ nv.models.scatter = function() {
           .style('fill-opacity', .5);
 
 
-      if (onlyCircles) {
+      // if (onlyCircles) {
 
-        var points = groups.selectAll('circle.nv-point')
-            .data(function(d) { return d.values }, pointKey);
-        points.enter().append('circle')
-            // .style('fill', function (d,i) { return d.color })
-            // .style('stroke', function (d,i) { return d.color })
-            .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x0(getX(d,i))) })
-            .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y0(getY(d,i))) })
-            .attr('r', function(d,i) { return (Math.sqrt(z(getSize(d,i))/Math.PI))*3 });
-        points.exit().remove();
-        groups.exit().selectAll('path.nv-point').transition()
-            .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x(getX(d,i))) })
-            .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y(getY(d,i))) })
-            .remove();
-        points.each(function(d,i) {
-          d3.select(this)
-            .classed('nv-point', true)
-            .classed('nv-point-' + i, true)
-            .classed('hover',false)
-            ;
-        });
-        points.transition()
-            .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x(getX(d,i))) })
-            .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y(getY(d,i))) })
-            .attr('r', function(d,i) { return (Math.sqrt(z(getSize(d,i))/Math.PI))*3 });
+      //   var points = groups.selectAll('circle.nv-point')
+      //       .data(function(d) { return d.values }, pointKey);
+      //   points.enter().append('circle')
+      //       // .style('fill', function (d,i) { return d.color })
+      //       // .style('stroke', function (d,i) { return d.color })
+      //       .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x0(getX(d,i))) })
+      //       .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y0(getY(d,i))) })
+      //       .attr('r', function(d,i) { return (Math.sqrt(z(getSize(d,i))/Math.PI))*3 });
+      //   points.exit().remove();
+      //   groups.exit().selectAll('path.nv-point').transition()
+      //       .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x(getX(d,i))) })
+      //       .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y(getY(d,i))) })
+      //       .remove();
+      //   points.each(function(d,i) {
+      //     d3.select(this)
+      //       .classed('nv-point', true)
+      //       .classed('nv-point-' + i, true)
+      //       .classed('hover',false)
+      //       ;
+      //   });
+      //   points.transition()
+      //       .attr('cx', function(d,i) { return nv.utils.NaNtoZero(x(getX(d,i))) })
+      //       .attr('cy', function(d,i) { return nv.utils.NaNtoZero(y(getY(d,i))) })
+      //       .attr('r', function(d,i) { return (Math.sqrt(z(getSize(d,i))/Math.PI))*3 });
 
-      } else {
+      // } else {
 
-        var points = groups.selectAll('path.nv-point')
-            .data(function(d) { return d.values });
-        points.enter().append('path')
-            // .style('fill', function (d,i) { return d.color })
-            // .style('stroke', function (d,i) { return d.color })
-            .attr('transform', function(d,i) {
-              return 'translate(' + x0(getX(d,i)) + ',' + y0(getY(d,i)) + ')'
-            })
-            .attr('d',
-              d3.svg.symbol()
-                .type(getShape)
-                .size(function(d,i) { return z(getSize(d,i)) })
-            );
-        points.exit().remove();
-        groups.exit().selectAll('path.nv-point')
-            .transition()
-            .attr('transform', function(d,i) {
-              return 'translate(' + x(getX(d,i)) + ',' + y(getY(d,i)) + ')'
-            })
-            .remove();
-        points.each(function(d,i) {
-          d3.select(this)
-            .classed('nv-point', true)
-            .classed('nv-point-' + i, true)
-            .classed('hover',false)
-            ;
-        });
-        points.transition()
-            .attr('transform', function(d,i) {
-              //nv.log(d,i,getX(d,i), x(getX(d,i)));
-              return 'translate(' + x(getX(d,i)) + ',' + y(getY(d,i)) + ')'
-            })
-            .attr('d',
-              d3.svg.symbol()
-                .type(getShape)
-                .size(function(d,i) { return z(getSize(d,i)) })
-            );
-      }
+      //   var points = groups.selectAll('path.nv-point')
+      //       .data(function(d) { return d.values });
+      //   points.enter().append('path')
+      //       // .style('fill', function (d,i) { return d.color })
+      //       // .style('stroke', function (d,i) { return d.color })
+      //       .attr('transform', function(d,i) {
+      //         return 'translate(' + x0(getX(d,i)) + ',' + y0(getY(d,i)) + ')'
+      //       })
+      //       .attr('d',
+      //         d3.svg.symbol()
+      //           .type(getShape)
+      //           .size(function(d,i) { return z(getSize(d,i)) })
+      //       );
+      //   points.exit().remove();
+      //   groups.exit().selectAll('path.nv-point')
+      //       .transition()
+      //       .attr('transform', function(d,i) {
+      //         return 'translate(' + x(getX(d,i)) + ',' + y(getY(d,i)) + ')'
+      //       })
+      //       .remove();
+      //   points.each(function(d,i) {
+      //     d3.select(this)
+      //       .classed('nv-point', true)
+      //       .classed('nv-point-' + i, true)
+      //       .classed('hover',false)
+      //       ;
+      //   });
+      //   points.transition()
+      //       .attr('transform', function(d,i) {
+      //         //nv.log(d,i,getX(d,i), x(getX(d,i)));
+      //         return 'translate(' + x(getX(d,i)) + ',' + y(getY(d,i)) + ')'
+      //       })
+      //       .attr('d',
+      //         d3.svg.symbol()
+      //           .type(getShape)
+      //           .size(function(d,i) { return z(getSize(d,i)) })
+      //       );
+      // }
 
 
       // Delay updating the invisible interactive layer for smoother animation

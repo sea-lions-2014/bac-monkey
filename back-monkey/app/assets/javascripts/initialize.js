@@ -1,5 +1,0 @@
-$(function(){
-  lowerNavEvents();
-  AJAXEvents();
-  signInEvents();
-});

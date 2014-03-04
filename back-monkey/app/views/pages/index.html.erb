@@ -4,7 +4,14 @@
   <p>Fill out the form below to start tracking your blood alcohol content (BAC). It will graph your estimated BAC over time, so you can decide whether you've had one beer too many (or too few).</p>
 </div>
 
-<div id="svg-container"></div>
+<div id="svg-container">
+  <div class="drive hidden bac-limit">
+    <p>You are legally drunk. Don't drive.</p>
+  </div>
+  <div class="dead hidden bac-limit">
+    <p>You are legally dead. Don't get up.</p>
+  </div>
+</div>
 
 <div id="footer">
   <div class="hidden arrow" id="up">&and;</div>
@@ -20,7 +27,3 @@
     <%= render "chart/nicotine_form" %>
   </div>
 </div>
-
-
-
-     <!-- render "chart/nicotine_form" -->
