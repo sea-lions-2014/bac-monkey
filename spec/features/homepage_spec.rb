@@ -89,5 +89,4 @@ describe "homepage", js:true do
     end
   end
 
-
 end
