@@ -12,10 +12,11 @@ var MonkeyApp = (function(){
 
   var _toggleSignInForm = function(){
     $('.signin_form').toggleClass('hidden');
+    $('#user_user_name').focus();
   }
 
   var _bindEvents = function(){
-    $('#lower-nav a').click(LowerNav.toggleForms)
+    $('#lower_nav a').click(LowerNav.toggleForms)
     $(".arrow").click(LowerNav.toggleNavHeight)
     $('#signin').click(MonkeyApp.toggleSignInForm)
 }
@@ -36,7 +37,6 @@ var MonkeyApp = (function(){
     },
 
     getCaffeineChart: function(event, data, status, xhr){
-      debugger
       var dataObj = SubstanceDataParser.caffeineData(data);
       Chart.render(dataObj);
     },
