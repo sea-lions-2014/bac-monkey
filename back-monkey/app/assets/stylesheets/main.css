@@ -483,6 +483,29 @@ background-color: #00B358;
   margin-right: .25em;
 }
 
+#consumption_history {
+  background-color: #000;
+  padding: 0.5em 1em;
+  margin: 2em auto 0 auto;
+  word-spacing: 3px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.date {
+  color: gray;
+  margin-left: 10%;
+}
+
+#vices {
+  background-color: #000;
+  padding: 0.5em 1em;
+  margin: 2em auto 0 auto;
+  word-spacing: 3px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
 /*-----MEDIA QUERIES-----*/
 
 

@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @history = current_user.past_week_consumption
   end
 
 end

@@ -33,10 +33,10 @@ describe "a registered user", js:true do
     end
 
     it "should list the user's total consumption" do
-      expect(page).to have_content 'Total consumption'
-      expect(page).to have_content 'drinks'
-      expect(page).to have_content 'mgs of caffeine'
-      expect(page).to have_content 'mgs of nicotine'
+      expect(page).to have_content 'C2H5OH'
+      expect(page).to have_content 'C8H10N4O2'
+      expect(page).to have_content 'C10H14N2'
+      expect(page).to have_content 'Drugs this week'
     end
   end
 
