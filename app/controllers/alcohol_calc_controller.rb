@@ -5,6 +5,7 @@ class AlcoholCalcController < ApplicationController
   def create
     args = format_params(params)
     save_consumption_record(args) if current_user
+    puts "---------I WENT INTO THE CONTROLLER---------"
     @alcohol_calc = AlcoholCalc.new(args)
     @bac = @alcohol_calc.bac_series
     render json: @bac
