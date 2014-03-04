@@ -73,4 +73,34 @@ describe User do
       expect(User.daily_average_nicotine).to eq 5
     end
   end
+
+  context "daily comparison methods" do
+    let!(:user){ create :user }
+    let!(:user2){ create :user2 }
+
+    before :each do
+      user.consumption_records.create(substance: "alcohol", amount: 10)
+      user.consumption_records.create(substance: "caffeine", amount: 10)
+      user.consumption_records.create(substance: "nicotine", amount: 10)
+      user2.consumption_records.create(substance: "alcohol", amount: 0)
+      user2.consumption_records.create(substance: "caffeine", amount: 0)
+      user2.consumption_records.create(substance: "nicotine", amount: 0)
+    end
+
+    it "returns comparative % alcohol consumption" do
+
+      expect(user.reload.daily_comparison_alcohol).to eq 100
+      expect(user2.reload.daily_comparison_alcohol).to eq -100
+    end
+
+    it "returns comparative % caffeine consumption" do
+      expect(user.reload.daily_comparison_alcohol).to eq 100
+      expect(user2.reload.daily_comparison_alcohol).to eq -100
+    end
+
+    it "returns comparative % nicotine consumption" do
+      expect(user.reload.daily_comparison_alcohol).to eq 100
+      expect(user2.reload.daily_comparison_alcohol).to eq -100
+    end
+  end
 end

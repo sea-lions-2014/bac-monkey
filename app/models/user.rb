@@ -31,6 +31,18 @@ class User < ActiveRecord::Base
     days == 0 ? 1 : days
   end
 
+  def daily_comparison_alcohol
+    (self.daily_average_alcohol - User.daily_average_alcohol) / User.daily_average_alcohol * 100
+  end
+
+  def daily_comparison_caffeine
+    (self.daily_average_alcohol - User.daily_average_alcohol) / User.daily_average_alcohol * 100
+  end
+
+  def daily_comparison_nicotine
+    (self.daily_average_alcohol - User.daily_average_alcohol) / User.daily_average_alcohol * 100
+  end
+
   # Daily average consumption for all users, not individual users:
   class << self
     def daily_average_alcohol
