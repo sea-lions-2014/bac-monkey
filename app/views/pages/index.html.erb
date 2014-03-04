@@ -1,5 +1,5 @@
 <div id="welcome_msg">
-  <span class="pop">Back Monkey is a personal tracker for your chemical vices.</span>
+  <span class="pop">BAC Monkey is a personal tracker for your chemical vices.</span>
 
   <p>Fill out the form below to start tracking your blood alcohol content (BAC). It will graph your estimated BAC over time, so you can decide whether you've had one beer too many (or too few).</p>
 </div>
@@ -17,20 +17,27 @@
   <div class="hidden arrow" id="up"><h5>show</h5></div>
   <div class="arrow" id="down"><h5>hide</h5></div>
   <div id="lower_nav">
-      <a href="#" id="bac">Alcohol</a>
-      <a href="#" id="caffeine">Caffeine</a>
-      <a href="#" id="nicotine">Nicotine</a>
+      <div id="desktop_links">
+        <a href="#" id="bac">Alcohol</a>
+        <a href="#" id="caffeine">Caffeine</a>
+        <a href="#" id="nicotine">Nicotine</a>
+      </div>
+      <div id="mobile_links">
+        <a href="#" id="s_bac">Alcohol</a>
+        <a href="#" id="s_caffeine">Caffeine</a>
+        <a href="#" id="s_nicotine">Nicotine</a>
+      </div>
   </div>
   <div id="form_container">
     <div id="desktop_forms">
-    <%= render "chart/caffeine_form" %>
-    <%= render "chart/bac_form" %>
-    <%= render "chart/nicotine_form" %>
+      <%= render "chart/caffeine_form" %>
+      <%= render "chart/bac_form" %>
+      <%= render "chart/nicotine_form" %>
     </div>
     <div id="mobile_forms" class="hidden">
-    <%= render "chart/s_caffeine_form" %>
-    <%= render "chart/s_bac_form" %>
-    <%= render "chart/s_nicotine_form" %>
+      <%= render "chart/s_caffeine_form" %>
+      <%= render "chart/s_bac_form" %>
+      <%= render "chart/s_nicotine_form" %>
     </div>
   </div>
 </div>

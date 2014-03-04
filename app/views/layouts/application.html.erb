@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BackMonkey</title>
+  <title>BAC Monkey</title>
   <link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -12,7 +12,7 @@
 <body>
 <nav id="topbar">
   <%= link_to image_tag("smoking_monkey.jpg", :alt => "monkey_logo"), root_path %>
-  <h3>Back Monkey</h3>
+  <h3>BAC Monkey</h3>
   <% if @current_user %>
     <%= link_to "Profile", user_path(@current_user), id:"profile-button" %>
     <%= link_to "Sign Out", session_path(@current_user), method: 'DELETE', id:"signout" %>

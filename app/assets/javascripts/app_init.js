@@ -8,6 +8,9 @@ var MonkeyApp = (function(){
     $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
     $('#bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
+    $('#s_caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
+    $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
+    $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
   }
 
   var _toggleSignInForm = function(){
@@ -19,19 +22,31 @@ var MonkeyApp = (function(){
     $('#lower_nav a').click(LowerNav.toggleForms)
     $(".arrow").click(LowerNav.toggleNavHeight)
     $('#signin').click(MonkeyApp.toggleSignInForm)
+    $(window).resize(_screenCheck)
   }
 
   var _cookieCheck = function(){
+    $.cookie.json = true;
     if ($.cookie('dataObj')){
       Chart.render($.cookie('dataObj'))
     }
   }
 
+  var _screenCheck = function(){
+    if($(document).width() <= 600){
+      LowerNav.mobileMode();
+    }
+    else
+    {
+      LowerNav.desktopMode();
+    }
+  }
+
   return{
     init: function(){
+      _screenCheck();
       _ajaxEvents();
       _bindEvents();
-      $.cookie.json = true;
       _cookieCheck();
     },
 
