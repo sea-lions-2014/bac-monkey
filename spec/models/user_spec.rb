@@ -47,4 +47,30 @@ describe User do
       expect(user.daily_average_nicotine).to eq 10
     end
   end
+
+  context "daily average methods for all users" do
+    let!(:user){ create :user }
+    let!(:user2){ create :user2 }
+
+    before :each do
+      user.consumption_records.create(substance: "alcohol", amount: 10)
+      user.consumption_records.create(substance: "caffeine", amount: 10)
+      user.consumption_records.create(substance: "nicotine", amount: 10)
+      user2.consumption_records.create(substance: "alcohol", amount: 0)
+      user2.consumption_records.create(substance: "caffeine", amount: 0)
+      user2.consumption_records.create(substance: "nicotine", amount: 0)
+    end
+
+    it "returns a daily average of alcohol consumption" do
+      expect(User.daily_average_alcohol).to eq 5
+    end
+
+    it "returns a daily average of caffeine consumption" do
+      expect(User.daily_average_caffeine).to eq 5
+    end
+
+    it "returns a daily average of nicotine consumption" do
+      expect(User.daily_average_nicotine).to eq 5
+    end
+  end
 end
