@@ -36,12 +36,12 @@ var SubstanceDataParser = (function(){
       return _formatData(data, 'BAC');
     },
 
-    caffeineData: function(event, data, status, xhr){
-      return formatData(data, 'mg of Caffeine');
+    caffeineData: function(data){
+      return _formatData(data, 'mg of Caffeine');
     },
 
-    nicotineData: function(event, data, status, xhr){
-      return formatData(data, 'mg of Nicotine')
+    nicotineData: function(data){
+      return _formatData(data, 'mg of Nicotine')
     }
   }
 })()
