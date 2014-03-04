@@ -37,7 +37,6 @@ var MonkeyApp = (function(){
     },
 
     getCaffeineChart: function(event, data, status, xhr){
-      debugger
       var dataObj = SubstanceDataParser.caffeineData(data);
       Chart.render(dataObj);
     },
