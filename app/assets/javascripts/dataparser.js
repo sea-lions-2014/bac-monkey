@@ -13,26 +13,8 @@ var SubstanceDataParser = (function(){
     return dataObj
   }
 
-  var _maxBAC = function(data){
-    var max = d3.max(data, function(array) {
-      return d3.max(array.slice(1));
-    });
-    if(max > 0.42){
-      $('.drive').addClass('hidden');
-      $('.dead').removeClass('hidden');
-    }
-    else if(max > 0.08){
-      $('.dead').addClass('hidden');
-      $('.drive').removeClass('hidden');
-    }
-    else{
-      $('.bac-limit').addClass('hidden');
-    }
-  }
-
   return {
     BACData: function(data){
-      _maxBAC(data)
       return _formatData(data, 'BAC');
     },
 
