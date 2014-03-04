@@ -22,7 +22,6 @@ var MonkeyApp = (function(){
     },
 
     getBACChart: function(event, data, status, xhr){
-      debugger
       var dataObj = SubstanceDataParser.BACData(data);
       Chart.render(dataObj);
     },

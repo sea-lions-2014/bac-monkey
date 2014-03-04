@@ -18,10 +18,15 @@ var SubstanceDataParser = (function(){
       return d3.max(array.slice(1));
     });
     if(max > 0.42){
-      $('.dead').removeClass('hidden')
+      $('.drive').addClass('hidden');
+      $('.dead').removeClass('hidden');
     }
     else if(max > 0.08){
-
+      $('.dead').addClass('hidden');
+      $('.drive').removeClass('hidden');
+    }
+    else{
+      $('.bac-limit').addClass('hidden');
     }
   }
 
