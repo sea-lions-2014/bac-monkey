@@ -32,29 +32,14 @@ class User < ActiveRecord::Base
   end
 
   def daily_comparison_alcohol
-    (self.daily_average_alcohol - User.daily_average_alcohol) / User.daily_average_alcohol * 100
+    (((self.daily_average_alcohol - 0.6) / 0.6) * 100).floor
   end
 
   def daily_comparison_caffeine
-    (self.daily_average_alcohol - User.daily_average_alcohol) / User.daily_average_alcohol * 100
+    (((self.daily_average_caffeine - 300) / 300.0) * 100).floor
   end
 
   def daily_comparison_nicotine
-    (self.daily_average_alcohol - User.daily_average_alcohol) / User.daily_average_alcohol * 100
-  end
-
-  # Daily average consumption for all users, not individual users:
-  class << self
-    def daily_average_alcohol
-      (User.all.map { |user| user.daily_average_alcohol }).reduce(:+) / User.count
-    end
-
-    def daily_average_caffeine
-      (User.all.map { |user| user.daily_average_caffeine }).reduce(:+) / User.count
-    end
-
-    def daily_average_nicotine
-      (User.all.map { |user| user.daily_average_nicotine }).reduce(:+) / User.count
-    end
+    (((self.daily_average_nicotine - 15) / 15.0) * 100).floor
   end
 end
