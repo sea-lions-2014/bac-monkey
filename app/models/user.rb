@@ -30,4 +30,19 @@ class User < ActiveRecord::Base
     days = ((Time.zone.now - self.created_at)/86400).ceil
     days == 0 ? 1 : days
   end
+
+  # Daily average consumption for all users, not individual users:
+  class << self
+    def daily_average_alcohol
+      (User.all.map { |user| user.daily_average_alcohol }).reduce(:+) / User.count
+    end
+
+    def daily_average_caffeine
+      (User.all.map { |user| user.daily_average_caffeine }).reduce(:+) / User.count
+    end
+
+    def daily_average_nicotine
+      (User.all.map { |user| user.daily_average_nicotine }).reduce(:+) / User.count
+    end
+  end
 end

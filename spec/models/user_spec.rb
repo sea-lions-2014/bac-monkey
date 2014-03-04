@@ -26,7 +26,7 @@ describe User do
     end
   end
 
-  context "daily average methods" do
+  context "daily average methods for one user" do
     let!(:user){ create :user }
     before :each do
       User.any_instance.stub(:total_alcohol) { 10 }
