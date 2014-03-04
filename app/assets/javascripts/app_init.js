@@ -12,6 +12,7 @@ var MonkeyApp = (function(){
 
   var _toggleSignInForm = function(){
     $('.signin_form').toggleClass('hidden');
+    $('#user_user_name').focus();
   }
 
   var _bindEvents = function(){

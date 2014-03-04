@@ -1,5 +1,5 @@
 <div id="nicotine_form" class="substance_form hidden">
-  <%= form_for :nicotine_calc, url: {action: :create, controller: :nicotine_calc}, remote: true do |f|%>
+  <%= form_for :nicotine_calc, url: nicotine_calc_path, remote: true do |f|%>
     <div class="line">
       I had
       <%= f.number_field :cigarettes, required: true, min: 1 %>

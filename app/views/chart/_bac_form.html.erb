@@ -1,5 +1,5 @@
 <div id="bac_form" class="substance_form">
-  <%= form_for :alcohol_calc, url: {action: :create, controller: :alcohol_calc}, remote: true do |f|%>
+  <%= form_for :alcohol_calc, url: alcohol_calc_path, remote: true do |f|%>
   <div class="line">
     I am a <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']], @gender), {required: true}, { :class => "drop_down" } %> weighing
     <%= f.number_field :weight, required: true, min: 0, value: @weight %> pounds. </div>
