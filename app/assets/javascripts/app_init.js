@@ -22,14 +22,16 @@ var MonkeyApp = (function(){
   }
 
   var _cookieCheck = function(){
-    //use ".selected" class to find visible form, perform cookieCheck
-    //call cookieCheck from LowerNav.toggleForms ?
+    if ($.cookie('dataObj')){
+      Chart.render($.cookie('dataObj'))
+    }
   }
 
   return{
     init: function(){
       _ajaxEvents();
       _bindEvents();
+      $.cookie.json = true;
       _cookieCheck();
     },
 
@@ -39,19 +41,19 @@ var MonkeyApp = (function(){
 
     getBACChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.BACData(data);
-      $.cookie('#bac_form', dataObj);
+      $.cookie('dataObj', dataObj);
       Chart.render(dataObj);
     },
 
     getCaffeineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.caffeineData(data);
-      $.cookie('#caffeine_form', dataObj);
+      $.cookie('dataObj', dataObj);
       Chart.render(dataObj);
     },
 
     getNicotineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.nicotineData(data);
-      $.cookie('#nicotine_form', dataObj);
+      $.cookie('dataObj', dataObj);
       Chart.render(dataObj);
     }
 

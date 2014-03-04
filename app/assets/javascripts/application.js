@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.cookie
 //= require fix_bug
 //= require d3.v3
 //= require nv.d3
