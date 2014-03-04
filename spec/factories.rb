@@ -8,6 +8,14 @@ FactoryGirl.define do
     weight 123
   end
 
+  factory :user2, class: User do
+    user_name "Johna"
+    email "johna@yesanemail.com"
+    password "password"
+    gender 'f'
+    weight 123
+  end
+
   factory :non_user, class: User do
     user_name "Bob"
     email "notanemail"
