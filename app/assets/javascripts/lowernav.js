@@ -4,6 +4,8 @@ var LowerNav = (function(){
       var form = '#' + $(this).attr('id') + "_form";
       $(form).removeClass('hidden');
       $(form).siblings().addClass('hidden');
+      $(this).addClass('selected');
+      $(this).siblings().removeClass('selected');
     },
 
     toggleNavHeight: function(){
