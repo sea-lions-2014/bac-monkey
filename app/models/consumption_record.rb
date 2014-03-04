@@ -12,6 +12,7 @@ class ConsumptionRecord < ActiveRecord::Base
 
   def update_user_total
     if self.user
+      debugger
       self.user.total_alcohol += self.amount if self.substance == "alcohol"
       self.user.total_caffeine += self.amount if self.substance == "caffeine"
       self.user.total_nicotine += self.amount if self.substance == "nicotine"
