@@ -16,7 +16,7 @@ var MonkeyApp = (function(){
   }
 
   var _bindEvents = function(){
-    $('#lower-nav a').click(LowerNav.toggleForms)
+    $('#lower_nav a').click(LowerNav.toggleForms)
     $(".arrow").click(LowerNav.toggleNavHeight)
     $('#signin').click(MonkeyApp.toggleSignInForm)
   }
