@@ -3,13 +3,14 @@
   <div class="line">
    <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']], @gender), {required: true}, { :class => "drop_down" } %> </div>
    <div class="line">
-     weight:
+     <%= f.label :weight %>:
      <%= f.number_field :weight, required: true, min: 0, value: @weight %>
    </div>
    <div class="line">
-    drinks: <%= f.number_field :drinks, required: true %></div>
+    <%= f.label :drinks %>:
+    <%= f.number_field :drinks, required: true %></div>
     <div class="line">
-      hours:
+      <%= f.label :hours %>:
       <%= f.number_field :hours, required: true, min: 0 %>
     </div>
     <div class="submit">

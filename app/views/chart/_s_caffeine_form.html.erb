@@ -3,11 +3,11 @@
     <div class="line">
       <%= f.select :type, options_for_select([['coffee', 'coffee'],['tea', 'tea']]), {required: true}, {:class => "drop_down"}%></div>
       <div class="line">
-      cups:
+      <%= f.label :cups%>:
       <%= f.number_field :cups, required: true, min: 1 %> </div>
 
  <div class="line">
-  hours:
+ <%= f.label :hours %>:
 <%= f.number_field :hours, required: true, min: 1 %>
     </div>
     <div class="submit">
