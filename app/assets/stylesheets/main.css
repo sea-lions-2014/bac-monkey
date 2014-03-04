@@ -289,7 +289,7 @@ nav a{
 /*this is just so we could see the list as we worked on it*/
 
 
-#lower-nav a{
+#lower_nav a{
  display: block;
  width: 5em;
   border-radius: 0.25em;
@@ -307,7 +307,7 @@ nav a{
 
 
 }
-#lower-nav{
+#lower_nav{
   width: 10%;
   position: fixed;
   /*margin:2em 0 0 0 ;*/
@@ -318,27 +318,27 @@ nav a{
   display: none;
 }
 
-#lower-nav #bac{
+#lower_nav #bac{
   background-color: #FF3D00;
 }
 
-#lower-nav #caffeine{
+#lower_nav #caffeine{
   background-color: #0969A2;
 }
 
- #lower-nav #nicotine{
+ #lower_nav #nicotine{
 background-color: #00B358;
 }
 
-#lower-nav #bac:active{
+#lower_nav #bac:active{
   background-color: #A62800;
 }
 
-#lower-nav #caffeine:active{
+#lower_nav #caffeine:active{
   background-color: #03436A;
 }
 
-#lower-nav #nicotine:active{
+#lower_nav #nicotine:active{
   background-color: #007439;
 }
 
@@ -549,4 +549,42 @@ background-color: #00B358;
   nav h3 {
     display: none;
   }
+}
+
+@media (max-width: 600px){
+  #form_container{
+    margin-left: 7em;
+  }
+
+  .line{
+    font-size: .75em;
+    width: 40%;
+  }
+
+.substance_form .line input{
+    width: 2em;
+  }
+
+ .substance_form .button{
+  padding: .5em;
+  font-size: .75em;
+  /*float: left;*/
+  margin-bottom: 10em;
+  position: absolute;
+  left: 5em;
+  top: 16em;
+   }
+
+ #lower_nav a{
+  padding: 1.7em .15em 1.7em .5em;
+
+    font-size: 1em;
+
+ }
+
+ .line .drop_down{
+  font-size: .5em;
+ }
+
+
 }
