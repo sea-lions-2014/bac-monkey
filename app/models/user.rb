@@ -36,10 +36,10 @@ class User < ActiveRecord::Base
   end
 
   def daily_comparison_caffeine
-    (((self.daily_average_caffeine - 300) / 300) * 100).floor
+    (((self.daily_average_caffeine - 300) / 300.0) * 100).floor
   end
 
   def daily_comparison_nicotine
-    (((self.daily_average_nicotine - 15) / 15) * 100).floor
+    (((self.daily_average_nicotine - 15) / 15.0) * 100).floor
   end
 end
