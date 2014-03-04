@@ -26,12 +26,6 @@ describe UsersController do
 
   context '#show' do
     let!(:user){ create :user }
-    
-    it "should find the current logged in user" do
-      session[:id] = user.id
-      get :show, id: user.id
-      expect(assigns(:user)).to eq user
-    end
 
     it "should require the user to be logged in" do
       session[:id] = nil
