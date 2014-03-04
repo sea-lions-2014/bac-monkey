@@ -19,12 +19,20 @@ var MonkeyApp = (function(){
     $('#lower_nav a').click(LowerNav.toggleForms)
     $(".arrow").click(LowerNav.toggleNavHeight)
     $('#signin').click(MonkeyApp.toggleSignInForm)
-}
+  }
+
+  var _cookieCheck = function(){
+    if ($.cookie('dataObj')){
+      Chart.render($.cookie('dataObj'))
+    }
+  }
 
   return{
     init: function(){
       _ajaxEvents();
       _bindEvents();
+      $.cookie.json = true;
+      _cookieCheck();
     },
 
     toggleSignInForm: function(){
@@ -33,17 +41,19 @@ var MonkeyApp = (function(){
 
     getBACChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.BACData(data);
+      $.cookie('dataObj', dataObj);
       Chart.render(dataObj);
     },
 
     getCaffeineChart: function(event, data, status, xhr){
-      debugger
       var dataObj = SubstanceDataParser.caffeineData(data);
+      $.cookie('dataObj', dataObj);
       Chart.render(dataObj);
     },
 
     getNicotineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.nicotineData(data);
+      $.cookie('dataObj', dataObj);
       Chart.render(dataObj);
     }
 

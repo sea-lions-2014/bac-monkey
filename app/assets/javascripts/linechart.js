@@ -47,7 +47,26 @@ var Chart = (function(){
             }
     );
 
+    _chartWarning(chart);
+
     return chart;
+  }
+
+  var _chartWarning = function(chart){
+    if (chart.yAxis.axisLabel() === 'BAC'){
+      var max = chart.yAxis.domain()[1]
+      if(max > 0.42){
+        $('.drive').hide(); 
+        $('.dead').show();
+      }
+      else if(max > 0.08){
+        $('.dead').hide();
+        $('.drive').show();
+      }
+    }
+    else{
+      $('.bac-limit').hide()
+    }
   }
 
   return {
