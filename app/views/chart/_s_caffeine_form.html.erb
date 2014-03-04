@@ -1,4 +1,4 @@
-<div id="s_caffeine_form" class="substance_form hidden">
+<div id="s_caffeine_form" class="mobile substance_form hidden">
   <%= form_for :caffeine_calc, url: caffeine_calc_path, remote: true do |f| %>
     <div class="line">
       <%= f.select :type, options_for_select([['coffee', 'coffee'],['tea', 'tea']]), {required: true}, {:class => "drop_down"}%></div>

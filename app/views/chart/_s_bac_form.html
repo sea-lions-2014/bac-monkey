@@ -1,4 +1,4 @@
-<div id="s_bac_form" class="substance_form">
+<div id="s_bac_form" class="mobile substance_form">
   <%= form_for :alcohol_calc, url: alcohol_calc_path, remote: true do |f|%>
   <div class="line">
    <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']], @gender), {required: true}, { :class => "drop_down" } %> </div>
