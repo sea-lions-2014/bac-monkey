@@ -3,11 +3,11 @@
   <div class="consumption_summary">
     <div class="user_info">
       <div class="daily_info" id="alc_daily">
-        <span class="big_num"><%= @user.daily_average_alcohol %></span>
+        <span class="big_num"><%= @user.daily_average_alcohol > 100000 ? "a lot" : @user.daily_average_alcohol %></span>
         <p>drinks per day</p>
       </div>
       <div class="total_info">
-        <span class="big_num"><%= @user.total_alcohol %></span>
+        <span class="big_num"><%= @user.total_alcohol > 100000 ? "a lot" : @user.total_alcohol %></span>
         <p>drinks total</p>
       </div>
     </div>
@@ -24,11 +24,13 @@
   <div class="consumption_summary">
     <div class="user_info">
       <div class="daily_info" id="caff_daily">
-        <span class="big_num"><%= @user.daily_average_caffeine %></span>
+        <span class="big_num">
+          <%= @user.daily_average_caffeine > 100000 ? "a lot" : @user.daily_average_caffeine %>
+        </span>
         <p>mgs caffeine per day</p>
       </div>
       <div class="total_info">
-        <span class="big_num"><%= @user.total_caffeine %></span>
+        <span class="big_num"><%= @user.total_caffeine > 100000 ? "a lot" : @user.total_caffeine %></span>
         <p>mgs caffeine total</p>
       </div>
     </div>
@@ -45,11 +47,11 @@
   <div class="consumption_summary">
     <div class="user_info">
       <div class="daily_info"  id="nic_daily">
-        <span class="big_num"><%= @user.daily_average_nicotine %></span>
+        <span class="big_num"><%= @user.daily_average_nicotine > 100000 ? "a lot" : @user.daily_average_nicotine %></span>
         <p>mgs nicotine per day</p>
       </div>
       <div class="total_info">
-        <span class="big_num"><%= @user.total_nicotine %></span>
+        <span class="big_num"><%= @user.total_caffeine > 100000 ? "a lot" : @user.total_caffeine %></span>
         <p>mgs nicotine total</p>
       </div>
     </div>
@@ -75,7 +77,15 @@
 
   <div id="vices">
     <h3>Vices</h3>
-
+    <div id="alc_medals">
+      asdf
+    </div>
+    <div id="caff_medals">
+      asdf
+    </div>
+    <div id="nic_medals">
+      asdf
+    </div>
   </div>
 
 </div>

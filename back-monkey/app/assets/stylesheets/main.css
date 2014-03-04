@@ -506,6 +506,24 @@ background-color: #00B358;
   text-align: center;
 }
 
+#alc_medals {
+  border: 1px solid white;
+  width: 20%;
+  display: inline-block;
+}
+
+#caff_medals {
+  border: 1px solid white;
+  width: 20%;
+  display: inline-block;
+}
+
+#nic_medals {
+  border: 1px solid white;
+  width: 20%;
+  display: inline-block;
+}
+
 /*-----MEDIA QUERIES-----*/
 
 
