@@ -1,5 +1,3 @@
-//Draw line chart
-
 var Chart = (function(){
 
   var _clearHomePage = function(){
@@ -18,6 +16,7 @@ var Chart = (function(){
 
   var _buildChart = function(dataObj){
     d3.select('#svg-container').insert('svg', '#footer').attr('id', 'chart');
+
     nv.addGraph(dataObj)
     var chart = nv.models.lineChart()
                 .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
@@ -53,8 +52,8 @@ var Chart = (function(){
 
   return {
     render: function(dataObj){
-      _clearHomePage();
       _buildChart(dataObj);
+      _clearHomePage();
       _styleChart(dataObj);
     }
   }

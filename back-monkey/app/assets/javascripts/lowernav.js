@@ -1,22 +1,19 @@
-function lowerNavEvents(){
-  $('#lower-nav a').click(toggleFormDisplay)
-  $(".arrow").click(toggleLowerNavHeight)
-}
+var LowerNav = (function(){
+  return {
+    toggleForms: function(){
+      var form = '#' + $(this).attr('id') + "_form";
+      $(form).removeClass('hidden');
+      $(form).siblings().addClass('hidden');
+    },
 
+    toggleNavHeight: function(){
+      var height = ($('#up').hasClass('hidden')) ? '1.5em' : '15em'
 
+      $('#footer').animate({
+        height: height
+      }, 800);
 
-function toggleFormDisplay(){
-  var form = '#' + $(this).attr('id') + "_form"
-  $(form).removeClass('hidden');
-  $(form).siblings().addClass('hidden');
-}
-
-function toggleLowerNavHeight(){
-  var height = ($('#up').hasClass('hidden')) ? '1.5em' : '15em'
-  
-  $('#footer').animate({
-    height: height
-  }, 800);
-
-  $('.arrow').toggleClass('hidden');
-}
+      $('.arrow').toggleClass('hidden');
+    }
+  }
+})()
