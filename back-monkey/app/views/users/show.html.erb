@@ -1,67 +1,81 @@
 <div id="user_profile">
-  <div class="consumption_list">
-    <div class="consumption_summary">
 
-      <div class="user_info">
-        <div class="daily_info" id="alc_daily">
-          <span class="big_num"><%= @user.daily_average_alcohol %></span>
-          <p>drinks per day</p>
-        </div>
-        <div class="total_info">
-          <span class="big_num"><%= @user.total_alcohol %></span>
-          <p>drinks total</p>
-        </div>
+  <div class="consumption_summary">
+    <div class="user_info">
+      <div class="daily_info" id="alc_daily">
+        <span class="big_num"><%= @user.daily_average_alcohol %></span>
+        <p>drinks per day</p>
       </div>
-      <div class="tips">
-        <h3>Alcohol (C<sub>2</sub>H<sub>5</sub>OH)</h3>
-        <p>Ethyl alcohol is a depressant intoxicant and one of the most commonly used drugs in the world. In large quantities alcohol reduces inhibition, impairs judgement, and dulls pain. Excess consumption can lead to liver damage and other serious health problems.</p>
-        <div class="advice">
-          <p><span class="average_num">0.6</span> drinks per day is the American average.</p>
-          <p><span class="average_num">2.0</span> drinks per day is the recommended maximum.</p>
-        </div>
+      <div class="total_info">
+        <span class="big_num"><%= @user.total_alcohol %></span>
+        <p>drinks total</p>
       </div>
     </div>
-
-    <div class="consumption_summary">
-      <div class="user_info">
-        <div class="daily_info" id="caff_daily">
-          <span class="big_num"><%= @user.daily_average_caffeine %></span>
-          <p>mgs caffeine per day</p>
-        </div>
-        <div class="total_info">
-          <span class="big_num"><%= @user.total_caffeine %></span>
-          <p>mgs caffeine total</p>
-        </div>
-      </div>
-      <div class="tips">
-        <h3>Caffeine (C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>)</h3>
-        <p>Caffeine is a crystalline xanthine alkaloid and a stimulant drug. Caffeine is commonly consumed to decrease fatigue and increase alertness. Excess consumption can lead to caffeine addiction, increased blood pressure, sleep disruption.</p>
-        <div class="advice">
-          <p><span class="average_num">300</span> mgs per day is the American average.</p>
-          <p><span class="average_num">600</span> mgs per day is the recommended maximum.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="consumption_summary">
-      <div class="user_info">
-        <div class="daily_info"  id="nic_daily">
-          <span class="big_num"><%= @user.daily_average_nicotine %></span>
-          <p>mgs nicotine per day</p>
-        </div>
-        <div class="total_info">
-          <span class="big_num"><%= @user.total_nicotine %></span>
-          <p>mgs nicotine total</p>
-        </div>
-      </div>
-      <div class="tips">
-        <h3>Nicotine (C<sub>10</sub>H<sub>14</sub>N<sub>2</sub>)</h3>
-        <p>Nicotine is a parasympathomimetic alkaloid and a stimulant drug. Excess consumption can lead to anxiety and sleep disruption. Regularly smoking tobacco greatly increases the risk of some cancers and emphysema.</p>
-        <div class="advice">
-          <p><span class="average_num">15</span> mgs per day is the approximate average among daily smokers.</p>
-          <p><span class="average_num">0</span> mgs per day is the recommended maximum.</p>
-        </div>
+    <div class="tips">
+      <h3>Alcohol (C<sub>2</sub>H<sub>5</sub>OH)</h3>
+      <p>Ethyl alcohol is a depressant intoxicant and one of the most commonly used drugs in the world. In large quantities alcohol reduces inhibition, impairs judgement, and dulls pain. Excess consumption can lead to liver damage and other serious health problems.</p>
+      <div class="advice">
+        <p><span class="average_num">0.6</span> drinks per day is the American average.</p>
+        <p><span class="average_num">2.0</span> drinks per day is the recommended maximum.</p>
       </div>
     </div>
   </div>
+
+  <div class="consumption_summary">
+    <div class="user_info">
+      <div class="daily_info" id="caff_daily">
+        <span class="big_num"><%= @user.daily_average_caffeine %></span>
+        <p>mgs caffeine per day</p>
+      </div>
+      <div class="total_info">
+        <span class="big_num"><%= @user.total_caffeine %></span>
+        <p>mgs caffeine total</p>
+      </div>
+    </div>
+    <div class="tips">
+      <h3>Caffeine (C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>)</h3>
+      <p>Caffeine is a crystalline xanthine alkaloid and a stimulant drug. Caffeine is commonly consumed to decrease fatigue and increase alertness. Excess consumption can lead to caffeine addiction, increased blood pressure, sleep disruption.</p>
+      <div class="advice">
+        <p><span class="average_num">300</span> mgs per day is the American average.</p>
+        <p><span class="average_num">600</span> mgs per day is the recommended maximum.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="consumption_summary">
+    <div class="user_info">
+      <div class="daily_info"  id="nic_daily">
+        <span class="big_num"><%= @user.daily_average_nicotine %></span>
+        <p>mgs nicotine per day</p>
+      </div>
+      <div class="total_info">
+        <span class="big_num"><%= @user.total_nicotine %></span>
+        <p>mgs nicotine total</p>
+      </div>
+    </div>
+    <div class="tips">
+      <h3>Nicotine (C<sub>10</sub>H<sub>14</sub>N<sub>2</sub>)</h3>
+      <p>Nicotine is a parasympathomimetic alkaloid and a stimulant drug. Excess consumption can lead to anxiety and sleep disruption. Regularly smoking tobacco greatly increases the risk of some cancers and emphysema.</p>
+      <div class="advice">
+        <p><span class="average_num">15</span> mgs per day is the approximate average among daily smokers.</p>
+        <p><span class="average_num">0</span> mgs per day is the recommended maximum.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="consumption_history">
+    <h3>Drugs this week</h3>
+    <% @history.each do |consumption_record| %>
+      <p>
+        <%= consumption_record.dose_description %>
+        <span class="date"><%= consumption_record.created_at.strftime("%m/%d/%y") %></span>
+      </p>
+    <% end %>
+  </div>
+
+  <div id="vices">
+    <h3>Vices</h3>
+
+  </div>
+
 </div>
