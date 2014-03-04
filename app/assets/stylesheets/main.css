@@ -520,7 +520,24 @@ background-color: #00B358;
 .gray {
   color: gray;
 }
+h5{
+    font-family: 'Lato', sans-serif;
+    font-size: .5em;
+    margin-top: 0em;
+    color:#7b7777;
+}
 
+/* #s_bac_form{
+  display: none;
+ }
+
+ #s_caffeine_form{
+  display: none;
+ }
+
+  #s_nicotine_form{
+  display: none;
+ }*/
 /*-----MEDIA QUERIES-----*/
 
 
@@ -569,21 +586,19 @@ background-color: #00B358;
   }
 
 .substance_form .line input{
-    width: 3em;
-
+    width:3em;
+    margin:.25em;
 
   }
 
  .substance_form .button{
   padding: .5em;
   font-size: .75em;
-  /*float: left;*/
   margin-bottom: 10em;
   position: absolute;
   left: 4em;
   top: 15em;
-/*  bottom:5em;
-*/   }
+  }
 
  #lower_nav a{
   padding: 2.55em 0em 2.55em 0em;
@@ -595,7 +610,31 @@ background-color: #00B358;
 
  .line .drop_down{
   font-size: .5em;
+  margin-bottom: 1em;
  }
 
+/* #s_bac_form{
+  display: inherit;
+ }
+
+ #bac_form{
+  display: none;
+ }
+
+ #s_caffeine_form{
+  display: inherit;
+ }
+
+ #caffeine_form{
+  display: none;
+ }
+
+ #s_nicotine_form{
+  display: inherit;
+ }
+
+ #nicotine_form{
+  display: none;
+ }*/
 
 }

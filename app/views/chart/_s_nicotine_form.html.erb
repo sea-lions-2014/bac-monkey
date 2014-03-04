@@ -1,0 +1,18 @@
+<div id="s_nicotine_form" class="substance_form hidden">
+  <%= form_for :nicotine_calc, url: nicotine_calc_path, remote: true do |f|%>
+    <div class="line">
+     cigarrettes:
+      <%= f.number_field :cigarettes, required: true, min: 1 %>
+
+    </div>
+    <div class="line">
+hours:
+<%= f.number_field :hours, required: true, min: 1 %> hours.
+    </div>
+    <div class="submit">
+      <%= f.submit "Check nicotine levels", :class=> "button", :id=> "nic_button" %>
+    </div>
+  <% end %>
+</div>
+
+
