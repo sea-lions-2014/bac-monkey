@@ -222,16 +222,6 @@ nav a{
   font-family: 'Lato', sans-serif;
 }
 
-/*.drive {
-  position: absolute;
-  top: 3.3em;
-  left: 50%;
-  color: red;
-  margin-left: -10em;
-  display: block;
-  font-family: 'Lato', sans-serif;
-}*/
-
 .tick text{
   fill:white;
   font-size: 12px;
@@ -326,8 +316,8 @@ nav a{
   background-color: #0969A2;
 }
 
- #lower_nav #nicotine{
-background-color: #00B358;
+#lower_nav #nicotine{
+  background-color: #00B358;
 }
 
 #lower_nav #bac:active{
