@@ -233,11 +233,6 @@ nav a{
  stroke-linecap:"round";
 }
 
-.registration_form{
-  margin-top: 300px;
-  display: block;
-}
-
 .signin_form{
   position: absolute;
   right: 0;
@@ -346,7 +341,10 @@ nav a{
   font-family: 'Lato', sans-serif;
   color: white;
   font-size: 15px;
+  margin-top: 300px;
+  display: block;
   width: 50%;
+  min-width: 465px;
   text-align: left;
   margin: 20em auto auto auto;
   background-color: #000;
@@ -512,11 +510,15 @@ h5{
 #mobile_registration{
   text-align: center;
   margin-top: 7em;
+  min-width: 0;
+  width: 250px;
+  padding: 1em 0 1em 0;
 }
 
 
 #mobile_registration input{
   margin: 1em;
+  width: 12em;
 }
 
 #mobile_registration .button{
