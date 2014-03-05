@@ -66,14 +66,22 @@ class SubstanceCalc
       (milligrams * (@elimination_rate * 0.25))
     end
 
-    def next_dose_up(next_dose)
-      next_dose = ((next_dose + consumption_rate) - metabolized(next_dose)).round(@precision)
+    def next_dose_up(starting_dose)
+      next_dose = next_dose_up_formula(starting_dose).round(@precision)
       next_dose < 0 ? 0 : next_dose
     end
 
     def next_dose_down(starting_dose, hours)
-      next_dose = (starting_dose - (starting_dose * (@elimination_rate * hours))).round(@precision)
+      next_dose = next_dose_down_formula(starting_dose, hours).round(@precision)
       next_dose < 0 ? 0 : next_dose
+    end
+
+    def next_dose_up_formula(starting_dose)
+      (starting_dose + consumption_rate) - metabolized(starting_dose)
+    end
+
+    def next_dose_down_formula(starting_dose, hours)
+      starting_dose - (starting_dose * (@elimination_rate * hours))
     end
 
     def peak_dose
