@@ -23,7 +23,7 @@
 @media (max-width: 950px) {
   .substance_comparisons{
     display: block;
-    width: 80%;
+    width: 70%;
     margin: 5em auto;
   }
 
@@ -106,5 +106,12 @@
 @media (max-width: 570px) {
   nav h3 {
     display: none;
+  }
+
+  .green_num{
+    font-size: 2em;
+  }
+  .red_num{
+    font-size: 2em;
   }
 }
