@@ -547,17 +547,18 @@ h5{
     color:#7b7777;
 }
 
-/* #s_bac_form{
-  display: none;
- }
+#mobile_registration{
+  text-align: center;
+  margin-top: 7em;
+}
 
- #s_caffeine_form{
-  display: none;
- }
+#mobile_registration input{
+  margin: 1em;
+}
 
-  #s_nicotine_form{
-  display: none;
- }*/
+#mobile_registration .button{
+  padding: .5em;
+}
 /*-----MEDIA QUERIES-----*/
 
 
