@@ -28,7 +28,7 @@
 }
 
 .substance_form .line input{
-  margin: .75em;
+  margin: .5em;
   width:50px;
   background-color: #1e1e1e;
   border-color: #1e1e1e;
@@ -57,6 +57,10 @@
   font-size: 20px;
   word-spacing: 5px;
   vertical-align: middle;
+}
+
+.first{
+  margin-left: .6em;
 }
 
 .substance_form .button{

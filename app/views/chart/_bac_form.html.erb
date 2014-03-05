@@ -1,6 +1,6 @@
 <div id="bac_form" class="substance_form">
   <%= form_for :alcohol_calc, url: alcohol_calc_path, remote: true do |f|%>
-  <div class="line">
+  <div class="line first">
     I am a
     <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']], @gender), {required: true}, { :class => "drop_down" } %>
     weighing
