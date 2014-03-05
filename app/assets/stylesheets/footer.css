@@ -72,3 +72,7 @@
 .substance_form .button:hover{
   background-color:#d34245;
 }
+
+#save_option{
+  margin-top: 1em;
+}
