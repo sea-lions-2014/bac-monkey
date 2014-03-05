@@ -1,0 +1,117 @@
+
+@media (max-width: 1130px) {
+  #user_profile {
+    width: 90%;
+    min-width: 0;
+  }
+
+  .user_info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tips {
+    width: 90%;
+    padding-left: 1em;
+  }
+
+  .total_info {
+    border-bottom: 3px solid #1e1e1e;
+  }
+}
+
+@media (max-width: 950px) {
+  .substance_comparisons{
+    display: block;
+    width: 70%;
+    margin: 5em auto;
+  }
+
+  .substance_comparisons img {
+    width: 40%;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 630px){
+  #form_container{
+    margin-left: 6em;
+
+  }
+
+  .line{
+    font-size: .75em;
+    width: 35%;
+    padding-top: 0em;
+
+  }
+
+  .substance_form .line input{
+    width:3em;
+    margin:.25em;
+  }
+
+  .substance_form .button{
+    padding: .5em;
+    font-size: .75em;
+    margin-bottom: 10em;
+    position: absolute;
+    left: 4em;
+    top: 13em;
+  }
+
+  #nic_button{
+    padding: .5em;
+    font-size: .75em;
+    margin-bottom: 10em;
+    position: absolute;
+    left: 3em;
+    top: 8em;
+  }
+
+  #caf_button{
+    padding: .5em;
+    font-size: .75em;
+    margin-bottom: 10em;
+    position: absolute;
+    left: 3em;
+    top: 10em;
+  }
+
+  #lower_nav a{
+    padding: 2.55em 0em 2.55em 0em;
+    text-align: center;
+    font-size: .75em;
+  }
+
+  .substance_form .line .drop_down{
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  .dead{
+    font-size: .75em;
+    margin-top: 1.5em;
+  }
+
+  .registration_form{
+    margin-top: 5em;
+  }
+
+  .registration_form input{
+    text-align: center;
+  }
+}
+
+@media (max-width: 570px) {
+  nav h3 {
+    display: none;
+  }
+
+  .green_num{
+    font-size: 2em;
+  }
+  .red_num{
+    font-size: 2em;
+  }
+}

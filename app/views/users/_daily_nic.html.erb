@@ -1,0 +1,20 @@
+<div class="consumption_summary">
+    <div class="user_info">
+      <div class="daily_info"  id="nic_daily">
+        <span class="big_num"><%= current_user.daily_average_nicotine > 100000 ? "a lot" : current_user.daily_average_nicotine %></span>
+        <p>mgs nicotine per day</p>
+      </div>
+      <div class="total_info">
+        <span class="big_num"><%= current_user.total_caffeine > 100000 ? "a lot" : current_user.total_nicotine %></span>
+        <p>mgs nicotine total</p>
+      </div>
+    </div>
+    <div class="tips">
+      <h3>Nicotine (C<sub>10</sub>H<sub>14</sub>N<sub>2</sub>)</h3>
+      <p>Nicotine is a parasympathomimetic alkaloid and a stimulant drug. Excess consumption can lead to anxiety and sleep disruption. Regularly smoking tobacco greatly increases the risk of some cancers and emphysema.</p>
+      <div class="advice">
+        <p><span class="average_num">15</span> mgs per day is the approximate average among daily smokers.</p>
+        <p><span class="average_num">0</span> mgs per day is the recommended maximum.</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,72 @@
+#chart{
+  margin: 0 auto;
+  margin-top: 5em;
+  color: #BDBDBD;
+  width:100%;
+  height: 60%;
+}
+
+#svg-container{
+  height:100%;
+  width: auto;
+}
+
+.bac-limit {
+  position: absolute;
+  top: 3.8em;
+  left: 50%;
+  color: red;
+  margin-left: -10em;
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+.tick text{
+  fill:white;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.nv-axisMaxMin{
+  fill:white;
+  stroke:none;
+  font-size: 12px;
+}
+
+.nv-legend{
+  fill:white;
+}
+
+.nv-guideline{
+  stroke:2px;
+}
+
+.nv-axislabel{
+  fill:white;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.nv-line{
+  color:white;
+}
+
+.nvd3 .nv-groups path.nv-line{
+ stroke-width: 7.5px;
+ stroke-linecap:"round";
+}
+
+.signin_form{
+  position: absolute;
+  right: 0;
+  top: 4.5em;
+}
+
+.signin_form input{
+  display: block;
+}
+
+#form_container{
+  margin-left: 5em;
+}

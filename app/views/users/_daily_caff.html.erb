@@ -1,0 +1,22 @@
+<div class="consumption_summary">
+    <div class="user_info">
+      <div class="daily_info" id="caff_daily">
+        <span class="big_num">
+          <%= current_user.daily_average_caffeine > 100000 ? "a lot" : current_user.daily_average_caffeine %>
+        </span>
+        <p>mgs caffeine per day</p>
+      </div>
+      <div class="total_info">
+        <span class="big_num"><%= current_user.total_caffeine > 100000 ? "a lot" : current_user.total_caffeine %></span>
+        <p>mgs caffeine total</p>
+      </div>
+    </div>
+    <div class="tips">
+      <h3>Caffeine (C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>)</h3>
+      <p>Caffeine is a crystalline xanthine alkaloid and a stimulant drug. Caffeine is commonly consumed to decrease fatigue and increase alertness. Excess consumption can lead to caffeine addiction, increased blood pressure, sleep disruption.</p>
+      <div class="advice">
+        <p><span class="average_num">300</span> mgs per day is the American average.</p>
+        <p><span class="average_num">600</span> mgs per day is the recommended maximum.</p>
+      </div>
+    </div>
+  </div>
