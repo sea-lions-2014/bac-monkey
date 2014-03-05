@@ -47,25 +47,30 @@ var Chart = (function(){
             }
     );
 
-    _chartWarning(chart);
+    _chartWarning(dataObj);
 
     return chart;
   }
 
-  var _chartWarning = function(chart){
-    if (chart.yAxis.axisLabel() === 'BAC'){
-      var max = chart.yAxis.domain()[1]
+  var _chartWarning = function(dataObj){
+    $('.bac-limit').hide()
+    if (dataObj[0].key === 'BAC'){
+
+      var BACvalues =  $.map(dataObj[0].values, function(value, index) {
+                      return [value.y];
+                    });
+
+      var max = Math.max.apply(null, BACvalues)
+
+      debugger
       if(max > 0.42){
-        $('.drive').hide(); 
+        $('.drive').hide();
         $('.dead').show();
       }
       else if(max > 0.08){
         $('.dead').hide();
         $('.drive').show();
       }
-    }
-    else{
-      $('.bac-limit').hide()
     }
   }
 
