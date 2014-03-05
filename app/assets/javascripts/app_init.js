@@ -15,6 +15,9 @@ var MonkeyApp = (function(){
 
   var _toggleSignInForm = function(){
     $('.signin_form').toggleClass('hidden');
+    if(_mobileUser()){
+      LowerNav.toggleNavHeight();
+    }
     $('#user_user_name').focus();
   }
 
@@ -24,7 +27,11 @@ var MonkeyApp = (function(){
     });
     $(".arrow").click(LowerNav.toggleNavHeight);
     $('#signin').click(MonkeyApp.toggleSignInForm);
-    $(window).resize(_screenCheck);
+    $(window).resize(_toggleLayout);
+  }
+
+  var _mobileUser = function(){
+    return $(document).width() <= 630
   }
 
   var _cookieCheck = function(){
@@ -34,8 +41,8 @@ var MonkeyApp = (function(){
     }
   }
 
-  var _screenCheck = function(){
-    if($(document).width() <= 630){
+  var _toggleLayout = function(){
+    if(_mobileUser()){
       SignUp.mobileMode();
       LowerNav.mobileMode();
     }
@@ -46,9 +53,17 @@ var MonkeyApp = (function(){
     }
   }
 
+  var _renderChart = function(dataObj){
+    $.cookie('dataObj', dataObj);
+    Chart.render(dataObj);
+    if (_mobileUser()){
+      LowerNav.toggleNavHeight();
+    }
+  }
+
   return{
     init: function(){
-      _screenCheck();
+      _toggleLayout();
       _ajaxEvents();
       _bindEvents();
       _cookieCheck();
@@ -60,20 +75,17 @@ var MonkeyApp = (function(){
 
     getBACChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.BACData(data);
-      $.cookie('dataObj', dataObj);
-      Chart.render(dataObj);
+      _renderChart(dataObj);
     },
 
     getCaffeineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.caffeineData(data);
-      $.cookie('dataObj', dataObj);
-      Chart.render(dataObj);
+      _renderChart(dataObj);
     },
 
     getNicotineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.nicotineData(data);
-      $.cookie('dataObj', dataObj);
-      Chart.render(dataObj);
+      _renderChart(dataObj);
     }
 
   }
