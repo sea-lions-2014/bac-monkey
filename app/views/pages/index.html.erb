@@ -12,32 +12,4 @@
     <p>You are legally dead. Don't get up.</p>
   </div>
 </div>
-
-<div id="footer">
-  <div class="hidden arrow" id="up"><h5>show</h5></div>
-  <div class="arrow" id="down"><h5>hide</h5></div>
-  <div id="lower_nav">
-      <div id="desktop_links">
-        <%= link_to 'Alcohol', '#', :id => 'bac' %>
-        <%= link_to 'Caffeine', '#', :id => 'caffeine' %>
-        <%= link_to 'Nicotine', '#', :id => 'nicotine' %>
-      </div>
-      <div id="mobile_links">
-        <%= link_to 'Alcohol', '#', :id => 's_bac' %>
-        <%= link_to 'Caffeine', '#', :id => 's_caffeine' %>
-        <%= link_to 'Nicotine', '#', :id => 's_nicotine' %>
-      </div>
-  </div>
-  <div id="form_container">
-    <div id="desktop_forms">
-      <%= render "chart/caffeine_form" %>
-      <%= render "chart/bac_form" %>
-      <%= render "chart/nicotine_form" %>
-    </div>
-    <div id="mobile_forms" class="hidden">
-      <%= render "chart/s_caffeine_form" %>
-      <%= render "chart/s_bac_form" %>
-      <%= render "chart/s_nicotine_form" %>
-    </div>
-  </div>
-</div>
+<%= render "footer" %>
