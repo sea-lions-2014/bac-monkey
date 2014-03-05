@@ -21,7 +21,7 @@ describe NicotineCalc do
     it "correctly estimates the mg of a person who smoked 2 mg over 1/2 hour after 2 hours" do
       results = niccalc.mg_series
       expect(results[8].last).to be > 1.1
-      expect(results[8].last).to be < 1.3
+      expect(results[8].last).to be < 1.4
     end
 
     it "BAC eventually reverts to 0" do

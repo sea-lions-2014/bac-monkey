@@ -21,7 +21,7 @@ describe CaffeineCalc do
     it "correctly estimates the mg of a person who drank 200 mg over 1/2 hour after 2 hours" do
       results = caffcalc.mg_series
       expect(results[8].last).to be > 166
-      expect(results[8].last).to be < 175
+      expect(results[8].last).to be < 176
     end
 
     it "BAC eventually reverts to 0" do

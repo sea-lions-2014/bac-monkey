@@ -1,6 +1,6 @@
 #-----NOTE!-----
 
-# AlcoholCalc cannot inherit from SubstanceCalc because alcohol
+# AlcoholCalc cannot use many of SubstanceCalc's methods because alcohol
 # intoxication is measured as BAC % rather than milligrams. Widmark's
 # BAC % formula is also very different from the formula used in
 # SubstanceCalc.
@@ -29,10 +29,7 @@ class AlcoholCalc
   # data-point series of BAC percentages at 15 minute intervals as a
   # nested array.
   def bac_series
-    build_up = bac_build_up
-    break_down = bac_break_down
-    build_up.pop
-    build_up + break_down
+    bac_build_up + bac_break_down
   end
 
   private

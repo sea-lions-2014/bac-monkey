@@ -31,10 +31,7 @@ class SubstanceCalc
     end
 
     def mg_series
-      build_up = mg_build_up
-      break_down = mg_break_down
-      build_up.pop
-      build_up + break_down
+      mg_build_up + mg_break_down
     end
 
     private
