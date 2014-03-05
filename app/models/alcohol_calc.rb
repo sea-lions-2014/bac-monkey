@@ -10,12 +10,11 @@
 class AlcoholCalc < SubstanceCalc
 
   def initialize(args)
+    super
     @current_dose = args[:current_bac] || 0
     @dose = args[:alcohol]
     @weight = args[:weight]
     @ratio = ratio(args[:gender])
-    @hours = args[:hours]
-    @interval_count = args[:interval_count] || 49
     @precision = 4
   end
 
