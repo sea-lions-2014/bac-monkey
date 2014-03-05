@@ -5,39 +5,7 @@
 </div>
 
 <div id="svg-container">
-  <div class="drive hidden bac-limit">
-    <p>You are legally drunk. Don't drive.</p>
-  </div>
-  <div class="dead hidden bac-limit">
-    <p>You are legally dead. Don't get up.</p>
-  </div>
+  <%= render 'chart/chart_warning' %>
 </div>
 
-<div id="footer">
-  <div class="hidden arrow" id="up"><h5>show</h5></div>
-  <div class="arrow" id="down"><h5>hide</h5></div>
-  <div id="lower_nav">
-      <div id="desktop_links">
-        <a href="#" id="bac">Alcohol</a>
-        <a href="#" id="caffeine">Caffeine</a>
-        <a href="#" id="nicotine">Nicotine</a>
-      </div>
-      <div id="mobile_links">
-        <a href="#" id="s_bac">Alcohol</a>
-        <a href="#" id="s_caffeine">Caffeine</a>
-        <a href="#" id="s_nicotine">Nicotine</a>
-      </div>
-  </div>
-  <div id="form_container">
-    <div id="desktop_forms">
-      <%= render "chart/caffeine_form" %>
-      <%= render "chart/bac_form" %>
-      <%= render "chart/nicotine_form" %>
-    </div>
-    <div id="mobile_forms" class="hidden">
-      <%= render "chart/s_caffeine_form" %>
-      <%= render "chart/s_bac_form" %>
-      <%= render "chart/s_nicotine_form" %>
-    </div>
-  </div>
-</div>
+<%= render "footer" %>

@@ -21,12 +21,18 @@ var MonkeyApp = (function(){
     $('#user_user_name').focus();
   }
 
+  var _clearCookies = function(){
+    $.removeCookie('dataObj')
+  }
+
   var _bindEvents = function(){
     $('#lower_nav a').click(function(event){
       LowerNav.toggleForms(event.target)
     });
     $(".arrow").click(LowerNav.toggleNavHeight);
     $('#signin').click(MonkeyApp.toggleSignInForm);
+    $('#signout').click(_clearCookies)
+    $('#login_form').click(_clearCookies)
     $(window).resize(_toggleLayout);
   }
 
