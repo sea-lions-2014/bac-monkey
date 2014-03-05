@@ -19,7 +19,9 @@ var MonkeyApp = (function(){
   }
 
   var _bindEvents = function(){
-    $('#lower_nav a').click(LowerNav.toggleForms);
+    $('#lower_nav a').click(function(event){
+      LowerNav.toggleForms(event.target)
+    });
     $(".arrow").click(LowerNav.toggleNavHeight);
     $('#signin').click(MonkeyApp.toggleSignInForm);
     $(window).resize(_screenCheck);

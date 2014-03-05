@@ -22,8 +22,8 @@ var LowerNav = (function(){
   }
 
   return {
-    toggleForms: function(){
-      _toggleForms(event.target);
+    toggleForms: function(target){
+      _toggleForms(target);
     },
 
     mobileMode: function(){

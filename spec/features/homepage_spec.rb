@@ -39,6 +39,7 @@ describe "homepage", js:true do
 
   context "caffeine form" do
     before :each do
+      visit root_path
       click_link 'Caffeine'
     end
 
