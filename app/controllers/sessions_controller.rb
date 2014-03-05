@@ -2,13 +2,12 @@ class SessionsController < ApplicationController
 
   def create
     username = params[:user][:user_name]
-    user = User.find(:first, :conditions => ["lower(user_name) = ?", username.downcase])
-    if user.authenticate(params[:user][:password])
+    user = User.find(:first, :conditions => ["lower(user_name) = ?", username.downcase]) || User.find(:first, :conditions => ["lower(email) = ?", username.downcase])
+    if user && user.authenticate(params[:user][:password])
       login(user)
       redirect_to user_path(user)
     else
-      flash.notice = "That username or password is invalid."
-      render 'users/_sign_in_form'
+      redirect_to root_path, notice: "That username or password is invalid."
     end
   end
 
