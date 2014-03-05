@@ -340,15 +340,15 @@ nav a{
 .registration_form{
   font-family: 'Lato', sans-serif;
   color: white;
-  font-size: 15px;
-  margin-top: 300px;
+  font-size: 1.25em;
   display: block;
   width: 50%;
   min-width: 465px;
-  text-align: left;
-  margin: 20em auto auto auto;
+  text-align: center;
+  margin: 8em auto auto auto;
   background-color: #000;
   border: 2px solid #121212;
+  padding-top: 1em;
 }
 
 .registration_form .button{
@@ -362,14 +362,15 @@ nav a{
 }
 
 .registration_form input{
-  margin: .75em;
-  width:100px;
+  display: block;
+  font-size: 1.25em;
+  margin: 1em auto;
+  width: 10em;
   background-color: #1e1e1e;
   border-color: #121212;
   font-family: 'Lato', sans-serif;
   color: white;
-  font-size: 15px;
-  padding: 5px;
+
 }
 
 .signin_form {
@@ -509,6 +510,7 @@ h5{
 
 #mobile_registration{
   text-align: center;
+  font-size: 1em;
   margin-top: 7em;
   min-width: 0;
   width: 250px;
@@ -518,11 +520,12 @@ h5{
 
 #mobile_registration input{
   margin: 1em;
-  width: 12em;
+  width: 10em;
 }
 
 #mobile_registration .button{
   padding: .5em;
+  margin: 2em auto 0 auto;
 }
 
 #comparisons {
@@ -602,7 +605,7 @@ h5{
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 630px){
   #form_container{
     margin-left: 6em;
 

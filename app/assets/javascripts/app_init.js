@@ -33,7 +33,7 @@ var MonkeyApp = (function(){
   }
 
   var _screenCheck = function(){
-    if($(document).width() <= 600){
+    if($(document).width() <= 630){
       SignUp.mobileMode();
       LowerNav.mobileMode();
     }
