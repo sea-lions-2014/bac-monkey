@@ -1,20 +1,20 @@
 <div class="consumption_summary">
-    <div class="user_info">
-      <div class="daily_info" id="alc_daily">
-        <span class="big_num"><%= current_user.daily_average_alcohol > 100000 ? "a lot" : current_user.daily_average_alcohol %></span>
-        <p>drinks per day</p>
-      </div>
-      <div class="total_info">
-        <span class="big_num"><%= current_user.total_alcohol > 100000 ? "a lot" : current_user.total_alcohol %></span>
-        <p>drinks total</p>
-      </div>
+  <div class="user_info">
+    <div class="daily_info" id="alc_daily">
+      <span class="big_num"><%= current_user.daily_average_alcohol > 100000 ? "a lot" : current_user.daily_average_alcohol %></span>
+      <p>drinks per day</p>
     </div>
-    <div class="tips">
-      <h3>Alcohol (C<sub>2</sub>H<sub>5</sub>OH)</h3>
-      <p>Ethyl alcohol is a depressant intoxicant and one of the most commonly used drugs in the world. In large quantities alcohol reduces inhibition, impairs judgement, and dulls pain. Excess consumption can lead to liver damage and other serious health problems.</p>
-      <div class="advice">
-        <p><span class="average_num">0.6</span> drinks per day is the American average.</p>
-        <p><span class="average_num">2.0</span> drinks per day is the recommended maximum.</p>
-      </div>
+    <div class="total_info">
+      <span class="big_num"><%= current_user.total_alcohol > 100000 ? "a lot" : current_user.total_alcohol %></span>
+      <p>drinks total</p>
     </div>
   </div>
+  <div class="tips">
+    <h3>Alcohol (C<sub>2</sub>H<sub>5</sub>OH)</h3>
+    <p>Ethyl alcohol is a depressant intoxicant and one of the most commonly used drugs in the world. In large quantities alcohol reduces inhibition, impairs judgement, and dulls pain. Excess consumption can lead to liver damage and other serious health problems.</p>
+    <div class="advice">
+      <p><span class="average_num">0.6</span> drinks per day is the American average.</p>
+      <p><span class="average_num">2.0</span> drinks per day is the recommended maximum.</p>
+    </div>
+  </div>
+</div>

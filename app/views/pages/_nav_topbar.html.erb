@@ -1,7 +1,10 @@
 <nav id="topbar">
   <%= link_to image_tag("smoking_monkey.jpg", :alt => "monkey_logo"), root_path %>
   <h3>BAC Monkey</h3>
-  <% if current_user %>
+  <% if current_user && !current_page?(root_path) %>
+    <%= link_to "Home", root_path, id:"home-button" %>
+    <%= link_to "Sign Out", session_path(current_user), method: 'DELETE', id:"signout" %>
+    <% elsif current_user %>
     <%= link_to "Profile", user_path(current_user), id:"profile-button" %>
     <%= link_to "Sign Out", session_path(current_user), method: 'DELETE', id:"signout" %>
   <% else %>

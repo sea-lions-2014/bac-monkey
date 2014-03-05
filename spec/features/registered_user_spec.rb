@@ -48,6 +48,26 @@ describe "a registered user", js:true do
     end
   end
 
+  context "profile page displays functional home button" do
+    before :each do
+      login_as user
+    end
+
+    it "redirects to home page" do
+      click_link 'Home'
+      expect(current_path).to eq root_path
+    end
+
+    it "does not have a profile button" do
+      expect(page).not_to have_content 'Profile'
+    end
+
+    it "displays a home button" do
+      expect(page).to have_content 'Home'
+    end
+
+  end
+
   context "navigation" do
     before :each do
       login_as user
@@ -63,5 +83,6 @@ describe "a registered user", js:true do
       find('#topbar img').click
       expect(current_path).to eq root_path
     end
+
   end
 end

@@ -57,6 +57,15 @@ nav a{
   background-color: #3a87b4;
 }
 
+#home-button{
+  position: absolute;
+  right: 6.75em;
+  background-color: #0969A2;
+}
+#home-button:hover{
+  background-color: #3a87b4;
+}
+
 
 #signin:hover{
   background-color:#8c8888;
