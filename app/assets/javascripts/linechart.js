@@ -56,7 +56,7 @@ var Chart = (function(){
     if (chart.yAxis.axisLabel() === 'BAC'){
       var max = chart.yAxis.domain()[1]
       if(max > 0.42){
-        $('.drive').hide(); 
+        $('.drive').hide();
         $('.dead').show();
       }
       else if(max > 0.08){

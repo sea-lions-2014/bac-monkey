@@ -621,7 +621,7 @@ h5{
   font-size: .75em;
   margin-bottom: 10em;
   position: absolute;
-  left: 4em;
+  left: 3em;
   top: 8em;
   }
 
@@ -630,7 +630,7 @@ h5{
   font-size: .75em;
   margin-bottom: 10em;
   position: absolute;
-  left: 4em;
+  left: 3em;
   top: 10em;
   }
 
@@ -642,8 +642,8 @@ h5{
 
  }
 
- .line .drop_down{
-  font-size: .5em;
+ .substance_form .line .drop_down{
+  font-size: 1em;
   margin-bottom: 1em;
  }
 
@@ -651,4 +651,12 @@ h5{
   font-size: .75em;
   margin-top: 1.5em;
 }
+.registration_form{
+  margin-top: 5em;
+}
+
+.registration_form input{
+  text-align: center;
+}
+
 }

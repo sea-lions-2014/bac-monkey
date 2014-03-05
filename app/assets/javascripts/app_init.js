@@ -19,25 +19,27 @@ var MonkeyApp = (function(){
   }
 
   var _bindEvents = function(){
-    $('#lower_nav a').click(LowerNav.toggleForms)
-    $(".arrow").click(LowerNav.toggleNavHeight)
-    $('#signin').click(MonkeyApp.toggleSignInForm)
-    $(window).resize(_screenCheck)
+    $('#lower_nav a').click(LowerNav.toggleForms);
+    $(".arrow").click(LowerNav.toggleNavHeight);
+    $('#signin').click(MonkeyApp.toggleSignInForm);
+    $(window).resize(_screenCheck);
   }
 
   var _cookieCheck = function(){
     $.cookie.json = true;
-    if ($.cookie('dataObj')){
-      Chart.render($.cookie('dataObj'))
+    if ($.cookie('dataObj') && $('#svg-container').length > 0){
+      Chart.render($.cookie('dataObj'));
     }
   }
 
   var _screenCheck = function(){
     if($(document).width() <= 600){
+      SignUp.mobileMode();
       LowerNav.mobileMode();
     }
     else
     {
+      SignUp.desktopMode();
       LowerNav.desktopMode();
     }
   }

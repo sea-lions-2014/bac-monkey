@@ -1,28 +1,22 @@
-<div class='registration_form'>
+<div class='registration_form' id="desktop_registration">
   <%= form_for @user do |f| %>
     <div class="line">
-    <%= f.label "Username" %>
-    <%= f.text_field :user_name %>
-
-
-
-
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-
- <div class="line">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-
-
-    <%= f.label :weight %>
-    <%= f.number_field :weight, min: 1 %></div>
+        <%= f.label "Desktop" %>
+        <%= f.text_field :user_name %>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+    </div>
     <div class="line">
-
-    <%= f.label :gender %>
-    <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]),{required: true}, { :class => "drop_down" }  %></div>
-
-    <%= f.submit "Sign Up", :class=> "button" %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= f.label :weight %>
+        <%= f.number_field :weight, min: 1 %>
+    </div>
+    <div class="line">
+        <%= f.label :gender %>
+        <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]),{required: true}, { :class => "drop_down" }  %>
+        <%= f.submit "Sign Up", :class=> "button" %>
+    </div>
   <% end %>
 </div>
+<%= render "s_new" %>
