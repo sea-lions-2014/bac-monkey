@@ -14,3 +14,28 @@
   font-size: 1.25em;
   margin-bottom: 1.5em;
 }
+
+#blurb {
+  margin-bottom: 5em;
+}
+
+#about_button {
+  border-top: 1px solid gray;
+  padding-top: 1em;
+  margin: 0 auto;
+  width: 75px;
+}
+
+#made {
+  color: white;
+}
+
+#welcome_msg a {
+  display: block;
+  color: gray;
+  text-decoration: none;
+}
+#welcome_msg a:hover {
+  color: #999999;
+}
+
