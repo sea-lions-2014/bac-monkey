@@ -15,8 +15,8 @@
   margin-bottom: 1.5em;
 }
 
-#blurb {
-  margin-bottom: 3.5em;
+#blurb p {
+  margin-bottom: 2.5em;
 }
 
 #about_button {
@@ -37,5 +37,10 @@
 }
 #welcome_msg a:hover {
   color: #999999;
+}
+
+.twitter-share-button {
+  margin-top: 2em;
+  margin-bottom: 4.25em;
 }
 

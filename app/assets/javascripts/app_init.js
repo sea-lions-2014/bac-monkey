@@ -23,6 +23,7 @@ var MonkeyApp = (function(){
 
   var _toggleAbout = function() {
     event.preventDefault();
+    $('#blurb').toggleClass('hidden');
     $('#about').toggleClass('hidden');
   }
 

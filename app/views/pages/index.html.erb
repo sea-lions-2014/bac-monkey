@@ -1,17 +1,13 @@
 <div id="welcome_msg">
-  <span class="pop">BAC Monkey is a personal tracker for your chemical vices.</span>
+  <div id="blurb">
+    <span class="pop">BAC Monkey is a personal tracker for your chemical vices.</span>
 
-  <p id="blurb">Fill out the form below to start tracking your blood alcohol content (BAC). It will graph your estimated BAC over time, so you can decide whether you've had one beer too many (or too few).</p>
-
-  <a id="about_button" href="#">About</a>
-
-  <div id="about" class="hidden">
-    <p id="made">Made by</p>
-    <a href="https://github.com/qsymmachus">John Olmsted</a>
-    <a href="https://github.com/dslachtman">Darcey Lachtman</a>
-    <a href="https://github.com/nifengle">Patrick Vilhena</a>
-    <a href="https://github.com/dgoodman1224">David Goodman</a>
+    <p>Fill out the form below to start tracking your blood alcohol content (BAC). It will graph your estimated BAC over time, so you can decide whether you've had one beer too many (or too few).</p>
   </div>
+
+  <%= render "about" %>
+
+  <a href="#" id="about_button">About</a>
 </div>
 
 <div id="svg-container">
