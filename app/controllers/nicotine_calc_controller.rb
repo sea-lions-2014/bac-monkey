@@ -9,8 +9,7 @@ class NicotineCalcController < CalcController
 
   def format_params
     @args = params[:nicotine_calc]
-    @args[:save] = eval(params[:save_search]) if params[:save_search]
-    @args[:hours] = @args[:hours].to_i
     @args[:milligrams] = @args[:cigarettes].to_i
+    super
   end
 end

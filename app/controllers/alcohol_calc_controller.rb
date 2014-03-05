@@ -18,9 +18,8 @@ class AlcoholCalcController < CalcController
 
   def format_params
     @args = params[:alcohol_calc]
-    @args[:save] = eval(params[:save_search]) if params[:save_search]
     @args[:weight] = @args[:weight].to_i
     @args[:alcohol] = @args[:drinks].to_i * 0.6
-    @args[:hours] = @args[:hours].to_i
+    super
   end
 end
