@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe NicotineCalcController do
-  let!(:args){{cigarettes: 4, hours: 2}}
+  let!(:args){{cigarettes: 4, hours: 2, save: true}}
   let!(:user) { create :user }
 
   context '#create' do
