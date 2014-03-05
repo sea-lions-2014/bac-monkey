@@ -1,0 +1,79 @@
+nav img{
+  width:75px;
+  position: absolute;
+  top:0em;
+  cursor: pointer;
+  left:0;
+}
+nav img:hover {
+  opacity: 0.7;
+}
+
+nav{
+  background: black;
+  position: fixed;
+  height: 64px;
+  border-bottom: 2px solid #121212;
+  top: 0em;
+  width: 100%;
+}
+
+nav h3{
+  color:white;
+  position: absolute;
+  display: inline-block;
+  margin-left: 2.5em;
+  font-family: 'Averia Sans Libre', sans-serif;
+  font-size: 2.5em;
+  top: -.9em;
+}
+
+nav a{
+  display: inline-block;
+  border-radius: 0.25em;
+  padding: .5em;
+  top: .85em;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+}
+
+#signout{
+  position: absolute;
+  right: .75em;
+  background-color: #7b7777;
+}
+#signout:hover{
+  background-color:#d34245;
+}
+
+#profile-button{
+  position: absolute;
+  right: 6.75em;
+  background-color: #0969A2;
+}
+#profile-button:hover{
+  background-color: #3a87b4;
+}
+
+
+#signin:hover{
+  background-color:#8c8888;
+}
+
+#signup:hover{
+  background-color:#d34245;
+}
+
+#signin{
+  position: absolute;
+  right: .75em;
+  background-color: #7b7777;
+}
+
+#signup{
+  position: absolute;
+  right: 5.5em;
+  background-color:#ca171b;
+}
