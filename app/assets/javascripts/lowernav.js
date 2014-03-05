@@ -14,11 +14,16 @@ var LowerNav = (function(){
     $('#desktop_links').show();
   }
 
+  var _toggleForms = function(target){
+    var idString = target.id.substring(target.id.indexOf('_')+1, target.id.length);
+    var form = '#' + idString + "_form";
+    $('[id*='+idString+'_form]').siblings().addClass('hidden');
+    $('[id*='+idString+'_form]').removeClass('hidden');
+  }
+
   return {
     toggleForms: function(){
-      var form = '#' + $(this).attr('id') + "_form";
-      $(form).removeClass('hidden');
-      $(form).siblings().addClass('hidden');
+      _toggleForms(event.target);
     },
 
     mobileMode: function(){
