@@ -48,59 +48,25 @@ describe User do
     end
   end
 
-  context "daily average methods for all users" do
-    let!(:user){ create :user }
-    let!(:user2){ create :user2 }
-
-    before :each do
-      user.consumption_records.create(substance: "alcohol", amount: 10)
-      user.consumption_records.create(substance: "caffeine", amount: 10)
-      user.consumption_records.create(substance: "nicotine", amount: 10)
-      user2.consumption_records.create(substance: "alcohol", amount: 0)
-      user2.consumption_records.create(substance: "caffeine", amount: 0)
-      user2.consumption_records.create(substance: "nicotine", amount: 0)
-    end
-
-    it "returns a daily average of alcohol consumption" do
-      expect(User.daily_average_alcohol).to eq 5
-    end
-
-    it "returns a daily average of caffeine consumption" do
-      expect(User.daily_average_caffeine).to eq 5
-    end
-
-    it "returns a daily average of nicotine consumption" do
-      expect(User.daily_average_nicotine).to eq 5
-    end
-  end
-
   context "daily comparison methods" do
     let!(:user){ create :user }
-    let!(:user2){ create :user2 }
 
     before :each do
-      user.consumption_records.create(substance: "alcohol", amount: 10)
-      user.consumption_records.create(substance: "caffeine", amount: 10)
-      user.consumption_records.create(substance: "nicotine", amount: 10)
-      user2.consumption_records.create(substance: "alcohol", amount: 0)
-      user2.consumption_records.create(substance: "caffeine", amount: 0)
-      user2.consumption_records.create(substance: "nicotine", amount: 0)
+      user.consumption_records.create(substance: "alcohol", amount: 4)
+      user.consumption_records.create(substance: "caffeine", amount: 200)
+      user.consumption_records.create(substance: "nicotine", amount: 5)
     end
 
     it "returns comparative % alcohol consumption" do
-
-      expect(user.reload.daily_comparison_alcohol).to eq 100
-      expect(user2.reload.daily_comparison_alcohol).to eq -100
+      expect(user.reload.daily_comparison_alcohol).to eq 566
     end
 
     it "returns comparative % caffeine consumption" do
-      expect(user.reload.daily_comparison_alcohol).to eq 100
-      expect(user2.reload.daily_comparison_alcohol).to eq -100
+      expect(user.reload.daily_comparison_caffeine).to eq -34
     end
 
     it "returns comparative % nicotine consumption" do
-      expect(user.reload.daily_comparison_alcohol).to eq 100
-      expect(user2.reload.daily_comparison_alcohol).to eq -100
+      expect(user.reload.daily_comparison_nicotine).to eq -67
     end
   end
 end

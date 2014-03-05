@@ -77,4 +77,35 @@
       </p>
     <% end %>
   </div>
+
+  <div id="comparisons">
+    <h3>How you compare</h3>
+      <div class = "substance_comparisons">
+        <% if current_user.daily_comparison_alcohol > 0 %>
+          <span class="green_num">+<%= current_user.daily_comparison_alcohol %> %</span>
+        <% else %>
+          <span class="red_num"><%= current_user.daily_comparison_alcohol %> %</span>
+        <% end %>
+        <p>than the average user</p>
+        <%= image_tag("beer.png") %>
+      </div>
+      <div class = "substance_comparisons middle">
+        <% if current_user.daily_comparison_caffeine > 0 %>
+          <span class="green_num">+<%= current_user.daily_comparison_caffeine %> %</span>
+        <% else %>
+          <span class="red_num"><%= current_user.daily_comparison_caffeine %> %</span>
+        <% end %>
+        <p>than the average user</p>
+        <%= image_tag("coffee.png") %>
+      </div>
+      <div class = "substance_comparisons">
+        <% if current_user.daily_comparison_nicotine > 0 %>
+          <span class="green_num">+<%= current_user.daily_comparison_nicotine %> %</span>
+        <% else %>
+          <span class="red_num"><%= current_user.daily_comparison_nicotine %> %</span>
+        <% end %>
+        <p>than the average user</p>
+        <%= image_tag("cigg.png") %>
+      </div>
+  </div>
 </div>
