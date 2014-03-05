@@ -11,7 +11,7 @@ describe CaffeineCalcController do
     end
 
     it "creates a caffeine series from data" do
-      expect(assigns(:caffeine_series)).to_not be_nil
+      expect(assigns(:series)).to_not be_nil
     end
 
     it "returns a JSON object" do

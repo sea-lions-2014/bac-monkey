@@ -12,7 +12,7 @@ describe NicotineCalcController do
     end
 
     it "creates a nicotine series from data" do
-      expect(assigns(:nicotine_series)).to_not be_nil
+      expect(assigns(:series)).to_not be_nil
     end
 
     it "returns a JSON object" do

@@ -11,7 +11,7 @@ describe AlcoholCalcController do
     end
 
     it "creates a BAC series from data" do
-      expect(assigns(:bac)).to_not be_nil
+      expect(assigns(:series)).to_not be_nil
     end
 
     it "returns a JSON object" do
