@@ -6,12 +6,12 @@ describe AlcoholCalcController do
 
   context '#create' do
     before :each do
-      ApplicationController.any_instance.stub(:current_user) { user }
+      stub_current_user user
       post :create, alcohol_calc: alcohol_calc
     end
 
-    it "creates a new AlcoholCalc instance" do
-      expect(assigns(:alcohol_calc)).to be_a AlcoholCalc
+    it "creates a BAC series from data" do
+      expect(assigns(:series)).to_not be_nil
     end
 
     it "returns a JSON object" do
