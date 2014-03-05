@@ -3,15 +3,12 @@
     <div class="line">
       I had
       <%= f.number_field :cigarettes, required: true, min: 1 %>
-      cigarettes
-    </div>
-    <div class="line">
-      Over the course of
+      cigarettes in
       <%= f.number_field :hours, required: true, min: 1 %> hours.
     </div>
+    <%= render "chart/save_option" %>
     <div class="submit">
       <%= f.submit "Check nicotine levels", :class=> "button", :id=> "nic_button" %>
-      <%= render "chart/save_option" %>
     </div>
   <% end %>
 </div>
