@@ -10,15 +10,15 @@
 <div class='registration_form' id="desktop_registration">
   <%= form_for @user do |f| %>
     <%= f.label "Username" %>
-    <%= f.text_field :user_name %>
+    <%= f.text_field :user_name, required: true %>
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.email_field :email, required: true %>
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, required: true %>
     <%= f.label :weight %>
-    <%= f.number_field :weight, min: 1 %>
+    <%= f.number_field :weight, min: 1, required: true %>
     <%= f.label :gender %>
-    <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]),{required: true}, { :class => "drop_down" }  %>
+    <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]), {required: true}, { :class => "drop_down" }  %>
     <%= f.submit "Sign Up", :class=> "button" %>
   <% end %>
 </div>
