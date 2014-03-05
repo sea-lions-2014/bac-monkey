@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe AlcoholCalcController do
-  let!(:alcohol_calc){{weight: 200, gender: "m", hours: 2, drinks: 4}}
+  let!(:alcohol_calc){{weight: 200, gender: "m", hours: 2, drinks: 4, save: true}}
   let!(:user) { create :user }
 
   context '#create' do
