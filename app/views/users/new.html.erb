@@ -1,22 +1,25 @@
 <div id="signup_message">
-  <span class="pop">Sign up to start tracking your bad habits.</span>
-
-  <p>BAC monkey will record your consumption habits when you're signed in. Find out your daily averages and how you compare to other users.</p>
+  <% if flash[:notice] %>
+    <p class="error"><%= flash[:notice] %>
+  <% else %>
+    <span class="pop">Sign up to start tracking your bad habits.</span>
+    <p>BAC monkey will record your consumption habits when you're signed in. Find out your daily averages and how you compare to other users.</p>
+  <% end %>
 </div>
 
 <div class='registration_form' id="desktop_registration">
   <%= form_for @user do |f| %>
-        <%= f.label "Username" %>
-        <%= f.text_field :user_name %>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        <%= f.label :weight %>
-        <%= f.number_field :weight, min: 1 %>
-        <%= f.label :gender %>
-        <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]),{required: true}, { :class => "drop_down" }  %>
-        <%= f.submit "Sign Up", :class=> "button" %>
+    <%= f.label "Username" %>
+    <%= f.text_field :user_name %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :weight %>
+    <%= f.number_field :weight, min: 1 %>
+    <%= f.label :gender %>
+    <%= f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]),{required: true}, { :class => "drop_down" }  %>
+    <%= f.submit "Sign Up", :class=> "button" %>
   <% end %>
 </div>
 <%= render "s_new" %>

@@ -14,3 +14,11 @@
   font-size: 1.25em;
   margin-bottom: 1.5em;
 }
+
+.error {
+  color: red;
+  display: block;
+  font-size: 2em;
+  line-height: 1.25em;
+  margin-bottom: 1.5em;
+}

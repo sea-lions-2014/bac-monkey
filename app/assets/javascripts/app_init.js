@@ -11,6 +11,7 @@ var MonkeyApp = (function(){
     $('#s_caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
     $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
+    $('.registration_form').on('ajax:success', {user: $(this).serialize()}, MonkeyApp.signUpUser)
   }
 
   var _toggleSignInForm = function(){
@@ -34,6 +35,12 @@ var MonkeyApp = (function(){
     $('#signout').click(_clearCookies)
     $('#login_form').click(_clearCookies)
     $(window).resize(_toggleLayout);
+    $('.registration_form #user_user_name').focusout(_validateUserUniqueness);
+  }
+
+  var _validateUserUniqueness = function(){
+    var userName = this.value
+
   }
 
   var _mobileUser = function(){
@@ -92,7 +99,7 @@ var MonkeyApp = (function(){
     getNicotineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.nicotineData(data);
       _renderChart(dataObj);
-    }
+    },
 
   }
 })()

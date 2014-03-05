@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :user_name, :email, :gender, :weight, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
   validates :gender, inclusion: { in: ["m", "f"]}
+  validates :user_name, :email, uniqueness: true
   has_secure_password
 
   def daily_average_alcohol

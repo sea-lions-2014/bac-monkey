@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       login(@user)
-      redirect_to user_path(@user)
-    else
       redirect_to root_path
+    else
+      redirect_to new_user_path, notice: "That username or email address is already registered."
     end
   end
 

@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  def new
-  end
 
   def create
     username = params[:user][:user_name]
