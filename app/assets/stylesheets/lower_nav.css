@@ -1,0 +1,90 @@
+
+#lower_nav a{
+ display: block;
+ width: 5em;
+ border-radius: 0.25em;
+ padding: 1.75em 1em 1.75em 1em;
+ top: .85em;
+ font-family: 'Lato', sans-serif;
+ letter-spacing: 1px;
+ color: white;
+ text-decoration: none;
+ background-color: #7b7777;
+ margin: .25em;
+ margin-bottom: .25em;
+}
+
+#lower_nav{
+  width: 10%;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+#lower_nav #bac{
+  background-color: #FF3D00;
+}
+
+#lower_nav #caffeine{
+  background-color: #0969A2;
+}
+
+#lower_nav #nicotine{
+  background-color: #00B358;
+}
+
+#lower_nav #bac:active{
+  background-color: #A62800;
+}
+
+#lower_nav #caffeine:active{
+  background-color: #03436A;
+}
+
+#lower_nav #nicotine:active{
+  background-color: #007439;
+}
+
+#lower_nav #s_bac{
+  background-color: #FF3D00;
+}
+
+#lower_nav #s_caffeine{
+  background-color: #0969A2;
+}
+
+#lower_nav #s_nicotine{
+  background-color: #00B358;
+}
+
+#lower_nav #s_bac:active{
+  background-color: #A62800;
+}
+
+#lower_nav #s_caffeine:active{
+  background-color: #03436A;
+}
+
+#lower_nav #s_nicotine:active{
+  background-color: #007439;
+}
+
+#nicotine_calc_hours{
+  margin-left: 1.75em;
+}
+
+#caffeine_calc_cups{
+  margin-left: .5em;
+}
+
+.arrow{
+  color: white;
+  position: absolute;
+  right: 1em
+}
+
+.arrow:hover{
+  cursor: pointer;
+}

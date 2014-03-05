@@ -1,0 +1,16 @@
+#welcome_msg {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  color: #7b7777;
+  width: 300px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.pop {
+  color: white;
+  display: block;
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
