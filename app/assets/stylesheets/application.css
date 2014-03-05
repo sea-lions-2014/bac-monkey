@@ -11,4 +11,12 @@
  *= require_self
  *= require nv.d3
  *= require main
+ *= require nav
+ *= require welcome_msg
+ *= require footer
+ *= require chart
+ *= require lower_nav
+ *= require registration
+ *= require profile
+ *= require media
  */
