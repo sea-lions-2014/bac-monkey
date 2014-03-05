@@ -79,9 +79,10 @@
 }
 
 #save_option {
+  display: block;
   font-size: 1em;
   margin: .5em 0;
-  color: white;
+  color: gray;
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
@@ -89,7 +90,14 @@
 .arrow{
   color: white;
   position: absolute;
-  right: 1em
+  right: 1em;
+}
+
+h5{
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin-top: 0em;
+  color:#7b7777;
 }
 
 .arrow:hover{
