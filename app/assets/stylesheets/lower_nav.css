@@ -69,17 +69,25 @@
 #lower_nav #s_nicotine:active{
   background-color: #007439;
 }
+#alcohol_calc_hours{
+  margin-left: 0em;
+}
 
+/*#alcohol_calc_weight{
+  margin-left: 1.5em;
+}*/
 #nicotine_calc_hours{
-  margin-left: 1.75em;
+  margin-left: .5em;
 }
 
 #caffeine_calc_cups{
   margin-left: .5em;
 }
 
+
+
 #save_option {
-  color: white;
+  color: #7b7777;
   font-family: 'Lato', sans-serif;
 }
 

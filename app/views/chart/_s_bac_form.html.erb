@@ -15,9 +15,9 @@
       <%= f.label :hours %>:
       <%= f.number_field :hours, required: true, min: 1 %>
     </div>
+    <%= render "chart/save_option" %>
     <div class="submit">
       <%= f.submit "Calculate BAC", :class=> "button", :id=> "alc_button" %>
     </div>
-    <%= render "chart/save_option" %>
   <% end %>
 </div>

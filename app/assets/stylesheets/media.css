@@ -51,13 +51,22 @@
     margin:.25em;
   }
 
-  .substance_form .button{
+/*  .substance_form .button{
     padding: .5em;
     font-size: .75em;
     margin-bottom: 10em;
     position: absolute;
     left: 4em;
     top: 13em;
+  }*/
+
+   #alc_button{
+    padding: .5em;
+    font-size: .75em;
+    margin-bottom: 10em;
+    position: absolute;
+    left: 4em;
+    top: 15.5em;
   }
 
   #nic_button{
@@ -66,7 +75,7 @@
     margin-bottom: 10em;
     position: absolute;
     left: 3em;
-    top: 7em;
+    top: 10em;
   }
 
   #caf_button{
@@ -75,7 +84,7 @@
     margin-bottom: 10em;
     position: absolute;
     left: 3em;
-    top: 10em;
+    top: 13em;
   }
 
   #lower_nav a{
@@ -103,7 +112,26 @@
   }
 
   #save_option{
-    margin-top: 2em;
+    color:#7b7777;
+    text-align: center;
+    margin: .5em auto;
+    position:absolute;
+    left: 2em;
+  }
+
+  #caffeine_calc_cups{
+    margin-left: .7em;
+  }
+
+  #alcohol_calc_drinks{
+    margin-left: .5em;
+  }
+
+  #alcohol_calc_hours{
+    margin-left: .6em;
+  }
+  #nicotine_calc_cigarettes{
+    margin-left: .5em;
   }
 }
 
