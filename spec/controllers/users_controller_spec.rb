@@ -14,13 +14,11 @@ describe UsersController do
     let!(:non_user) { build :non_user }
 
     it "creates a user given valid info" do
-      post :create, user: attributes_for(:user)
-      expect(assigns(:user).save).to be true
+      expect{post :create, user: attributes_for(:user)}.to change{User.count}.by(1)
     end
 
     it "does not create a user given invalid info" do
-      post :create, user: attributes_for(:non_user)
-      expect(assigns(:user).save).to be false
+      expect{post :create, user: attributes_for(:non_user)}.to_not change{User.count}
     end
   end
 
