@@ -62,7 +62,6 @@ var Chart = (function(){
 
       var max = Math.max.apply(null, BACvalues)
 
-      debugger
       if(max > 0.42){
         $('.drive').hide();
         $('.dead').show();
