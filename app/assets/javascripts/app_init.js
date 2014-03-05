@@ -11,6 +11,7 @@ var MonkeyApp = (function(){
     $('#s_caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
     $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
+    $('.registration_form').on('ajax:success', {user: $(this).serialize()}, MonkeyApp.signUpUser)
   }
 
   var _toggleSignInForm = function(){
@@ -37,10 +38,10 @@ var MonkeyApp = (function(){
     });
     $(".arrow").click(LowerNav.toggleNavHeight);
     $('#signin').click(MonkeyApp.toggleSignInForm);
-    $('#signout').click(_clearCookies)
-    $('#login_form').click(_clearCookies)
+    $('#signout').click(_clearCookies);
+    $('#login_form').click(_clearCookies);
     $(window).resize(_toggleLayout);
-    $('#about_button').click(_toggleAbout)
+    $('#about_button').click(_toggleAbout);
   }
 
   var _mobileUser = function(){
@@ -99,7 +100,7 @@ var MonkeyApp = (function(){
     getNicotineChart: function(event, data, status, xhr){
       var dataObj = SubstanceDataParser.nicotineData(data);
       _renderChart(dataObj);
-    }
+    },
 
   }
 })()

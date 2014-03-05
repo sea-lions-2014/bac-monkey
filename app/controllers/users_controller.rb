@@ -6,12 +6,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      login(@user)
-      redirect_to user_path(@user)
-    else
+    user = User.new(params[:user])
+    if user.save
+      login(user)
       redirect_to root_path
+    else
+      redirect_to new_user_path, notice: "That username or email address is already registered."
     end
   end
 

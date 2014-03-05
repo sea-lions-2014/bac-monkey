@@ -10,7 +10,6 @@ describe "a registered user", js:true do
 
     it "a user should be able to sign in" do
       login_as user
-      # sleep 1
       expect(current_path).to eq user_path user
     end
   end

@@ -18,7 +18,7 @@ class AlcoholCalcController < ApplicationController
 
   def format_params(params)
     args = params[:alcohol_calc]
-    args[:save] == eval(params[:save_search]) if params[:save_search]
+    args[:save] = eval(params[:save_search]) if params[:save_search]
     args[:weight] = args[:weight].to_i
     args[:alcohol] = args[:drinks].to_i * 0.6
     args[:hours] = args[:hours].to_i
