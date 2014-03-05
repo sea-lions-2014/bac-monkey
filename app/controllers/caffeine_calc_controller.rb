@@ -5,7 +5,7 @@ class CaffeineCalcController < ApplicationController
     args = format_params(params)
     save_consumption_record(args) if current_user
     caffeine_calc = CaffeineCalc.new(args)
-    @caffeine_series = caffeine_calc.mg_series
+    @caffeine_series = caffeine_calc.series
     render json: @caffeine_series
   end
 

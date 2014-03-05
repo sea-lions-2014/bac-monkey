@@ -6,7 +6,7 @@ class AlcoholCalcController < ApplicationController
     args = format_params(params)
     save_consumption_record(args) if current_user
     @alcohol_calc = AlcoholCalc.new(args)
-    @bac = @alcohol_calc.bac_series
+    @bac = @alcohol_calc.series
     render json: @bac
   end
 
