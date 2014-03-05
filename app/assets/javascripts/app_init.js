@@ -22,6 +22,12 @@ var MonkeyApp = (function(){
     $('#user_user_name').focus();
   }
 
+  var _toggleAbout = function() {
+    event.preventDefault();
+    $('#blurb').toggleClass('hidden');
+    $('#about').toggleClass('hidden');
+  }
+
   var _clearCookies = function(){
     $.removeCookie('dataObj')
   }
@@ -32,15 +38,10 @@ var MonkeyApp = (function(){
     });
     $(".arrow").click(LowerNav.toggleNavHeight);
     $('#signin').click(MonkeyApp.toggleSignInForm);
-    $('#signout').click(_clearCookies)
-    $('#login_form').click(_clearCookies)
+    $('#signout').click(_clearCookies);
+    $('#login_form').click(_clearCookies);
     $(window).resize(_toggleLayout);
-    $('.registration_form #user_user_name').focusout(_validateUserUniqueness);
-  }
-
-  var _validateUserUniqueness = function(){
-    var userName = this.value
-
+    $('#about_button').click(_toggleAbout);
   }
 
   var _mobileUser = function(){
