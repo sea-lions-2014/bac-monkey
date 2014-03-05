@@ -159,6 +159,7 @@ nav a{
   word-spacing: 5px;
   vertical-align: middle;
 }
+<<<<<<< HEAD
 
 .substance_form .button{
   color: white;
@@ -188,10 +189,11 @@ nav a{
 }
 
 .bac-limit {
+
   position: absolute;
   top: 3.8em;
   left: 50%;
-  color: red;
+  color: #FF3D00;
   margin-left: -10em;
   display: block;
   font-family: 'Lato', sans-serif;
@@ -222,10 +224,13 @@ nav a{
   fill:white;
   font-family: 'Lato', sans-serif;
 
-}
-
 .nv-line{
   color:white;
+}
+
+.nvd3 .nv-groups path.nv-line{
+   stroke-width: 7.5px;
+   stroke-linecap:"round";
 }
 
 .nvd3 .nv-groups path.nv-line{
