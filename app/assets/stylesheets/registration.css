@@ -3,10 +3,10 @@
   color: white;
   font-size: 1.25em;
   display: block;
-  width: 50%;
+  width: 30%;
   min-width: 465px;
   text-align: center;
-  margin: 8em auto auto auto;
+  margin: 0em auto auto auto;
   background-color: #000;
   border: 2px solid #121212;
   padding-top: 1em;
@@ -59,4 +59,14 @@
   padding: .5em;
   margin: 0 auto;
   font-size: 1em;
+}
+
+#signup_message {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  color: #7b7777;
+  width: 300px;
+  margin: 7em auto 2em auto;
+  text-align: center;
 }

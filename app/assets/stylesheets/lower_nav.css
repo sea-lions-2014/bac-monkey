@@ -1,4 +1,3 @@
-
 #lower_nav a{
  display: block;
  width: 5em;
@@ -77,6 +76,11 @@
 
 #caffeine_calc_cups{
   margin-left: .5em;
+}
+
+#save_option {
+  color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 .arrow{

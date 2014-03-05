@@ -6,11 +6,12 @@
       cigarettes
     </div>
     <div class="line">
-Over the course of
-<%= f.number_field :hours, required: true, min: 1 %> hours.
+      Over the course of
+      <%= f.number_field :hours, required: true, min: 1 %> hours.
     </div>
     <div class="submit">
       <%= f.submit "Check nicotine levels", :class=> "button", :id=> "nic_button" %>
+      <%= render "chart/save_option" %>
     </div>
   <% end %>
 </div>
