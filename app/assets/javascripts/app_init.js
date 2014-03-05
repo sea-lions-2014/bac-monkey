@@ -21,6 +21,12 @@ var MonkeyApp = (function(){
     $('#user_user_name').focus();
   }
 
+  var _toggleAbout = function() {
+    event.preventDefault();
+    $('#blurb').toggleClass('hidden');
+    $('#about').toggleClass('hidden');
+  }
+
   var _clearCookies = function(){
     $.removeCookie('dataObj')
   }
@@ -34,6 +40,7 @@ var MonkeyApp = (function(){
     $('#signout').click(_clearCookies)
     $('#login_form').click(_clearCookies)
     $(window).resize(_toggleLayout);
+    $('#about_button').click(_toggleAbout)
   }
 
   var _mobileUser = function(){
