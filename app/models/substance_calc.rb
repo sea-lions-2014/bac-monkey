@@ -39,7 +39,7 @@ class SubstanceCalc
     # Returns a mg series during the time you are continually consuming a substance
     def build_up
       next_dose = @current_dose
-      series = [[0, @current_dose]]
+      series = [[0, next_dose]]
 
       build_up_interval_count.times do |interval|
         next_dose = next_dose_up(next_dose)

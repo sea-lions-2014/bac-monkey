@@ -1,8 +1,3 @@
-#-----NOTE!-----
-
-# AlcoholCalc overrides some of SubstanceCalc's methods because Widmark's
-# BAC % formula is very different from the formula used in SubstanceCalc.
-
 #-----WIDMARK'S BAC % FORMULA-----
 # Let
 # alcohol = liquid ounces of alcohol
@@ -42,13 +37,14 @@ class AlcoholCalc < SubstanceCalc
     return 0.66 if gender == "f"
   end
 
-  def next_dose_up(next_dose)
-    next_dose = ((next_dose + bac(consumption_rate, @weight, @ratio)) - metabolized).round(@precision)
-    next_dose < 0 ? 0 : next_dose
+  # AlcoholCalc overrides SubstanceCalc's formula methods because Widmark's
+  # BAC % formula is very different from the formula used in SubstanceCalc.
+
+  def next_dose_up_formula(starting_dose)
+    (starting_dose + bac(consumption_rate, @weight, @ratio)) - metabolized
   end
 
-  def next_dose_down(starting_dose, hours)
-    next_dose = (starting_dose - (0.015 * hours)).round(@precision)
-    next_dose < 0 ? 0 : next_dose
+  def next_dose_down_formula(starting_dose, hours)
+    starting_dose - (0.015 * hours)
   end
 end
