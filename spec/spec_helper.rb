@@ -31,7 +31,7 @@ RSpec.configure do |config|
   end
 
   config.include FactoryGirl::Syntax::Methods
-  config.include LoginUser, type: :feature
+  config.include LoginUser
 
   config.order = "random"
 end

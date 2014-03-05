@@ -7,12 +7,12 @@ describe NicotineCalcController do
   context '#create' do
 
     before :each do
-      ApplicationController.any_instance.stub(:current_user) { user }
+      stub_current_user user
       post :create, nicotine_calc: args
     end
 
     it "creates a nicotine series from data" do
-      expect(assigns(:nicotine_series)).to be
+      expect(assigns(:nicotine_series)).to_not be_nil
     end
 
     it "returns a JSON object" do
