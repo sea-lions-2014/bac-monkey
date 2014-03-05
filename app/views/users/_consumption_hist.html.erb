@@ -1,12 +1,13 @@
   <div id="consumption_history">
     <h3>Drugs this week</h3>
     <% if @history.empty? %>
-      <p class="gray">None yet!</p>
+    <p class="gray">None yet!</p>
     <% end %>
     <% @history.each do |consumption_record| %>
-      <p>
-        <%= consumption_record.dose_description %>
-        <span class="date"><%= consumption_record.created_at.strftime("%m/%d/%y") %></span>
-      </p>
+    <p>
+      <%= consumption_record.dose_description %>
+      <span class="date"><%= consumption_record.created_at.strftime("%m/%d/%y") %>
+      </span>
+    </p>
     <% end %>
   </div>
