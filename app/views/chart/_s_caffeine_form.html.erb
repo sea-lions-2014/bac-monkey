@@ -11,10 +11,10 @@
     <%= f.label :hours %>:
     <%= f.number_field :hours, required: true, min: 1 %>
   </div>
+  <%= render "chart/save_option" %>
   <div class="submit">
     <%= f.submit "Check caffeine levels", :class=> "button", :id=>"caf_button" %>
   </div>
-  <%= render "chart/save_option" %>
   <% end %>
 </div>
 

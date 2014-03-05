@@ -8,10 +8,10 @@
       <%= f.label :hours %>:
       <%= f.number_field :hours, required: true, min: 1 %>
     </div>
+    <%= render "chart/save_option" %>
     <div class="submit">
       <%= f.submit "Check nicotine levels", :class=> "button", :id=> "nic_button" %>
     </div>
-    <%= render "chart/save_option" %>
   <% end %>
 </div>
 

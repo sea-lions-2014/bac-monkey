@@ -2,6 +2,12 @@ body {
   background-color: #1e1e1e;
   margin: 0;
 }
+
+input[type='submit']{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
 /*===============NAV=====================*/
 
 /*=====================WELCOME MSG===============*/
