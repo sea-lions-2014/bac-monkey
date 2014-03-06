@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:user][:password])
       login(user)
       render json: current_user.id
-      # redirect_to user_path(user)
     else
-      # redirect_to root_path, notice: "That username or password is invalid."
+      # render json: '/users/sign_in_error', :layout => false
+      render partial: '/users/sign_in_error', :status => :unprocessable_entity
     end
   end
 

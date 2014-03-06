@@ -12,6 +12,7 @@ var MonkeyApp = (function(){
     $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
     $('.signin_form form').on('ajax:success', _authenticate)
+    $('.signin_form form').on('ajax:error', _errorMessage)
   }
 
   var _toggleSignInForm = function(){
@@ -74,8 +75,13 @@ var MonkeyApp = (function(){
       LowerNav.toggleNavHeight();
     }
   }
-  var _authenticate = function(event, data, status, xhr){
+  var _authenticate = function(event, data){
     window.location.href = '/'
+  }
+
+  var _errorMessage = function(event, xhr){
+    $('.signin_form').append(xhr.responseText);
+
   }
 
   return{

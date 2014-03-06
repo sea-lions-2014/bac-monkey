@@ -10,7 +10,7 @@ describe "a registered user", js:true do
 
     it "a user should be able to sign in" do
       login_as user
-      expect(current_path).to eq user_path user
+      expect(page).to have_content 'Profile'
     end
   end
 
@@ -20,7 +20,6 @@ describe "a registered user", js:true do
     end
 
     it "should have default values filled in for a logged in user" do
-      visit root_path
       expect(find('#alcohol_calc_weight').value).to eq user.weight.to_s
       expect(find('#alcohol_calc_gender').value).to eq 'f'
     end
@@ -29,6 +28,7 @@ describe "a registered user", js:true do
   context "profile" do
     before :each do
       login_as user
+      click_link 'Profile'
     end
 
     it "should list the user's total consumption" do
@@ -50,6 +50,7 @@ describe "a registered user", js:true do
   context "profile page displays functional home button" do
     before :each do
       login_as user
+      click_link 'Profile'
     end
 
     it "redirects to home page" do
