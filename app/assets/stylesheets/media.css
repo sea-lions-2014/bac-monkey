@@ -69,6 +69,10 @@
     top: 15.5em;
   }
 
+  #nicotine_calc_hours{
+    margin-left: 1.75em;
+  }
+
   #nic_button{
     padding: .5em;
     font-size: .75em;
