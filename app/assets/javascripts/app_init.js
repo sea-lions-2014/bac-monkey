@@ -11,7 +11,8 @@ var MonkeyApp = (function(){
     $('#s_caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
     $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
-    $('#sign_')
+    $('.signin_form form').on('ajax:success', _authenticate)
+    $('.signin_form form').on('ajax:error', _errorMessage)
   }
 
   var _toggleSignInForm = function(){
@@ -74,6 +75,14 @@ var MonkeyApp = (function(){
       LowerNav.toggleNavHeight();
     }
   }
+  var _authenticate = function(event, data){
+    window.location.href = '/'
+  }
+
+  var _errorMessage = function(event, xhr){
+    $('.signin_form').append(xhr.responseText);
+
+  }
 
   return{
     init: function(){
@@ -82,6 +91,7 @@ var MonkeyApp = (function(){
       _bindEvents();
       _cookieCheck();
     },
+
 
     toggleSignInForm: function(){
       _toggleSignInForm();
