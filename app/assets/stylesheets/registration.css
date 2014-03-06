@@ -6,7 +6,7 @@
   width: 30%;
   min-width: 465px;
   text-align: center;
-  margin: 0em auto auto auto;
+  margin: 0em auto 2em auto;
   background-color: #000;
   border: 2px solid #121212;
   padding-top: 1em;
@@ -69,4 +69,24 @@
   width: 300px;
   margin: 7em auto 2em auto;
   text-align: center;
+}
+
+#mobile_registration{
+  text-align: center;
+  font-size: 1em;
+  margin-top: 3em;
+  min-width: 0;
+  width: 250px;
+  padding: 1em 0 1em 0;
+}
+
+
+#mobile_registration input{
+  margin: 1em;
+  width: 10em;
+}
+
+#mobile_registration .button{
+  padding: .5em;
+  margin: 2em auto 0 auto;
 }
