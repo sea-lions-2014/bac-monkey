@@ -54,9 +54,9 @@ var Chart = (function(){
 
   var _chartWarning = function(dataObj){
     $('.bac-limit').hide();
-    
-    var valuesArray = $.map(dataObj[0].values, function(element,index){ 
-      return element.y 
+
+    var valuesArray = $.map(dataObj[0].values, function(element,index){
+      return element.y;
     });
 
     var maxValue = Math.max.apply(null, valuesArray)
@@ -81,6 +81,5 @@ var Chart = (function(){
       _styleChart(dataObj);
     }
   }
-
 })()
 

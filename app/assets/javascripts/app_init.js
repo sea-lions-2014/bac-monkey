@@ -5,12 +5,15 @@ $(function(){
 var MonkeyApp = (function(){
 
   var _ajaxEvents = function(){
-    $('#caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
-    $('#bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
-    $('#nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
-    $('#s_caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
-    $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
-    $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
+    //desktop forms
+    $('#caffeine_form').on('ajax:success', _getCaffeineChart);
+    $('#bac_form').on('ajax:success', _getBACChart);
+    $('#nicotine_form').on('ajax:success', _getNicotineChart);
+    //mobile forms
+    $('#s_caffeine_form').on('ajax:success', _getCaffeineChart);
+    $('#s_bac_form').on('ajax:success', _getBACChart);
+    $('#s_nicotine_form').on('ajax:success', _getNicotineChart);
+    //sign in
     $('.signin_form form').on('ajax:success', _authenticate)
     $('.signin_form form').on('ajax:error', _errorMessage)
   }
@@ -81,7 +84,21 @@ var MonkeyApp = (function(){
 
   var _errorMessage = function(event, xhr){
     $('.error_container').html(xhr.responseText);
+  }
 
+  var _getBACChart = function(event, data){
+    var dataObj = SubstanceDataParser.BACData(data);
+    _renderChart(dataObj);
+  }
+
+  var _getCaffeineChart = function(event, data){
+    var dataObj = SubstanceDataParser.caffeineData(data);
+    _renderChart(dataObj);
+  }
+
+  var _getNicotineChart = function(event, data){
+    var dataObj = SubstanceDataParser.nicotineData(data);
+    _renderChart(dataObj);
   }
 
   return{
@@ -92,25 +109,8 @@ var MonkeyApp = (function(){
       _cookieCheck();
     },
 
-
     toggleSignInForm: function(){
       _toggleSignInForm();
     },
-
-    getBACChart: function(event, data, status, xhr){
-      var dataObj = SubstanceDataParser.BACData(data);
-      _renderChart(dataObj);
-    },
-
-    getCaffeineChart: function(event, data, status, xhr){
-      var dataObj = SubstanceDataParser.caffeineData(data);
-      _renderChart(dataObj);
-    },
-
-    getNicotineChart: function(event, data, status, xhr){
-      var dataObj = SubstanceDataParser.nicotineData(data);
-      _renderChart(dataObj);
-    },
-
   }
 })()
