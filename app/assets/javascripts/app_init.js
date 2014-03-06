@@ -80,7 +80,7 @@ var MonkeyApp = (function(){
   }
 
   var _errorMessage = function(event, xhr){
-    $('.signin_form').append(xhr.responseText);
+    $('.error_container').html(xhr.responseText);
 
   }
 
