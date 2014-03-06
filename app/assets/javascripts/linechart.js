@@ -59,15 +59,13 @@ var Chart = (function(){
       return element.y;
     });
 
-    var maxValue = Math.max.apply(null, valuesArray)
-
-    if (maxValue === 'BAC'){
-      var max = chart.yAxis.domain()[1]
-      if(max > 0.42){
+    if (dataObj[0].key === 'BAC'){
+      var maxValue = Math.max.apply(null, valuesArray)
+      if(maxValue > 0.42){
         $('.drive').hide();
         $('.dead').show();
       }
-      else if(max > 0.08){
+      else if(maxValue > 0.08){
         $('.dead').hide();
         $('.drive').show();
       }
