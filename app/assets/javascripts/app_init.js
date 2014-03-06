@@ -45,7 +45,7 @@ var MonkeyApp = (function(){
   }
 
   var _mobileUser = function(){
-    return $(document).width() <= 630
+    return $(document).width() <= 680
   }
 
   var _cookieCheck = function(){
