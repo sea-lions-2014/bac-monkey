@@ -51,15 +51,6 @@
     margin:.25em;
   }
 
-/*  .substance_form .button{
-    padding: .5em;
-    font-size: .75em;
-    margin-bottom: 10em;
-    position: absolute;
-    left: 4em;
-    top: 13em;
-  }*/
-
    #alc_button{
     padding: .5em;
     font-size: .75em;
@@ -67,6 +58,10 @@
     position: absolute;
     left: 4em;
     top: 15.5em;
+  }
+
+  #nicotine_calc_hours{
+    margin-left: 1.75em;
   }
 
   #nic_button{
@@ -139,7 +134,9 @@
   nav h3 {
     display: none;
   }
+}
 
+@media (max-width: 500px) {
   .green_num{
     font-size: 2em;
   }
