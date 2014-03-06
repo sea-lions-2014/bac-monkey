@@ -21,6 +21,16 @@ var LowerNav = (function(){
     $('[id*='+idString+'_form]').removeClass('hidden');
   }
 
+  var _toggleNavHeight = function(){
+    var height = ($('#up').hasClass('hidden')) ? '1.5em' : '15em'
+
+    $('#footer').animate({
+      height: height
+    }, 800);
+
+    $('.arrow').toggleClass('hidden');
+  }
+
   return {
     toggleForms: function(target){
       _toggleForms(target);
@@ -35,13 +45,7 @@ var LowerNav = (function(){
     },
 
     toggleNavHeight: function(){
-      var height = ($('#up').hasClass('hidden')) ? '1.5em' : '15em'
-
-      $('#footer').animate({
-        height: height
-      }, 800);
-
-      $('.arrow').toggleClass('hidden');
+      _toggleNavHeight();
     }
   }
 })()
