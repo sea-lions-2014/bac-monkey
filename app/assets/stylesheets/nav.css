@@ -60,10 +60,10 @@ nav a{
 #home-button{
   position: absolute;
   right: 6.75em;
-  background-color: #0969A2;
+  background-color: #00B358;
 }
 #home-button:hover{
-  background-color: #3a87b4;
+  background-color: #32c279;
 }
 
 
