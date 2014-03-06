@@ -11,10 +11,11 @@ var MonkeyApp = (function(){
     $('#s_caffeine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getCaffeineChart);
     $('#s_bac_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getBACChart);
     $('#s_nicotine_form').on('ajax:success', {args: $(this).serialize()}, MonkeyApp.getNicotineChart);
+    $('#sign_')
   }
 
   var _toggleSignInForm = function(){
-    $('.signin_form').toggleClass('hidden');
+    $('.signin_form').toggle();
     if(_mobileUser()){
       LowerNav.toggleNavHeight();
     }
@@ -38,7 +39,7 @@ var MonkeyApp = (function(){
     $(".arrow").click(LowerNav.toggleNavHeight);
     $('#signin').click(MonkeyApp.toggleSignInForm);
     $('#signout').click(_clearCookies);
-    $('#login_form').click(_clearCookies);
+    $('#login_form').submit(_clearCookies);
     $(window).resize(_toggleLayout);
     $('#about_button').click(_toggleAbout);
   }
