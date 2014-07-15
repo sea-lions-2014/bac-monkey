@@ -1,0 +1,13 @@
+#caffeine_form.substance_form.hidden
+  = form_for :caffeine_calc, url: caffeine_calc_path, remote: true do |f|
+    .line
+      I had
+      = f.number_field :cups, required: true, min: 1
+      cups of
+      = f.select :type, options_for_select([['coffee', 'coffee'],['tea', 'tea']]), {required: true}, {:class => "drop_down"}
+      in
+      = f.number_field :hours, required: true, min: 1
+      hours.
+      = render "chart/save_option"
+    .submit
+      = f.submit "Check caffeine levels", :class=> "button", :id=>"caf_button"

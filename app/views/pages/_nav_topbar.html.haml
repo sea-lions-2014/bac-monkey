@@ -1,4 +1,4 @@
-%nav{id:"topbar"}
+%nav#topbar
   = link_to image_tag("smoking_monkey.jpg", :alt => "monkey_logo"), root_path
   %h3 BAC Monkey
   - if current_user && !current_page?(root_path)

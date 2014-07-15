@@ -1,10 +1,10 @@
 #consumption_history
   %h3 Drugs this week
   - if @history.empty?
-    %p{class: "gray"} None yet!
+    %p.gray None yet!
   - @history.each do |consumption_record|
     %p
       = consumption_record.dose_description
-      %span{class: "date"}= consumption_record.created_at.strftime("%m/%d/%y")
+      %span.date= consumption_record.created_at.strftime("%m/%d/%y")
 
 

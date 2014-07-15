@@ -1,11 +1,11 @@
 #signup_message
   - if flash[:notice]
-    %p{class:"error"}= flash[:notice]
+    %p.error= flash[:notice]
   - else
-    %span{class:"pop"} Sign up to start tracking your bad habits
+    %span.pop Sign up to start tracking your bad habits
     %p BAC monkey will record your consumption habits when you're signed in. Find out your daily averages and how you compare to other users.
 
-.registration_form{id: "desktop_registration"}
+#desktop_registration.registration_form
   = form_for @user do |f|
     = f.label "Username"
     = f.text_field :user_name, required: true
