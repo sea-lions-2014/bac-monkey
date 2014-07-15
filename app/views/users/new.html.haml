@@ -1,0 +1,21 @@
+#signup_message
+  - if flash[:notice]
+    %p.error= flash[:notice]
+  - else
+    %span.pop Sign up to start tracking your bad habits
+    %p BAC monkey will record your consumption habits when you're signed in. Find out your daily averages and how you compare to other users.
+
+#desktop_registration.registration_form
+  = form_for @user do |f|
+    = f.label "Username"
+    = f.text_field :user_name, required: true
+    = f.label :email
+    = f.email_field :email, required: true
+    = f.label :password
+    = f.password_field :password, required: true
+    = f.label :weight
+    = f.number_field :weight, min: 1, required: true
+    = f.label :gender
+    = f.select :gender, options_for_select([["Male", 'm'],["Female",'f']]), {required: true}, { :class => "drop_down" }
+    = f.submit "Sign Up", :class=> "button"
+= render "s_new"

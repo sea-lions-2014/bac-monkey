@@ -1,0 +1,19 @@
+#bac_form.substance_form
+  = form_for :alcohol_calc, url: alcohol_calc_path, remote: true do |f|
+    .line.first
+      I am a
+      = f.select :gender, options_for_select([["Male", 'm'],["Female",'f']], @gender), {required: true}, { :class => "drop_down" }
+      weighing
+      = f.number_field :weight, required: true, min: 0, value: @weight
+      pounds.
+
+    .line
+      I had
+      = f.number_field :drinks, required: true
+      drinks over
+      = f.number_field :hours, required: true, min: 0
+      hours.
+
+      = render "chart/save_option"
+    .submit
+      = f.submit "Calculate BAC", :class=> "button", :id=> "alc_button"

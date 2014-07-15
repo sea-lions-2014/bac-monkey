@@ -1,0 +1,23 @@
+.consumption_summary
+  .user_info
+    #nic_daily.daily_info
+      %span.big_num= current_user.daily_average_nicotine
+      %p mgs nicotine per day
+    .total_info
+      %span.big_num= current_user.total_nicotine
+      %p mgs nicotine total
+  .tips
+    %h3
+      Nicotine (C
+      %sub>10
+      H
+      %sub>14
+      N
+      %sub>2
+      )
+    %p Nicotine is a parasympathomimetic alkaloid and a stimulant drug. Excess consumption can lead to anxiety and sleep disruption. Regularly smoking tobacco greatly increases the risk of some cancers and emphysema.
+    .advice
+      %p
+        %span.average_num 15 mgs per day is the American average.
+      %p
+        %span.average_num 0 mgs per day is the recommended maximum.

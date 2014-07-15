@@ -1,0 +1,5 @@
+LOG:  database system was shut down at 2014-07-14 16:38:44 PDT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "bac_monkey_dev" does not exist
+FATAL:  database "bac_monkey_test" does not exist

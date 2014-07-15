@@ -1,0 +1,11 @@
+#s_nicotine_form.mobile.substance_form.hidden
+  = form_for :nicotine_calc, url: nicotine_calc_path, remote: true do |f|
+    .line
+      = f.label :cigarettes
+      = f.number_field :cigarettes, required: true, min: 1
+    .line
+      = f.label :hours
+      = f.number_field :hours, required: true, min: 1
+    = render "chart/save_option"
+    .submit
+      = f.submit "Check nicotine levels", :class=> "button", :id=> "nic_button"

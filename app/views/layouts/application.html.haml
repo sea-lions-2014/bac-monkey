@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+%html
+%head
+  %title BAC Monkey
+  = favicon_link_tag "/favicon.ico"
+  %link{rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Averia+Sans+Libre'}
+  %link{href: 'http://fonts.googleapis.com/css?family=Lato', rel:'stylesheet', type:'text/css'}
+  = stylesheet_link_tag "application", :media => "all"
+  = javascript_include_tag "application"
+  %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=no"}
+  = csrf_meta_tags
+
+%body
+  = render 'pages/nav_topbar'
+  = render 'users/sign_in_form'
+  = yield
+
+

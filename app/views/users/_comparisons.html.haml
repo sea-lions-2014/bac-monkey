@@ -1,0 +1,23 @@
+#comparisons
+  %h3 How you compare
+  .substance_comparisons
+    - if current_user.daily_comparison_alcohol > 0
+      %span.green_num= current_user.daily_comparison_alcohol
+    - else
+      %span.red_num= current_user.daily_comparison_alcohol
+      %p than the average user
+    = image_tag "beer.png"
+  .substance_comparisons{class: "middle"}
+    - if current_user.daily_comparison_caffeine > 0
+      %span.green_num= current_user.daily_comparison_caffeine
+    - else
+      %span.red_num= current_user.daily_comparison_caffeine
+      %p than the average user
+      = image_tag "coffee.png"
+  .substance_comparisons
+    - if current_user.daily_comparison_nicotine > 0
+      %span.green_num= current_user.daily_comparison_nicotine
+    - else
+      %span.red_num= current_user.daily_comparison_nicotine
+      %p than the average user
+    = image_tag "cigg.png"

@@ -15,11 +15,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'haml'
 
 group :development, :testing  do
   gem 'rspec-rails'
-  # gem 'sqlite3'
   gem 'debugger'
 end
 

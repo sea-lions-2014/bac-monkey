@@ -1,0 +1,21 @@
+.consumption_summary
+  .user_info
+    #alc_daily.daily_info
+      %span.big_num= current_user.daily_average_alcohol
+      %p drinks per day
+    .total_info
+      %span.big_num= current_user.total_alcohol
+      %p drinks total
+  .tips
+    %h3
+      Alcohol (C
+      %sub>2
+      H
+      %sub>5
+      OH)
+    %p Ethyl alcohol is a depressant intoxicant and one of the most commonly used drugs in the world. In large quantities alcohol reduces inhibition, impairs judgement, and dulls pain. Excess consumption can lead to liver damage and other serious health problems.
+    .advice
+      %p
+        %span.average_num 0.6 drinks per day is the American average.
+      %p
+        %span.average_num 2.0 drinks per day is the recommended maximum.
