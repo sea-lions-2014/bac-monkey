@@ -1,12 +1,12 @@
-#topbar
+%nav{id:"topbar"}
   = link_to image_tag("smoking_monkey.jpg", :alt => "monkey_logo"), root_path
   %h3 BAC Monkey
-  -if current_user && !current_page?(root_path)
+  - if current_user && !current_page?(root_path)
     = link_to "Home", root_path, id:"home-button"
-    = link_to "Sign Out", session_path(current_user), method: 'DELETE', id: "signout"
-  -elsif current_user
-    = link_to "Profile", user_path(current_user), id: "profile-button"
-    = link_to "Sign Out", session_path(current_user), method: 'DELETE', id: "signout"
-  -else
-    = link_to "Sign Up", new_user_path, id: "signup"
-    = link_to "Sign In", '#', id: "signin", remote: true
+    = link_to "Sign Out", session_path(current_user), method: 'DELETE', id:"signout"
+  - elsif current_user
+    = link_to "Profile", user_path(current_user), id:"profile-button"
+    = link_to "Sign Out", session_path(current_user), method: 'DELETE', id:"signout"
+  - else
+    = link_to "Sign Up", new_user_path, id:"signup"
+    = link_to "Sign In", '#', id:"signin", remote: true

@@ -1,0 +1,24 @@
+.consumption_summary
+  .user_info
+    .daily_info{id: "caff_daily"}
+      %span{class: "big_num"}= current_user.daily_average_caffeine
+      %p mgs caffeine per day
+    .total_info
+      %span{class: "big_num"}= current_user.total_caffeine
+      %p mgs caffeine total
+  .tips
+    %h3
+      Caffeine (C
+      %sub>8
+      H
+      %sub>10
+      N
+      %sub>4
+      O
+      %sub>2)
+    %p Caffeine is a crystalline xanthine alkaloid and a stimulant drug. Caffeine is commonly consumed to decrease fatigue and increase alertness. Excess consumption can lead to caffeine addiction, increased blood pressure, sleep disruption.
+    .advice
+      %p
+        %span{class:"average_num"}300 mgs per day is the American average.
+      %p
+        %span{class:"average_num"}600 mgs per day is the recommended maximum.
