@@ -19,7 +19,6 @@ gem 'haml'
 
 group :development, :testing  do
   gem 'rspec-rails'
-  gem 'debugger'
 end
 
 group :testing do
